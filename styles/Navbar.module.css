@@ -21,5 +21,10 @@
 }
 
 .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:40%;
     padding-top:3vh; 
+    
 }

@@ -1,0 +1,10 @@
+.location_info{
+    display: flex;
+    margin-top:5vh;
+    background-color: #225544;
+    border-radius: 10px;
+    width:90vw;
+    margin: 5vw;
+    padding: 15px;
+    color:white;
+}
