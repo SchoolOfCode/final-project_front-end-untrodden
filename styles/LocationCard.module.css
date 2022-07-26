@@ -1,0 +1,12 @@
+.card{
+    background-color: #225544;
+    width:35vw;
+    margin: 15px;
+    padding:10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.title {
+    color: #E8A941
+}
