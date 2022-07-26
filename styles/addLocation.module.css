@@ -1,3 +1,18 @@
+.main {
+  max-width: 1400px;
+  margin: auto;
+}
 .h1 {
-  color: red;
+  text-align: center;
+}
+
+.main_grid_container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.main_grid_container div {
+  border: 1px black solid;
 }
