@@ -1,4 +1,5 @@
 import styles from '../styles/addLocation.module.css';
+import { useForm } from "react-hook-form";
 
 export default function Addlocation() {
   return (
