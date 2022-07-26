@@ -44,6 +44,14 @@ export default function Addlocation() {
                 {...register('postcode')}
               />
             </label>
+
+            {/* <label htmlFor="locationDescription">Location Description:</label>
+            <textarea
+              // type="text-area"
+              id="locationDescription"
+              {...register('locationDescription')}
+            /> */}
+
           </div>
           <div className={styles.grid_right}>
             {/* <label
