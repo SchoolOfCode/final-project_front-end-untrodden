@@ -60,9 +60,12 @@ export default function Addlocation() {
               id="locationDescription"
               {...register('locationDescription')}
             />
+            <label htmlFor="Location Category">Location category</label>
+            <div className={styles.checkbox_container}>
+              <label htmlFor="seaside">Seaside</label>
+              <input input type="checkbox" id="seaside" />
+            </div>
           </div>
-          <label htmlFor="Location Category">Location category</label>
-          <input type="checkbox" />
           <div className={styles.grid_right}>
             {/* <label
               htmlFor="testing"
@@ -73,7 +76,9 @@ export default function Addlocation() {
             <p>right</p>
           </div>
         </div>
-        <button>Submit</button>
+        <div className={styles.btn_container}>
+          <button className={styles.btn}>Add Location</button>
+        </div>
       </form>
     </main>
   );
