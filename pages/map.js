@@ -7,7 +7,7 @@ const MapComponent = dynamic(() => import("../Components/map.js"), {
   
 const Map = () => {
     return (
-        <div id='map' style={{height:'400px'}}>
+        <div id='map' style={{height:'650px', width:'550px'}}>
             <MapComponent />
         </div>
     );
