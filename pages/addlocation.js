@@ -10,49 +10,59 @@ export default function Addlocation() {
       <h1 className={styles.h1}>Add Location</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.main_grid_container}>
-          <div className={styles.grid_left}>
+          <div className={styles.flex_container_left}>
+            {/* location name section */}
             <label htmlFor="locationName">Location Name:</label>
             <input
               type="text"
               id="locationName"
               {...register('locationName')}
             />
-            <label htmlFor="locationAddress">
-              Location Address
-              <input
-                type="text"
-                id="locationAddress"
-                placeholder="Street/Road"
-                {...register('street')}
-              />
-              <input
-                type="text"
-                id="locationAdress"
-                placeholder="Town"
-                {...register('town')}
-              />
-              <input
-                type="text"
-                id="locationAdress"
-                placeholder="Region"
-                {...register('region')}
-              />
-              <input
-                type="text"
-                id="locationAdress"
-                placeholder="Postcode"
-                {...register('postcode')}
-              />
-            </label>
-
-            {/* <label htmlFor="locationDescription">Location Description:</label>
+            {/* address section */}
+            <label htmlFor="Location Address">Location Address</label>
+            <label htmlFor="Street/road"></label>
+            <input
+              type="text"
+              id="Street/road"
+              placeholder="Street/Road"
+              {...register('street')}
+            />
+            <label htmlFor="location Town"></label>
+            <input
+              type="text"
+              id="location Town"
+              placeholder="Town"
+              {...register('town')}
+            />
+            <label htmlFor="location Region"></label>
+            <input
+              type="text"
+              id="locationn Region"
+              placeholder="Region"
+              {...register('region')}
+            />
+            <label htmlFor="location Postcode"></label>
+            <input
+              type="text"
+              id="location Postcode"
+              placeholder="Postcode"
+              {...register('postcode')}
+            />
+            {/* location description */}
+            <label htmlFor="locationDescription">Location Description:</label>
+            <p className={styles.description_p}>
+              Let us know why it’s a place worth visiting. Also, please tell us
+              about any nice restaurants or pubs in the area, transport tips and
+              any other useful information for a first time visitor.
+            </p>
             <textarea
               // type="text-area"
               id="locationDescription"
               {...register('locationDescription')}
-            /> */}
-
+            />
           </div>
+          <label htmlFor="Location Category">Location category</label>
+          <input type="checkbox" />
           <div className={styles.grid_right}>
             {/* <label
               htmlFor="testing"
