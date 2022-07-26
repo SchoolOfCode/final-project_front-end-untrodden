@@ -24,3 +24,9 @@ a {
     background: black;
   }
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  
+}
