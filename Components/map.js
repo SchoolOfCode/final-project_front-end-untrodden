@@ -30,10 +30,9 @@ export default function Map() {
             // Below made the map controlled and so moveable.
             onMove={evt => setViewport(evt.viewport)}
             ref={(instance) => (mapRef.current = instance)}
-
+        //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
             minZoom ={5}
             maxZoom = {16}
-            
             >
         </ReactMapGL>
     )
