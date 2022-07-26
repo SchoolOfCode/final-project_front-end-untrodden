@@ -65,3 +65,20 @@
 .checkbox_container label {
   font-weight: 400;
 }
+/* .checkbox_container input {
+  display: none;
+} */
+.checkbox_container {
+  margin-top: 1rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 1rem;
+}
+.checkbox_container div {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #e8a941;
+  padding: 0.3rem 0;
+  border-radius: 6px;
+}

@@ -60,10 +60,29 @@ export default function Addlocation() {
               id="locationDescription"
               {...register('locationDescription')}
             />
+            {/* location category */}
             <label htmlFor="Location Category">Location category</label>
             <div className={styles.checkbox_container}>
-              <label htmlFor="seaside">Seaside</label>
-              <input input type="checkbox" id="seaside" />
+              <div>
+                <label htmlFor="seaside">Seaside</label>
+                <input type="checkbox" id="seaside" {...register('seaside')} />
+              </div>
+              <div>
+                <label htmlFor="castles">Castles</label>
+                <input type="checkbox" id="castles" {...register('castles')} />
+              </div>
+              <div>
+                <label htmlFor="caves">Caves</label>
+                <input type="checkbox" id="caves" {...register('caves')} />
+              </div>
+              <div>
+                <label htmlFor="peaceful">Peaceful</label>
+                <input
+                  type="checkbox"
+                  id="peaceful"
+                  {...register('peaceful')}
+                />
+              </div>
             </div>
           </div>
           <div className={styles.grid_right}>
