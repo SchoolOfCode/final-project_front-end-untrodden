@@ -26,9 +26,9 @@ export default function Map() {
       mapboxAccessToken="pk.eyJ1IjoidG9tYm9vdGg0NTMiLCJhIjoiY2w2MHN1eHRzMDNocDNqanZraHdnODk3MiJ9.v1i7uaU_HioJgFeF0REClw"
             {...viewport}
             // onViewportChange={(nextViewport) => setViewport(nextViewport)}
-
             // Below made the map controlled and so moveable.
             onMove={evt => setViewport(evt.viewport)}
+            // stores an instance of the map on initialization to be used later - bounding box?
             ref={(instance) => (mapRef.current = instance)}
         //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
             minZoom ={5}
