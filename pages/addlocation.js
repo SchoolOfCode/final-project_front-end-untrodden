@@ -12,9 +12,9 @@ import Museums from '../public/amenities_images/museum.png';
 import Beach from '../public/amenities_images/beach.png';
 import Hiking from '../public/amenities_images/hiking.png';
 import PetFriendly from '../public/amenities_images/pet_friendly.png';
-import Nature from '../public/amenities_images/nature.png';
-import Wildlife from '../public/amenities_images/wildlife';
-import Kayaking from '../public/amenities_images/kayaking.png';
+import Forests from '../public/amenities_images/nature.png';
+import Wildlife from '../public/amenities_images/wildlife.png';
+import Watersports from '../public/amenities_images/kayaking.png';
 import Shopping from '../public/amenities_images/shopping_bag.png';
 
 import styles from '../styles/addLocation.module.css';
@@ -392,13 +392,53 @@ export default function Addlocation() {
                   <label>
                     <input
                       type="checkbox"
+                      id="amenities_museums"
+                      {...register('amenities_museums')}
+                    />
+                    <span>
+                      <Image
+                        className={styles.amenities_pic}
+                        src={Museums}
+                        height={35}
+                        width={35}
+                      ></Image>
+                    </span>
+                  </label>
+                </div>
+
+                <div
+                  className={`${styles.amenities_category} ${styles.checked}`}
+                >
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="amenities_beach"
+                      {...register('amenities_beach')}
+                    />
+                    <span>
+                      <Image
+                        className={styles.amenities_pic}
+                        src={Beach}
+                        height={35}
+                        width={35}
+                      ></Image>
+                    </span>
+                  </label>
+                </div>
+
+                <div
+                  className={`${styles.amenities_category} ${styles.checked}`}
+                >
+                  <label>
+                    <input
+                      type="checkbox"
                       id="amenities_hiking"
                       {...register('amenities_hiking')}
                     />
                     <span>
                       <Image
                         className={styles.amenities_pic}
-                        src={NoRestaurants}
+                        src={Hiking}
                         height={35}
                         width={35}
                       ></Image>
@@ -412,13 +452,13 @@ export default function Addlocation() {
                   <label>
                     <input
                       type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
+                      id="amenities_pet_friendly"
+                      {...register('amenities_pet_friendly')}
                     />
                     <span>
                       <Image
                         className={styles.amenities_pic}
-                        src={NoRestaurants}
+                        src={PetFriendly}
                         height={35}
                         width={35}
                       ></Image>
@@ -432,13 +472,13 @@ export default function Addlocation() {
                   <label>
                     <input
                       type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
+                      id="amenities_forests"
+                      {...register('amenities_forests')}
                     />
                     <span>
                       <Image
                         className={styles.amenities_pic}
-                        src={NoRestaurants}
+                        src={Forests}
                         height={35}
                         width={35}
                       ></Image>
@@ -452,13 +492,13 @@ export default function Addlocation() {
                   <label>
                     <input
                       type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
+                      id="amenities_lots_of_wildlife"
+                      {...register('amenities_lots_of_wildlife')}
                     />
                     <span>
                       <Image
                         className={styles.amenities_pic}
-                        src={NoRestaurants}
+                        src={Wildlife}
                         height={35}
                         width={35}
                       ></Image>
@@ -472,13 +512,13 @@ export default function Addlocation() {
                   <label>
                     <input
                       type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
+                      id="amenities_watersports"
+                      {...register('amenities_watersports')}
                     />
                     <span>
                       <Image
                         className={styles.amenities_pic}
-                        src={NoRestaurants}
+                        src={Watersports}
                         height={35}
                         width={35}
                       ></Image>
@@ -492,53 +532,13 @@ export default function Addlocation() {
                   <label>
                     <input
                       type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
+                      id="amenities_shopping"
+                      {...register('amenities_shopping')}
                     />
                     <span>
                       <Image
                         className={styles.amenities_pic}
-                        src={NoRestaurants}
-                        height={35}
-                        width={35}
-                      ></Image>
-                    </span>
-                  </label>
-                </div>
-
-                <div
-                  className={`${styles.amenities_category} ${styles.checked}`}
-                >
-                  <label>
-                    <input
-                      type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
-                    />
-                    <span>
-                      <Image
-                        className={styles.amenities_pic}
-                        src={NoRestaurants}
-                        height={35}
-                        width={35}
-                      ></Image>
-                    </span>
-                  </label>
-                </div>
-
-                <div
-                  className={`${styles.amenities_category} ${styles.checked}`}
-                >
-                  <label>
-                    <input
-                      type="checkbox"
-                      id="amenities_no_restaurants"
-                      {...register('amenities_no_restaurants')}
-                    />
-                    <span>
-                      <Image
-                        className={styles.amenities_pic}
-                        src={NoRestaurants}
+                        src={Shopping}
                         height={35}
                         width={35}
                       ></Image>
