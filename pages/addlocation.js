@@ -62,12 +62,49 @@ export default function Addlocation() {
             />
             {/* location category */}
             <label htmlFor="Location Category">Location category</label>
-            <div className={styles.checkbox_container}>
-              <div>
+            <div className={styles.location_category_grid_container}>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="seaside"
+                    {...register('seaside')}
+                  />
+                  <span>Seaside</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="castles"
+                    {...register('castles')}
+                  />
+                  <span>Castles</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="caves" {...register('caves')} />
+                  <span>Caves</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="peaceful"
+                    {...register('peaceful')}
+                  />
+                  <span>Peaceful</span>
+                </label>
+              </div>
+
+              {/* <div className={styles.location_category_box}>
                 <label htmlFor="seaside">Seaside</label>
                 <input type="checkbox" id="seaside" {...register('seaside')} />
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <label htmlFor="castles">Castles</label>
                 <input type="checkbox" id="castles" {...register('castles')} />
               </div>
@@ -82,7 +119,7 @@ export default function Addlocation() {
                   id="peaceful"
                   {...register('peaceful')}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className={styles.grid_right}>
