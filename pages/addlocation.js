@@ -19,7 +19,7 @@ export default function Addlocation() {
               {...register('locationName')}
             />
             {/* address section */}
-            <label htmlFor="Location Address">Location Address</label>
+            <label htmlFor="Location Address">Location Address:</label>
             <label htmlFor="Street/road"></label>
             <input
               type="text"
@@ -58,10 +58,10 @@ export default function Addlocation() {
             <textarea
               // type="text-area"
               id="locationDescription"
-              {...register('locationDescription')}
+              {...register('location_description')}
             />
             {/* location category */}
-            <label htmlFor="Location Category">Location category</label>
+            <label htmlFor="Location Category">Location category:</label>
             <div className={styles.location_category_grid_container}>
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
@@ -97,6 +97,62 @@ export default function Addlocation() {
                     {...register('peaceful')}
                   />
                   <span>Peaceful</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="hiking" {...register('hiking')} />
+                  <span>Hiking</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="hills" {...register('hills')} />
+                  <span>Hills</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="historic"
+                    {...register('historic')}
+                  />
+                  <span>Historic</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="secluded"
+                    {...register('secluded')}
+                  />
+                  <span>Secluded</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="casual" {...register('casual')} />
+                  <span>Casual</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="lake" {...register('lake')} />
+                  <span>Lake</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="busy" {...register('busy')} />
+                  <span>Busy</span>
+                </label>
+              </div>
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input type="checkbox" id="woods" {...register('woods')} />
+                  <span>Woods</span>
                 </label>
               </div>
 
