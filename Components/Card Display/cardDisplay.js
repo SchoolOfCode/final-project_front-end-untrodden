@@ -6,5 +6,6 @@ export default function CardDisplay (){
     <LocationCard/>
     <LocationCard/>
     <LocationCard/>
+    <LocationCard/>
     </div>
 }
