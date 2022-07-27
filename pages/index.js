@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
 
     <main className={styles.main}>
-    
+    <FilterBar/>
     <section >
       <Map/>
     </section>
@@ -29,7 +29,7 @@ export default function Home() {
 
     </main>
 
-<FilterBar/>
+
 
       
     </div>

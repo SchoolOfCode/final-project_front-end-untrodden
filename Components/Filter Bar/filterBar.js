@@ -74,7 +74,7 @@ export default function FilterBar(){
      }
 
 
-    return <div className={styles.filterbar}>
+    return (<div className={styles.filterbar}>
        
 <select className={styles.dropdown} id="regions" onChange={()=>onChangeRegionState()}>
   <option  value="0">Region:</option>
@@ -93,5 +93,5 @@ export default function FilterBar(){
 
 <input className={styles.input} type='text' placeholder='Seach Locations'/>
     </div>
-
+    )
 }
