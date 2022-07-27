@@ -1,4 +1,9 @@
 import Image from 'next/image';
+//components
+import LocationNameAndAddress from '../Components/FormComponents/LocationNameAndAddress';
+import LocationDescription from '../Components/FormComponents/LocationDescription';
+import LocationCategory from '../Components/FormComponents/LocationCategory';
+import LocationAmenities from '../Components/FormComponents/LocationAmenities';
 // amenities pics
 import Parking from '../public/amenities_images/local_parking.png';
 import Food from '../public/amenities_images/food.png';
@@ -27,195 +32,17 @@ export default function Addlocation() {
   return (
     <main className={styles.main}>
       <h1 className={styles.h1}>Add Location</h1>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.main_grid_container}>
           <div className={styles.flex_container_left}>
-            {/* location name section */}
-            <label htmlFor="locationName">Location Name:</label>
-            <input
-              type="text"
-              id="locationName"
-              {...register('locationName')}
-            />
-            {/* address section */}
-            <label htmlFor="Location Address">Location Address:</label>
+            <LocationNameAndAddress register={register} />
 
-            <label htmlFor="Street/road"></label>
-            <input
-              type="text"
-              id="Street/road"
-              placeholder="Street/Road"
-              {...register('street')}
-            />
-
-            <label htmlFor="location Town"></label>
-            <input
-              type="text"
-              id="location Town"
-              placeholder="Town"
-              {...register('town')}
-            />
-
-            <label htmlFor="location Region"></label>
-            <input
-              type="text"
-              id="locationn Region"
-              placeholder="Region"
-              {...register('region')}
-            />
-
-            <label htmlFor="location Postcode"></label>
-            <input
-              type="text"
-              id="location Postcode"
-              placeholder="Postcode"
-              {...register('postcode')}
-            />
-
-            {/* location description */}
-
-            <label htmlFor="locationDescription">Location Description:</label>
-            <p className={styles.description_p}>
-              Let us know why it’s a place worth visiting. Also, please tell us
-              about any nice restaurants or pubs in the area, transport tips and
-              any other useful information for a first time visitor.
-            </p>
-            <textarea
-              id="locationDescription"
-              {...register('location_description')}
-            />
-
-            {/* location category */}
+            <LocationDescription register={register} />
 
             <label htmlFor="Location Category">Location category:</label>
             <div className={styles.location_category_grid_container}>
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_seaside"
-                    {...register('category_seaside')}
-                  />
-                  <span>Seaside</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_castles"
-                    {...register('category_castles')}
-                  />
-                  <span>Castles</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input type="checkbox" id="caves" {...register('caves')} />
-                  <span>Caves</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_peaceful"
-                    {...register('category_peaceful')}
-                  />
-                  <span>Peaceful</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_hiking"
-                    {...register('category_hiking')}
-                  />
-                  <span>Hiking</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_hills"
-                    {...register('category_hills')}
-                  />
-                  <span>Hills</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_historic"
-                    {...register('category_historic')}
-                  />
-                  <span>Historic</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_secluded"
-                    {...register('category_secluded')}
-                  />
-                  <span>Secluded</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_casual"
-                    {...register('category_casual')}
-                  />
-                  <span>Casual</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_lake"
-                    {...register('category_lake')}
-                  />
-                  <span>Lake</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_busy"
-                    {...register('category_busy')}
-                  />
-                  <span>Busy</span>
-                </label>
-              </div>
-
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input
-                    type="checkbox"
-                    id="category_woods"
-                    {...register('category_woods')}
-                  />
-                  <span>Woods</span>
-                </label>
-              </div>
+              <LocationCategory register={register} />
             </div>
           </div>
 
