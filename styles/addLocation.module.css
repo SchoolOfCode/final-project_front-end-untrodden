@@ -109,6 +109,15 @@
 }
 
 /* amenities section */
+
+.flex_container_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  color: var(--secondary);
+}
+
 .amenities_category input:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
