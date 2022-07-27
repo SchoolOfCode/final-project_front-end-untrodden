@@ -1,3 +1,8 @@
+
+import styles from '../styles/Map.module.css'
+
+
+
 import { useRef, useState } from "react";
 import ReactMapGL from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css"; 
@@ -36,4 +41,5 @@ export default function Map() {
             >
         </ReactMapGL>
     )
+
 }
