@@ -1,0 +1,26 @@
+.filterbar{
+    display: flex;
+    justify-content: space-evenly;
+    height: 7vh;
+    width: 90vw;
+    border-radius: 10px;
+    background-color: #225544;
+    margin-top: 5vh;
+
+}
+
+.dropdown{
+    background-color: #225544;
+    border: none;
+    color: white;
+    margin: 10px;
+    width:10vw;
+}
+
+.dropdown_header{
+    color: #E8A941;
+}
+.input{
+    margin: 10px;
+    width:15vw;
+}
