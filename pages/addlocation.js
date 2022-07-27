@@ -56,7 +56,6 @@ export default function Addlocation() {
               any other useful information for a first time visitor.
             </p>
             <textarea
-              // type="text-area"
               id="locationDescription"
               {...register('location_description')}
             />
@@ -155,27 +154,6 @@ export default function Addlocation() {
                   <span>Woods</span>
                 </label>
               </div>
-
-              {/* <div className={styles.location_category_box}>
-                <label htmlFor="seaside">Seaside</label>
-                <input type="checkbox" id="seaside" {...register('seaside')} />
-              </div> */}
-              {/* <div>
-                <label htmlFor="castles">Castles</label>
-                <input type="checkbox" id="castles" {...register('castles')} />
-              </div>
-              <div>
-                <label htmlFor="caves">Caves</label>
-                <input type="checkbox" id="caves" {...register('caves')} />
-              </div>
-              <div>
-                <label htmlFor="peaceful">Peaceful</label>
-                <input
-                  type="checkbox"
-                  id="peaceful"
-                  {...register('peaceful')}
-                />
-              </div> */}
             </div>
           </div>
           <div className={styles.grid_right}>

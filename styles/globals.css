@@ -21,7 +21,7 @@ h1 {
 }
 
 /* Location page styles */
-input[type='text'],
+/* input[type='text'],
 textarea {
   display: inline-block;
   box-sizing: border-box;
@@ -36,17 +36,17 @@ textarea {
   border-radius: 10px;
   font-weight: 500;
   font-size: 26px;
-}
-label {
+} */
+/* label {
   color: var(--secondary);
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   margin-left: 1.2rem;
-}
-textarea {
+} */
+/* textarea {
   min-height: 300px;
   max-width: 500px;
   min-width: 500px;
-}
+} */
