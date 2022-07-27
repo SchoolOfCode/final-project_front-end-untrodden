@@ -25,6 +25,7 @@ h1 {
 textarea {
   display: inline-block;
   box-sizing: border-box;
+
   width: 80%;
   padding: 0.7rem 1.2rem;
   margin: 0.5rem 0;
@@ -50,3 +51,5 @@ textarea {
   max-width: 500px;
   min-width: 500px;
 } */
+
+
