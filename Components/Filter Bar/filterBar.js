@@ -5,7 +5,7 @@ let catagory = [
                 "Seaside",
                 "Castles",
                 "Caves",
-                "Peacful",
+                "Peaceful",
                 "Hiking",
                 "Hills",
                 "Historic",
@@ -26,7 +26,32 @@ let regions = [
                 "East of England",
                 "South West"]
 
-let amenities = []
+let amenities = [ 
+                "parking",
+                "food",
+                "family",
+                "changing facilities",
+                "disability access",
+                "peaceful",
+                "electric_charging",
+                "no_restaurants",
+                "museums",
+                "beach",
+                "hiking",
+                "pet_friendly",
+                "forests",
+                "lots_of_wildlife",
+                "watersports",
+                "shopping",
+                "bodies_of_water",
+                "camping",
+                "mountains",
+                "hearing_loop",
+                "public_transport_good",
+                "public_transport_bad",
+                "accommodation",
+                "wifi",
+]
 
 
 
@@ -43,6 +68,7 @@ export default function FilterBar(){
 
     function onChangeCatagoryState(){
         let catagory = document.getElementById("catagory").value
+        console.log(catagory)
                   setCatagoryState(catagory)
          console.log(catagoryState)
      }
