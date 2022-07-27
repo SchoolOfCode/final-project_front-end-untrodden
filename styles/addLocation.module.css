@@ -107,3 +107,20 @@
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
+
+/* amenities section */
+.amenities_category input:checked + span .amenities_pic {
+  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%);
+}
+
+.amenities_category label input {
+  display: none;
+}
+
+.amenities_category_grid_container {
+  margin-top: 1rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}

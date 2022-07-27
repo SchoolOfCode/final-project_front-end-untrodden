@@ -1,3 +1,12 @@
+import Image from 'next/image';
+import Parking from '../public/amenities_images/local_parking.png';
+import Food from '../public/amenities_images/food.png';
+import Family from '../public/amenities_images/carbon_pedestrian-family.png';
+import BabyChanging from '../public/amenities_images/baby_changing_station.png';
+import Disability from '../public/amenities_images/accessible.png';
+import Peaceful from '../public/amenities_images/bxs_volume-mute.png';
+import Wifi from '../public/amenities_images/wifi.png';
+
 import styles from '../styles/addLocation.module.css';
 import { useForm } from 'react-hook-form';
 
@@ -20,6 +29,7 @@ export default function Addlocation() {
             />
             {/* address section */}
             <label htmlFor="Location Address">Location Address:</label>
+
             <label htmlFor="Street/road"></label>
             <input
               type="text"
@@ -27,6 +37,7 @@ export default function Addlocation() {
               placeholder="Street/Road"
               {...register('street')}
             />
+
             <label htmlFor="location Town"></label>
             <input
               type="text"
@@ -34,6 +45,7 @@ export default function Addlocation() {
               placeholder="Town"
               {...register('town')}
             />
+
             <label htmlFor="location Region"></label>
             <input
               type="text"
@@ -41,6 +53,7 @@ export default function Addlocation() {
               placeholder="Region"
               {...register('region')}
             />
+
             <label htmlFor="location Postcode"></label>
             <input
               type="text"
@@ -48,7 +61,9 @@ export default function Addlocation() {
               placeholder="Postcode"
               {...register('postcode')}
             />
+
             {/* location description */}
+
             <label htmlFor="locationDescription">Location Description:</label>
             <p className={styles.description_p}>
               Let us know why it’s a place worth visiting. Also, please tell us
@@ -59,110 +74,291 @@ export default function Addlocation() {
               id="locationDescription"
               {...register('location_description')}
             />
+
             {/* location category */}
+
             <label htmlFor="Location Category">Location category:</label>
             <div className={styles.location_category_grid_container}>
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
                   <input
                     type="checkbox"
-                    id="seaside"
-                    {...register('seaside')}
+                    id="category_seaside"
+                    {...register('category_seaside')}
                   />
                   <span>Seaside</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
                   <input
                     type="checkbox"
-                    id="castles"
-                    {...register('castles')}
+                    id="category_castles"
+                    {...register('category_castles')}
                   />
                   <span>Castles</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
                   <input type="checkbox" id="caves" {...register('caves')} />
                   <span>Caves</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
                   <input
                     type="checkbox"
-                    id="peaceful"
-                    {...register('peaceful')}
+                    id="category_peaceful"
+                    {...register('category_peaceful')}
                   />
                   <span>Peaceful</span>
                 </label>
               </div>
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input type="checkbox" id="hiking" {...register('hiking')} />
-                  <span>Hiking</span>
-                </label>
-              </div>
-              <div className={`${styles.location_category} ${styles.checked}`}>
-                <label>
-                  <input type="checkbox" id="hills" {...register('hills')} />
-                  <span>Hills</span>
-                </label>
-              </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
                   <input
                     type="checkbox"
-                    id="historic"
-                    {...register('historic')}
+                    id="category_hiking"
+                    {...register('category_hiking')}
+                  />
+                  <span>Hiking</span>
+                </label>
+              </div>
+
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="category_hills"
+                    {...register('category_hills')}
+                  />
+                  <span>Hills</span>
+                </label>
+              </div>
+
+              <div className={`${styles.location_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="category_historic"
+                    {...register('category_historic')}
                   />
                   <span>Historic</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
                   <input
                     type="checkbox"
-                    id="secluded"
-                    {...register('secluded')}
+                    id="category_secluded"
+                    {...register('category_secluded')}
                   />
                   <span>Secluded</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
-                  <input type="checkbox" id="casual" {...register('casual')} />
+                  <input
+                    type="checkbox"
+                    id="category_casual"
+                    {...register('category_casual')}
+                  />
                   <span>Casual</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
-                  <input type="checkbox" id="lake" {...register('lake')} />
+                  <input
+                    type="checkbox"
+                    id="category_lake"
+                    {...register('category_lake')}
+                  />
                   <span>Lake</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
-                  <input type="checkbox" id="busy" {...register('busy')} />
+                  <input
+                    type="checkbox"
+                    id="category_busy"
+                    {...register('category_busy')}
+                  />
                   <span>Busy</span>
                 </label>
               </div>
+
               <div className={`${styles.location_category} ${styles.checked}`}>
                 <label>
-                  <input type="checkbox" id="woods" {...register('woods')} />
+                  <input
+                    type="checkbox"
+                    id="category_woods"
+                    {...register('category_woods')}
+                  />
                   <span>Woods</span>
                 </label>
               </div>
             </div>
           </div>
+
+          {/* amenities section */}
+
           <div className={styles.grid_right}>
-            {/* <label
-              htmlFor="testing"
-              type="text"
-              id="testing"
-              {...register('testing', { required: true, maxLength: 20 })}
-            /> */}
+            <label>Select all available Amenities</label>
+
+            <div className={styles.amenities_category_grid_container}>
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_parking"
+                    {...register('amenities_parking')}
+                  />{' '}
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Parking}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_food"
+                    {...register('amenities_food')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Food}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_family"
+                    {...register('amenities_family')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Family}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_changing_facilities"
+                    {...register('amenities_changing_facilities')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={BabyChanging}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_disability_access"
+                    {...register('amenities_disability_access')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Disability}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_peaceful"
+                    {...register('amenities_peaceful')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Peaceful}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_wifi"
+                    {...register('amenities_wifi')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Wifi}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div>
+
+              {/* <div className={`${styles.amenities_category} ${styles.checked}`}>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="amenities_food"
+                    {...register('amenities_food')}
+                  />
+                  <span>
+                    <Image
+                      className={styles.amenities_pic}
+                      src={Food}
+                      height={35}
+                      width={35}
+                    ></Image>
+                  </span>
+                </label>
+              </div> */}
+            </div>
             <p>right</p>
           </div>
         </div>
