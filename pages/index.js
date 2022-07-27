@@ -3,6 +3,8 @@ import Image from 'next/image'
 import CardDisplay from '../Components/Card Display/cardDisplay'
 import styles from '../styles/Home.module.css'
 import Map from '../Components/map'
+
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -12,6 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <main className={styles.main}>
+    
     <section >
       <Map/>
     </section>
