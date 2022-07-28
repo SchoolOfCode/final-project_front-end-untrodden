@@ -140,9 +140,9 @@ export default function FilterBar(){
   {amenities.map(amen => <option>{amen}</option>)}
 </select>
 */}
-<div>
-      <FormControl sx={{ m: 1, width: 300, }}>
-        <InputLabel id="demo-multiple-checkbox-label" style={{color:'white'}} >Amenities:</InputLabel>
+<div className={styles.amenities_filter}>
+      <FormControl sx={{ m: 0.5, width: '15vw' }}>
+        <InputLabel id="demo-multiple-checkbox-label" style={{color:'#E8A941', fontSize:'1.2vw',}} >Amenities:</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
@@ -152,11 +152,12 @@ export default function FilterBar(){
           input={<OutlinedInput label="Amenities:" />}
           renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
+          style={{color:'white'}}
         >
           {amenities.map((amen) => (
             <MenuItem key={amen} value={amen}>
             <ListItemText primary={amen} />
-              <Checkbox checked={amenity.indexOf(amen) > -1} />
+              <Checkbox style={{color:'white'}} checked={amenity.indexOf(amen) > -1} />
              
             </MenuItem>
           ))}
