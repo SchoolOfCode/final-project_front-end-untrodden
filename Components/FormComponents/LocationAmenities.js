@@ -1,5 +1,5 @@
 //pictures
-import Parking from '../../public/amenities_images/local_parking.png';
+import Parking from '../../public/amenities_images/amenities_parking.png';
 import Food from '../../public/amenities_images/food.png';
 import Family from '../../public/amenities_images/carbon_pedestrian-family.png';
 import BabyChanging from '../../public/amenities_images/baby_changing_station.png';
