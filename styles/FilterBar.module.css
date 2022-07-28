@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+.filterbar{
+    display: flex;
+    justify-content: space-evenly;
+    height: 7vh;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #E8A941;
+    border-radius: 10px;
+    background-color: #225544;
+    margin-top: 5vh;
+    font-family:  "Raleway", sans-serif ;
+   
+}
+
+.dropdown{
+    background-color: #225544;
+    border: none;
+    color: white;
+    margin: 10px;
+    width:10vw;
+    padding-bottom: 8px;
+    font-family:  "Raleway", sans-serif ;
+    font-size: 20px;
+}
+
+.dropdown_header{
+    color: #E8A941;
+}
+
+.input{
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    width:25vw;
+    height: 65%;
+    font-family:  "Raleway", sans-serif ;
+    font-size: 20px;
+}
+
+
+.dropdown::-webkit-scrollbar {
+    width: 15px;               /* width of the entire scrollbar */
+  }
+  
+  .dropdown::-webkit-scrollbar-track {
+    background: #225544;  /* color of the tracking area */
+    border-radius: 10px;        
+  }
+  
+  .dropdown::-webkit-scrollbar-thumb {
+    background-color: #E8A941;    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+    height: 50px;
+  }
+ 
+
+  .multi{
+    margin-top: 15px;
+    max-width: 25vw;
+    background-color: #225544;
+  }

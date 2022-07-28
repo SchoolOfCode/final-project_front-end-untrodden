@@ -1,11 +1,14 @@
+import styles from '../styles/Map.module.css'
 import { useRef, useState } from "react";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL,{Marker, Popup} from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css"; 
 
-
-export default function Map() {
+export default function Map({allLocationData}) {
     const mapRef = useRef(null);
-    // const map =  new mapboxgl.Map({});
+    const [showPopup, setShowPopup] = useState(false);
+    const [popupLat, setPopupLat] = useState(null);
+    const [popupLong, setPopupLong] = useState(null);
+    const [popupName, setPopupName]= useState(null)
     const [viewport, setViewport] = useState({
         width: "100%",
         height: "100%",
@@ -14,17 +17,13 @@ export default function Map() {
         longitude: -3.898575,
         zoom: 5
     });
-//  attempt at event listener to check if the map is even registering the drag, but it doesnt like the const on line 9 ?????
-    // map.on('drag', () => {
-    //     console.log('A drag event occurred.');
-    //     });
 
     return (
+        <section className={styles.map_container}>
         <ReactMapGL
-            mapStyle="mapbox://styles/tombooth453/cl622p3gs000914s5r8fg0jak"
-            // mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
-      mapboxAccessToken="pk.eyJ1IjoidG9tYm9vdGg0NTMiLCJhIjoiY2w2MHN1eHRzMDNocDNqanZraHdnODk3MiJ9.v1i7uaU_HioJgFeF0REClw"
-            {...viewport}
+            mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
+            mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
+                   {...viewport}
             // onViewportChange={(nextViewport) => setViewport(nextViewport)}
             // Below made the map controlled and so moveable.
             onMove={evt => setViewport(evt.viewport)}
@@ -34,6 +33,28 @@ export default function Map() {
             minZoom ={5}
             maxZoom = {16}
             >
+{allLocationData.map(location => <Marker longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
+                <img src="/location-marker.png" onClick={() => {
+                    setPopupLat(location.latitude);
+                    setPopupLong(location.longitude)
+                    setPopupName(location.location_name)
+                    setShowPopup(true)}} />
+             </Marker>
+ )}
+              
+    {showPopup && (
+      <Popup longitude={popupLong} latitude={popupLat}
+              anchor="top-left"
+        closeOnClick={false}
+        onClose={() => setShowPopup(false)}>
+        {popupName}
+      </Popup>)}
+
+    
         </ReactMapGL>
+      
+  
+        </section>
     )
+
 }
