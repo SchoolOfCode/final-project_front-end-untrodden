@@ -24,9 +24,10 @@ export default function Map() {
     return (
         <section className={styles.map_container}>
         <ReactMapGL
-            mapStyle="mapbox://styles/tombooth453/cl622p3gs000914s5r8fg0jak"
-            // mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
-      mapboxAccessToken="pk.eyJ1IjoidG9tYm9vdGg0NTMiLCJhIjoiY2w2MHN1eHRzMDNocDNqanZraHdnODk3MiJ9.v1i7uaU_HioJgFeF0REClw"
+            // mapStyle="mapbox://styles/tombooth453/cl622p3gs000914s5r8fg0jak"
+            mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
+            mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
+        //   mapboxAccessToken="pk.eyJ1IjoidG9tYm9vdGg0NTMiLCJhIjoiY2w2MHN1eHRzMDNocDNqanZraHdnODk3MiJ9.v1i7uaU_HioJgFeF0REClw"
             {...viewport}
             // onViewportChange={(nextViewport) => setViewport(nextViewport)}
             // Below made the map controlled and so moveable.
