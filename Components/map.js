@@ -1,12 +1,14 @@
 
 import styles from '../styles/Map.module.css'
 import { useRef, useState } from "react";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL,{Marker, Popup} from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css"; 
-
+import mapboxgl from 'mapbox-gl';
 
 export default function Map() {
     const mapRef = useRef(null);
+    const [showPopup, setShowPopup] = useState(false);
+
     // const map =  new mapboxgl.Map({});
     const [viewport, setViewport] = useState({
         width: "100%",
@@ -21,14 +23,50 @@ export default function Map() {
     //     console.log('A drag event occurred.');
     //     });
 
+    const geojson = {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-77.032, 38.913]
+            },
+            properties: {
+              title: 'Mapbox',
+              description: 'Washington, D.C.'
+            }
+          },
+          {
+            type: 'Feature',
+            geometry: {
+              type: 'Point',
+              coordinates: [-122.414, 37.776]
+            },
+            properties: {
+              title: 'Mapbox',
+              description: 'San Francisco, California'
+            }
+          }
+        ]
+      };
+
+// add markers to map
+{/*for (const feature of geojson.features) {
+    // create a HTML element for each feature
+    const el = document.createElement('div');
+    el.className = 'marker';
+  
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(Map); */}
+  
+
     return (
         <section className={styles.map_container}>
         <ReactMapGL
-            // mapStyle="mapbox://styles/tombooth453/cl622p3gs000914s5r8fg0jak"
             mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
             mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
-        //   mapboxAccessToken="pk.eyJ1IjoidG9tYm9vdGg0NTMiLCJhIjoiY2w2MHN1eHRzMDNocDNqanZraHdnODk3MiJ9.v1i7uaU_HioJgFeF0REClw"
-            {...viewport}
+                   {...viewport}
             // onViewportChange={(nextViewport) => setViewport(nextViewport)}
             // Below made the map controlled and so moveable.
             onMove={evt => setViewport(evt.viewport)}
@@ -38,7 +76,32 @@ export default function Map() {
             minZoom ={5}
             maxZoom = {16}
             >
+
+              <Marker longitude={-2} latitude={54} anchor="bottom" >
+                <img src="/location-marker.png" onClick={() => setShowPopup(true)} />
+             </Marker>
+
+    {showPopup && (
+      <Popup longitude={-2} latitude={54}
+              anchor="top-left"
+        closeOnClick={false}
+        onClose={() => setShowPopup(false)}>
+        You are here
+      </Popup>)}
+
+      {showPopup && (
+      <Popup longitude={-6.5} latitude={55}
+        anchor="top-left"
+        closeOnClick={false}
+        onClose={() => setShowPopup(false)}>
+        You are here
+      </Popup>)}
+    <Marker longitude={-6.5} latitude={55} anchor="bottom" >
+      <img src="/location-marker.png" />
+    </Marker>
         </ReactMapGL>
+      
+  
         </section>
     )
 
