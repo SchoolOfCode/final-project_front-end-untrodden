@@ -121,7 +121,6 @@
 .amenities_category input:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
-  /* border: 1px solid black; */
 }
 
 .amenities_category label input {
@@ -130,7 +129,20 @@
 
 .amenities_category_grid_container {
   margin-top: 1rem;
-  width: 90%;
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+}
+/* .amenities_category {
+  border-radius: 8px;
+} */
+.amenities_pic:hover {
+  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%);
+}
+.amenities_category:hover {
+  transform: scale(1.1);
+  transition-duration: 100ms;
+  transition-property: transform;
 }

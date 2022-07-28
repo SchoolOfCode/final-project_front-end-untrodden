@@ -39,6 +39,9 @@ export default function Addlocation() {
               <div className={styles.amenities_category_grid_container}>
                 <LocationAmenities register={register} />
               </div>
+              {/* Mapbox map will go here */}
+
+              {/* add image will go here */}
 
               {/* closing divs for the whole form */}
             </div>
