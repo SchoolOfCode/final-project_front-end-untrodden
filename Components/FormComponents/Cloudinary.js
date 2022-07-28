@@ -29,6 +29,7 @@ export default function CloudinaryTest() {
 
   async function handleOnSubmit(event) {
     event.preventDefault();
+    console.log(event)
 
     const form = event.currentTarget;
     const fileInput = Array.from(form.elements).find(({ name }) => name === 'file');
@@ -39,9 +40,9 @@ export default function CloudinaryTest() {
       formData.append('file', file);
     }
 
-    formData.append('upload_preset', 'my-uploads');
+    formData.append('upload_preset', 'untrodden-pics');
 
-    const data = await fetch('https://api.cloudinary.com/v1_1/[Your Cloudinary Cloud Name]/image/upload', {
+    const data = await fetch('https://api.cloudinary.com/v1_1/dkethqypm/image/upload', {
       method: 'POST',
       body: formData
     }).then(r => r.json());
@@ -60,11 +61,11 @@ export default function CloudinaryTest() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Image Uploader
+          Image Uploader=
         </h1>
 
         <p className={styles.description}>
-          Upload your image to Cloudinary!
+          Please upload a photo of the location below:
         </p>
 
         <form className={styles.form} method="post" onChange={handleOnChange} onSubmit={handleOnSubmit}>
@@ -85,10 +86,6 @@ export default function CloudinaryTest() {
           )}
         </form>
       </main>
-
-      <footer className={styles.footer}>
-        <p>Find the tutorial on <a href="https://spacejelly.dev/">spacejelly.dev</a>!</p>
-      </footer>
     </div>
   )
 }
