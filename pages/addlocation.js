@@ -1,20 +1,24 @@
-import Image from 'next/image';
+import CloudinaryTest from "../Components/FormComponents/Cloudinary";
+
+
+
+import Image from "next/image";
 //components
-import LocationNameAndAddress from '../Components/FormComponents/LocationNameAndAddress';
-import LocationDescription from '../Components/FormComponents/LocationDescription';
-import LocationCategory from '../Components/FormComponents/LocationCategory';
-import LocationAmenities from '../Components/FormComponents/LocationAmenities';
+import LocationNameAndAddress from "../Components/FormComponents/LocationNameAndAddress";
+import LocationDescription from "../Components/FormComponents/LocationDescription";
+import LocationCategory from "../Components/FormComponents/LocationCategory";
+import LocationAmenities from "../Components/FormComponents/LocationAmenities";
 // amenities pics
 
-import styles from '../styles/addLocation.module.css';
-import { useForm } from 'react-hook-form';
+import styles from "../styles/addLocation.module.css";
+import { useForm } from "react-hook-form";
 
 export default function Addlocation() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => console.log(data);
 
-  return (
+  return (<>
     <main className={styles.main}>
       <h1 className={styles.h1}>Add Location</h1>
 
@@ -39,9 +43,15 @@ export default function Addlocation() {
               <div className={styles.amenities_category_grid_container}>
                 <LocationAmenities register={register} />
               </div>
+
               {/* Mapbox map will go here */}
 
               {/* add image will go here */}
+
+
+
+
+
 
               {/* closing divs for the whole form */}
             </div>
@@ -52,5 +62,7 @@ export default function Addlocation() {
         </div>
       </form>
     </main>
+    <CloudinaryTest></CloudinaryTest>
+    </>
   );
 }
