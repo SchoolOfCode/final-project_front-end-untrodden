@@ -15,6 +15,7 @@ const MapComponent = dynamic(() => import("../Components/map.js"), {
 
 export default function Home() {
 
+
   const [allLocationData , setAllLocationData] = useState([])
 
   useEffect(() => {
@@ -57,4 +58,5 @@ export default function Home() {
     </div>
   )
 }
+
 

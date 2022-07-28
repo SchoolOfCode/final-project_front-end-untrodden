@@ -16,9 +16,11 @@
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+
     "react-hook-form": "^7.33.1",
     "react-map-gl": "^7.0.18",
     "react-select": "^5.4.0"
+
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
