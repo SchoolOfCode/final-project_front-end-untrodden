@@ -1,13 +1,12 @@
-
 import Head from 'next/head'
 import Image from 'next/image'
 import CardDisplay from '../Components/Card Display/cardDisplay'
 import styles from '../styles/Home.module.css'
 import Map from '../Components/map'
 import FilterBar from '../Components/Filter Bar/filterBar'
-
 import dynamic from 'next/dynamic'
-
+import React, { useEffect, useState } from 'react'
+ 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
     loading: () => "Loading...",
     ssr: false
@@ -15,6 +14,25 @@ const MapComponent = dynamic(() => import("../Components/map.js"), {
 
 
 export default function Home() {
+
+  const [allLocationData , setAllLocationData] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const url = `https://untrodden.herokuapp.com/locations`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setAllLocationData(data.payload);
+              } catch (error) {
+        console.log('error', error);
+      }
+    }
+    fetchData()
+  } ,[])
+
+  console.log(allLocationData)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,10 +43,10 @@ export default function Home() {
       <FilterBar/>
     <main className={styles.main}>
         <section>
-          <MapComponent />
+          <MapComponent allLocationData={allLocationData}/>
         </section>
         <section>
-        <CardDisplay/>
+        <CardDisplay allLocationData={allLocationData}/>
     </section>
 
     </main>

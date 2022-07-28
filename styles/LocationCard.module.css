@@ -47,5 +47,5 @@
     border: none;
     border-radius: 5px;
     height:25px;
-    width:25%;
+    min-width:25%;
 }
