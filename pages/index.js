@@ -25,12 +25,10 @@ export default function Home() {
       <FilterBar/>
     <main className={styles.main}>
         <section>
-    <div id='map' className={styles.map_container}>
-            <MapComponent />
-        </div>
-    </section>
-    <section>
-    <CardDisplay/>
+          <MapComponent />
+        </section>
+        <section>
+        <CardDisplay/>
     </section>
 
     </main>

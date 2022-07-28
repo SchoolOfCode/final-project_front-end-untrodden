@@ -1,4 +1,6 @@
 .map_container{
-    width:40vw;
-    height: 60vh;
+    width:50vw;
+    height: 80vh;
+    margin-top: 3vh;
+    border-radius: 10px;
 }
