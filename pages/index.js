@@ -3,9 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import CardDisplay from '../Components/Card Display/cardDisplay'
 import styles from '../styles/Home.module.css'
-
 import Map from '../Components/map'
-
 import FilterBar from '../Components/Filter Bar/filterBar'
 
 import dynamic from 'next/dynamic'
@@ -27,12 +25,10 @@ export default function Home() {
       <FilterBar/>
     <main className={styles.main}>
         <section>
-    <div id='map' style={{height:'80vmax', width:'80vmax' }}>
-            <MapComponent />
-        </div>
-    </section>
-    <section>
-    <CardDisplay/>
+          <MapComponent />
+        </section>
+        <section>
+        <CardDisplay/>
     </section>
 
     </main>

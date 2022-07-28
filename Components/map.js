@@ -1,8 +1,5 @@
 
 import styles from '../styles/Map.module.css'
-
-
-
 import { useRef, useState } from "react";
 import ReactMapGL from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css"; 
@@ -25,6 +22,7 @@ export default function Map() {
     //     });
 
     return (
+        <section className={styles.map_container}>
         <ReactMapGL
             mapStyle="mapbox://styles/tombooth453/cl622p3gs000914s5r8fg0jak"
             // mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
@@ -40,6 +38,7 @@ export default function Map() {
             maxZoom = {16}
             >
         </ReactMapGL>
+        </section>
     )
 
 }
