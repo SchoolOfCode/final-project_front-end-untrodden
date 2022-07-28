@@ -2,6 +2,9 @@ import styles from '../../styles/LocationCard.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
+
+
+
 export default function LocationCard ({location}){
     return <div className={styles.card}>
         <img className={styles.card_img} src={location.image_url}  alt="Location" />
@@ -10,11 +13,10 @@ export default function LocationCard ({location}){
                 <p className={styles.description}>{location.location_description}</p>
             <section className={styles.amenities_button}>        
                 <section className={styles.amenities}>
-                    <Image src='/wc.png' height={24} width={24} responsive/>
-                    <Image src='/wc.png' height={24} width={24} responsive/> 
-                    <Image src='/wc.png' height={24} width={24} responsive/> 
-                    <Image src='/wc.png' height={24} width={24} responsive/>
-                </section>
+
+                  {location.amenities.map(amenity =><img src={`/amenities_images/${amenity}.png`} height={24} width={24} />)}  
+                    
+                    </section>
                 <Link href={`/location/${location.location_id}`}><button className={styles.button}>More Info</button></Link>
             </section>
 
