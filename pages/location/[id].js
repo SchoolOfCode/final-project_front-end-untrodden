@@ -31,9 +31,28 @@ export async function getStaticProps(context) {
 export default function LocationDisplayPage({ location }) {
   return (
     <div>
-      <h1>hello</h1>
-      <p>{location.location_name}</p>
+      <img src={location.image_url} width={300} height={300}></img>
+
+      <section className={styles.amenities}>
+        {location.amenities.map((amenity) => (
+          <>
+            <img
+              src={`/amenities_images/${amenity}.png`}
+              height={24}
+              width={24}
+            />
+            <p>{amenity}</p>
+          </>
+        ))}
+      </section>
+
+      <h1>{location.location_name}</h1>
+      <h3>Address</h3>
       <p>{location.street}</p>
+      <p>{location.town}</p>
+      <p>{location.region}</p>
+      <p>{location.postcode}</p>
+      <p>{location.description}</p>
     </div>
   );
 }
