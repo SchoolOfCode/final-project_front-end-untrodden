@@ -18,23 +18,34 @@
     width:35%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 
 .card_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 60%;
     height: 100%;
     margin-left:15px;
+    
 }
 
 .title {
     color: #E8A941;
     margin: 0;
+    font-size: 1.2vw;
 }
 
 .description{
+    
     max-height:50%;
     overflow: hidden;
+    font-size: 0.8vw;
+    margin-top: 0;
+    margin-bottom: 5;
+
 }
 .amenities_button{
     display: flex;
@@ -46,6 +57,7 @@
     color: #225544;
     border: none;
     border-radius: 5px;
-    height:25px;
-    min-width:25%;
+    max-height:25px;
+    min-width:26%;
+    font-size: 0.8vw;
 }

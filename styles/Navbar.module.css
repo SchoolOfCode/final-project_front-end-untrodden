@@ -27,10 +27,11 @@
     justify-content: space-evenly;
     width:40%;
     padding-top:3vh; 
-    
+    font-size: 1vw
 }
 
 .link{
     color:inherit;
     text-decoration: none; 
+
 }
