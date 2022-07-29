@@ -23,9 +23,13 @@
 
 
 .card_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 60%;
     height: 100%;
     margin-left:15px;
+    
 }
 
 .title {
@@ -35,9 +39,13 @@
 }
 
 .description{
+    
     max-height:50%;
     overflow: hidden;
-    font-size: 1vw;
+    font-size: 0.8vw;
+    margin-top: 0;
+    margin-bottom: 5;
+
 }
 .amenities_button{
     display: flex;
