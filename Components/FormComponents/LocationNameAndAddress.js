@@ -2,7 +2,7 @@ export default function LocationNameAndAddress({ register }) {
   return (
     <>
       <label htmlFor="locationName">Location Name:</label>
-      <input type="text" id="locationName" {...register('locationName')} />
+      <input type="text" id="locationName" {...register('location_name')} />
       {/* address section */}
       <label htmlFor="Location Address">Location Address:</label>
 

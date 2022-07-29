@@ -1,4 +1,3 @@
-import CloudinaryTest from '../Components/FormComponents/Cloudinary';
 
 import Image from 'next/image';
 //components
@@ -6,15 +5,56 @@ import LocationNameAndAddress from '../Components/FormComponents/LocationNameAnd
 import LocationDescription from '../Components/FormComponents/LocationDescription';
 import LocationCategory from '../Components/FormComponents/LocationCategory';
 import LocationAmenities from '../Components/FormComponents/LocationAmenities';
+// dynamic components
+import dynamic from 'next/dynamic'
+const Cloudinary = dynamic(() => import("../Components/FormComponents/Cloudinary"), {
+    loading: () => "Loading...",
+    ssr: false
+  });
 // amenities pics
 
 import styles from '../styles/addLocation.module.css';
 import { useForm } from 'react-hook-form';
+import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
 
 export default function Addlocation() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) =>{
+    console.log(data)
+    const res = await fetch("https://untrodden.herokuapp.com/locations", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const responseData = await res.json();
+    console.log(responseData)
+    return responseData;
+   
+    
+
+  }
+
+
+
+
+
+
+// // function to add a new resources to the backend
+// async function postResources(input) {
+//   const res = await fetch("v1/resources", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(input),
+//   });
+//   const data = await res.json();
+//   return data;
+// }
+
+
+
+
+
 
   return (
     <>
@@ -43,9 +83,10 @@ export default function Addlocation() {
                   <LocationAmenities register={register} />
                 </div>
 
-                {/* Mapbox map will go here */}
+                <LocationCoordinates register={register}/>
 
                 {/* add image will go here */}
+                <Cloudinary setValue={setValue} />
 
                 {/* closing divs for the whole form */}
               </div>
@@ -55,7 +96,6 @@ export default function Addlocation() {
             <button className={styles.btn}>Add Location</button>
           </div>
         </form>
-        <CloudinaryTest />
       </main>
     </>
   );
