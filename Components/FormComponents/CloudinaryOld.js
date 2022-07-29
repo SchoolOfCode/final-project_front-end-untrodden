@@ -2,9 +2,14 @@ import { useState } from 'react';
 import Head from 'next/head';
 import styles from '../../styles/cloudinaryTest.module.css';
 
-export default function Cloudinary({ setValue }) {
+export default function CloudinaryTest() {
   const [imageSrc, setImageSrc] = useState();
   const [uploadData, setUploadData] = useState();
+
+  /**
+   * handleOnChange
+   * @description Triggers when the file input changes (ex: when a file is selected)
+   */
 
   function handleOnChange(changeEvent) {
     const reader = new FileReader();
@@ -17,30 +22,41 @@ export default function Cloudinary({ setValue }) {
     reader.readAsDataURL(changeEvent.target.files[0]);
   }
 
+  /**
+   * handleOnSubmit
+   * @description Triggers when the main form is submitted
+   */
+
   async function handleOnSubmit(event) {
     event.preventDefault();
-    // console.log(event);
 
-    const response = await fetch(
+    const form = event.currentTarget;
+    const fileInput = Array.from(form.elements).find(
+      ({ name }) => name === 'file'
+    );
+
+    const formData = new FormData();
+
+//formdata looks something like this:
+// 'file' : file
+// 'upload_preset' : 'untrodden-pics'
+
+    for (const file of fileInput.files) {
+      formData.append('file', file);
+    }
+    
+    formData.append('upload_preset', 'untrodden-pics');
+    const data = await fetch(
       'https://api.cloudinary.com/v1_1/dkethqypm/image/upload',
       {
-       method: 'POST',
-       headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-       },
-       body: JSON.stringify({
-          file: imageSrc,
-          upload_preset: 'untrodden-pics'
-      })
-     })
-    
-    const data = await response.json();
-    
+        method: 'POST',
+        body: formData,
+      }
+    ).then((r) => r.json());
+
     setImageSrc(data.secure_url);
     setUploadData(data);
-    setValue('image_url', data.secure_url);
-    console.log(data);
+    // console.log(data);
   }
 
   return (
@@ -58,22 +74,21 @@ export default function Cloudinary({ setValue }) {
           Please upload a photo of the location below:
         </p>
 
-        {/* Changed this form to a div tag instead, as we can't have a form inside a form */}
-        <div
+        <form
           className={styles.form}
           method="post"
-          // onChange={handleOnChange} -> Moved this directly to the input tag below
-          // onSubmit={handleOnSubmit} -> Moved this directly to the button tag below
+          onChange={handleOnChange}
+          onSubmit={handleOnSubmit}
         >
           <p>
-            <input onChange={handleOnChange} type="file" name="file" /> 
+            <input type="file" name="file" />
           </p>
 
           <img src={imageSrc} />
 
           {imageSrc && !uploadData && (
             <p>
-              <button onClick={handleOnSubmit}>Upload Files</button>
+              <button>Upload Files</button>
             </p>
           )}
           {/* 
@@ -82,7 +97,7 @@ export default function Cloudinary({ setValue }) {
               <pre>{JSON.stringify(uploadData, null, 2)}</pre>
             </code>
           )} */}
-        </div>
+        </form>
       </main>
     </div>
   );
