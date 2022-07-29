@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-
+//get props to location page
 
 export default function LocationCard ({location}){
     return <div className={styles.card}>
