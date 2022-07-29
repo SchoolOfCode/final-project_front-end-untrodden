@@ -52,7 +52,7 @@ export default function Cloudinary({ setValue }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Image Uploader=</h1>
+        <h1 className={styles.title}>Upload Location Image</h1>
 
         <p className={styles.description}>
           Please upload a photo of the location below:
