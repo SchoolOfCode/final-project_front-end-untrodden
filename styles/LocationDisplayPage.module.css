@@ -1,4 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap');
+
+.location_page{
+  background-color: #225544;
+  padding: 5vw;
+  margin: 10vw;
+  border-radius: 10px;
+  color: white;
+  font-family: 'raleway';
+}
+
 .amenities {
   display: flex;
   align-items: center;
+  max-width: 40vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.icon_description{
+display: flex;
+align-items: center;
+}
+
+.image{
+  width: 40vw;
+  height: 40vw;
+  border-radius: 10px;
+
+  object-fit: cover;
 }
