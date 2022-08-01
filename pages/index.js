@@ -43,13 +43,17 @@ export default function Home() {
 
 
 
-  function onChangeCategoryState(){
-    let selectedCategory = document.getElementById("category").value
-      setCategoryState("")
-      setCategoryState(selectedCategory)
-      console.log(categoryState)
+  function onChangeCategoryState(event){
+    // let selectedCategory = document.getElementById("category").value
+      // setCategoryState("")
+      // console.log(event)
+      console.log(event.target.value);
+      setCategoryState(event.target.value)
+      // console.log(categoryState)
     //if alllocatoindata.    
-filteredLocations()
+  setDisplayedData([...allLocationData.filter(location =>location.categories.includes(event.target.value))])
+
+// filteredLocations()
 }
 
 
@@ -60,10 +64,9 @@ function filteredLocations(){
 {/*
   allLocationData.map(location => {if (location.categories.includes(categoryState)){
   filteredLocations.push(location)
-  console.log(filteredLocations)
-  }})
+}})
 */}
-
+console.log(finalLocations)
   setDisplayedData(finalLocations)
  
 }
@@ -81,8 +84,8 @@ function filteredLocations(){
   {value:"category_secluded", label:"Secluded"},
   {value:"category_casual", label:"Casual"},
   {value:"category_lakes", label:"Lake"},
-  {value:"category_busy", label:"Woods"},
-  {value:"category_woods", label:"Busy"},
+  {value:"category_woods", label:"Woods"},
+  {value:"category_busy", label:"Busy"},
 ]
 
 
@@ -97,7 +100,7 @@ function filteredLocations(){
         <link rel="icon" href="/favicon.ico" />
       </Head>
             <div> 
-          <select className={styles.dropdown} id="category" onChange={()=>onChangeCategoryState()}>
+          <select className={styles.dropdown} id="category" onChange={onChangeCategoryState} value={categoryState}>
           <option value="0">Category:</option>
           {category.map(cat =><option key={cat.value} value={cat.value}>{cat.label}</option>)}
             </select>
