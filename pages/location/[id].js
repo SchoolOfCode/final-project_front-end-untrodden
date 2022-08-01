@@ -48,13 +48,19 @@ export default function LocationDisplayPage({ location }) {
 </div>
 <div className={styles.right_div}>
       <h1>{location.location_name}</h1>
+      console.log(location.location_name)
       <h3 className={styles.heading}>Address</h3>
       <p>{location.street}</p>
+      console.log(location.street)
       <p>{location.town}</p>
+      console.log(location.town)
       <p>{location.region}</p>
+      console.log(location.region)
       <p>{location.postcode}</p>
+      console.log(location.postcode)
       <h3 className={styles.heading}>Description</h3>
       <p>{location.location_description}</p>
+      console.log(location.location_description)
 
   </div>   
     </div>
