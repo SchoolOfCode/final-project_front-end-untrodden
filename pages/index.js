@@ -23,7 +23,7 @@ export default function Home() {
 
   const [categoryState, setCategoryState] = useState("")
   const [allLocationData , setAllLocationData] = useState([])
-
+  const[displayedData,setDisplayedData]= useState([])
  
 
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function Home() {
         const response = await fetch(url);
         const data = await response.json();
         setAllLocationData(data.payload);
+        setDisplayedData(data.payload)
               } catch (error) {
         console.log('error', error);
       }
@@ -44,20 +45,28 @@ export default function Home() {
 
   function onChangeCategoryState(){
     let selectedCategory = document.getElementById("category").value
+      setCategoryState("")
       setCategoryState(selectedCategory)
-    console.log(categoryState)
+      console.log(categoryState)
     //if alllocatoindata.    
 filteredLocations()
 }
 
+
 function filteredLocations(){
-  let filteredLocations = []
+  let filteredLocations = [...allLocationData]
+
+  let finalLocations = [...filteredLocations.filter(location =>location.categories.includes(categoryState))]
+{/*
   allLocationData.map(location => {if (location.categories.includes(categoryState)){
   filteredLocations.push(location)
-  } setAllLocationData(filteredLocations) })
+  console.log(filteredLocations)
+  }})
+*/}
 
+  setDisplayedData(finalLocations)
+ 
 }
-
 
 
 
@@ -79,6 +88,7 @@ function filteredLocations(){
 
   console.log(allLocationData)
 
+
   return (
     <div className={styles.container}>
       <Head>
@@ -90,15 +100,15 @@ function filteredLocations(){
           <select className={styles.dropdown} id="category" onChange={()=>onChangeCategoryState()}>
           <option value="0">Category:</option>
           {category.map(cat =><option key={cat.value} value={cat.value}>{cat.label}</option>)}
-        </select>
+            </select>
         </div>
-      <FilterBar/>
-    <main className={styles.main}>
+     {/* <FilterBar/>*/}
+         <main className={styles.main}>
         <section>
-          <MapComponent allLocationData={allLocationData}/>
+          <MapComponent allLocationData={displayedData}/>
         </section>
         <section>
-        <CardDisplay allLocationData={allLocationData}/>
+        <CardDisplay allLocationData={displayedData}/>
     </section>
 
     </main>
