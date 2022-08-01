@@ -6,8 +6,36 @@ import Map from '../Components/map'
 import FilterBar from '../Components/Filter Bar/filterBar'
 import dynamic from 'next/dynamic'
 import React, { useEffect, useState } from 'react'
-//import CategoryFilter from '../Components/Category Filter/categoryFilter'
+import CategoryFilter from '../Components/Category Filter/categoryFilter'
+import RegionFilter from '../Components/Region Filter/regionFilter'
  
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import ListItemText from '@mui/material/ListItemText';
+import Select from '@mui/material/Select';
+import Checkbox from '@mui/material/Checkbox';
+
+//import Select from 'react-select';
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+      color:'white',
+      backgroundColor: '#225544',
+    
+    },
+  },
+};
+
+
+
+
+
 
 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
@@ -25,6 +53,37 @@ export default function Home() {
   const [allLocationData , setAllLocationData] = useState([])
   const[displayedData,setDisplayedData]= useState([])
   const [regionState, setRegionState] = useState("")
+  const [amenity, setAmenity] = useState([]);
+
+  let amenities = [ 
+    "Parking",
+    "Food",
+    "Family",
+    "Changing facilities",
+    "Disability access",
+    "Peaceful",
+    "Electric charging",
+    "No restaurants",
+    "Museums",
+    "Beach",
+    "Hiking",
+    "Pet friendly",
+    "Forests",
+    "Lots of wildlife",
+    "Watersports",
+    "Shopping",
+    "Bodies of water",
+    "Camping",
+    "Mountains",
+    "Hearing loop",
+    "Public transport good",
+    "Public transport bad",
+    "Accommodation",
+    "Wifi",
+  ]
+  
+  
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +100,7 @@ export default function Home() {
     fetchData()
   } ,[])
 
+
   function onChangeRegionState(event){
     
      setRegionState(event.target.value)
@@ -55,56 +115,19 @@ export default function Home() {
 
 }
 
-
-
-
- let category = [
-  {value:"category_seaside", label:"Seaside"} ,
-  {value:"category_castles", label:"Castles"},
-  {value:"category_caves", label:"Caves"},
-  {value:"category_peaceful", label:"Peaceful"},
-  {value:"category_hiking", label:"Hiking"},
-  {value:"category_hills", label:"Hills"},
-  {value:"category_historic", label:"Historic"},
-  {value:"category_secluded", label:"Secluded"},
-  {value:"category_casual", label:"Casual"},
-  {value:"category_lakes", label:"Lake"},
-  {value:"category_woods", label:"Woods"},
-  {value:"category_busy", label:"Busy"},
-]
-let regions = [
-  {value:"London",label:"London"},
-  {value:"North East",label:"North East"},
-  {value:"North West",label:"North West"}, 
-  {value:"Yorkshire",label:"Yorkshire"}, 
-  {value:"East Midlands",label:"East Midlands"}, 
-  {value:"West Midlands",label:"West Midlands"}, 
-  {value:"South East",label:"South East"}, 
-  {value:"East of England",label:"East of England"},
-  {value:"South West",label:"South West"},
-  {value:"North Wales",label:"North Wales"},
-  {value:"South West Wales",label:"South West Wales"},
-  {value:"South East Wales",label:"South East Wales"},
-  {value:"Mid Wales",label:"Mid Wales"},
-  {value:"South West Scotland",label:"South West Scotland"},
-  {value:"North East Scotland",label:"North East Scotland"},
-  {value:"Central Scotland East",label:"Central Scotland East"},
-  {value:"Central Scotland West",label:"Central Scotland West"},
-  {value:"Sottish Highlands and Western Isles",label:"Sottish Highlands and Western Isles"},
-  {value:"Shetland and the Orkney Islands",label:"Shetland and the Orkney Islands"},
-  {value:"Edinburgh",label:"Edinburgh"},
-  {value:"Glasgow",label:"Glasgow"},
-  {value:"Antrim",label:"Antrim"},
-  {value:"Armagh",label:"Armagh"},
-  {value:"Down",label:"Down"},
-  {value:"Fermanagh",label:"Fermanagh"},
-  {value:"Londonderry",label:"Londonderry"},
-  {value:"Tyrone",label:"Tyrone"},
-]
+function handleChange (event) {
+  const {
+    target: { value },
+  } = event;
+  setAmenity(
+    // On autofill we get a stringified value.
+    typeof value === 'string' ? value.split(',') : value,
+  );
+  console.log(categoryState)
+};
 
 
   console.log(allLocationData)
-
 
   return (
     <div className={styles.container}>
@@ -114,20 +137,38 @@ let regions = [
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-      <select className={styles.dropdown} id="regions" onChange={onChangeRegionState} value={regionState}>
-  <option value="0">Region:</option>
-  {regions.map(reg => <option key={reg.value} value={reg.value}>{reg.label}</option>)}
-    </select>
-  </div>
+<section className='FilterBar'>
+<RegionFilter onChange={onChangeRegionState} value={regionState}/>
+<CategoryFilter onChange={onChangeCategoryState} value={categoryState} />
+<div className={styles.amenities_filter}>
+      <FormControl sx={{ m: 0.5, width: '15vw' }}>
+        <InputLabel id="demo-multiple-checkbox-label" style={{color:'#E8A941', fontSize:'1.2vw',}} >Amenities:</InputLabel>
+        <Select
+          labelId="demo-multiple-checkbox-label"
+          id="demo-multiple-checkbox"
+          multiple
+          value={amenity}
+          onChange={handleChange}
+          input={<OutlinedInput label="Amenities:" />}
+          renderValue={(selected) => selected.join(', ')}
+          MenuProps={MenuProps}
+          style={{color:'white'}}
+        >
+          {amenities.map((amen) => (
+            <MenuItem key={amen} value={amen}>
+            <ListItemText primary={amen} />
+              <Checkbox style={{color:'white'}} checked={amenity.indexOf(amen) > -1} />
+             
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </div>
+    
 
-            <div> 
-          <select className={styles.dropdown} id="category" onChange={onChangeCategoryState} value={categoryState}>
-          <option value="0">Category:</option>
-          {category.map(cat =><option key={cat.value} value={cat.value}>{cat.label}</option>)}
-            </select>
-        </div>
-     {/* <FilterBar/>*/}
+</section>
+          
+     
          <main className={styles.main}>
         <section>
           <MapComponent allLocationData={displayedData}/>
