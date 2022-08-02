@@ -7,8 +7,6 @@ import FilterBar from '../Components/Filter Bar/filterBar'
 import dynamic from 'next/dynamic'
 import React, { useEffect, useState } from 'react'
 //import CategoryFilter from '../Components/Category Filter/categoryFilter'
- 
-
 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
     loading: () => "Loading...",
