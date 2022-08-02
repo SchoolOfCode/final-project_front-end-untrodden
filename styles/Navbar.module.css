@@ -10,7 +10,7 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-top:2vh;
-    color: white;
+    color: #E8A941;
     font-family:  "Raleway", sans-serif ;
     font-size: 16;
     
@@ -31,7 +31,16 @@
 }
 
 .link{
-    color:inherit;
+    color:#E8A941;
     text-decoration: none; 
 
+}
+
+.header a{
+    text-decoration: none;
+}
+
+
+.login{
+    text-decoration: none;
 }

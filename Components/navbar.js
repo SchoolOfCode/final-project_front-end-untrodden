@@ -26,11 +26,11 @@ export default function Nav(){
         
         {user ?
         <>
-        <a href="/api/auth/logout">Logout</a>
+        <a className={styles.login} href="/api/auth/logout">Logout</a>
         <Profile />
         </>
         : 
-        <a href="/api/auth/login">Login</a>
+        <a className={styles.login} href="/api/auth/login">Login</a>
         }
         </nav>
     </header>
