@@ -22,16 +22,13 @@ export default function Nav() {
         </Link>
         {/* <Link href='/addlocation'><a  className={styles.link}>ADD LOCATION</a></Link> */}
 
-        {user ? (
+        
           <Link className={styles.link} href="/addlocation">
             Add Location
           </Link>
-        ) : (
-          <a className={styles.link} href="/api/auth/login">
-            Add Location
-          </a>
+    
 
-        )}
+        
 
         {user ? (
           <>
