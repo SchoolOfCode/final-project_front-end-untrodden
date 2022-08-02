@@ -156,7 +156,17 @@ setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(a
           value={amenityState}
           onChange={handleChange}
           input={<OutlinedInput label="Amenities:" />}
-          renderValue={(selected) => let selectedAms = [] selected.split(', ')}
+          renderValue={(selected) => {
+            let selectedAms = [] 
+            for (let i = 0; i < selected.length; i++) {
+              selectedAms.push(selected[i].slice(10))
+            }
+            for (let i = 0; i < selectedAms.length; i++) {
+              selectedAms[i] = selectedAms[i].replaceAll(/_/g, ' ');
+              selectedAms[i] = selectedAms[i].charAt(0).toUpperCase() + selectedAms[i].slice(1);
+            }
+            return selectedAms.join(', ')
+          }}
           MenuProps={MenuProps}
           style={{color:'black'}}
         >
