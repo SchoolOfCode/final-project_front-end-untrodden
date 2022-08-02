@@ -3,10 +3,12 @@ import CardDisplay from '../Components/Card Display/cardDisplay'
 import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic'
 import React, { useEffect, useState } from 'react'
+
 import CategoryFilter from '../Components/Category Filter/categoryFilter'
 import RegionFilter from '../Components/Region Filter/regionFilter'
 import AmenityFilter from '../Components/Amenity Filter/amenityFilter'
 import ComboBox from '../Components/Text Search/textSearch'
+
 
 
 

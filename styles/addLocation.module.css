@@ -43,7 +43,8 @@
 }
 /* location and address section */
 .main input[type='text'],
-.main textarea {
+.main textarea,
+.main select {
   display: inline-block;
   box-sizing: border-box;
   width: 80%;
