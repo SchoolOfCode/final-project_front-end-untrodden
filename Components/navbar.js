@@ -14,15 +14,13 @@ export default function Nav(){
         <Link href='/'><a  className={styles.link}>HOME</a></Link>
         <Link href='/aboutUs'><a  className={styles.link}>ABOUT US</a></Link>
         {/* <Link href='/addlocation'><a  className={styles.link}>ADD LOCATION</a></Link> */}
-        {user ? (
-          <Link className={styles.link} href="/addlocation">
-            ADD LOCATION
-          </Link>
-        ) : (
+        {/* {user ? ( */}
+          <Link className={styles.link} href="/addlocation">ADD LOCATION</Link>
+        {/* ) : (
           <a className={styles.link} href="/api/auth/login">
             ADD LOCATION
           </a>
-        )} 
+        )}  */}
         
         {user ?
         <>
