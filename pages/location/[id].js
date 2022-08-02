@@ -43,6 +43,7 @@ export async function getStaticProps(context) {
 
 export default function LocationDisplayPage({ location }) {
   return (
+
     <>
       <div className={styles.location_page}>
         <div className={styles.left_div}>
@@ -73,5 +74,6 @@ export default function LocationDisplayPage({ location }) {
       </div>
       <MapLocationPage location={location} />
     </>
+
   );
 }
