@@ -30,26 +30,21 @@ export default function Map({ allLocationData }) {
         // stores an instance of the map on initialization to be used later - bounding box?
         ref={(instance) => (mapRef.current = instance)}
         //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
-        minZoom={5}
-        maxZoom={16}
-      >
-        {allLocationData.map((location) => (
-          <Marker
-            longitude={location.longitude}
-            latitude={location.latitude}
-            anchor="bottom"
-          >
-            <img
-              src="/location-marker.png"
-              onClick={() => {
-                setPopupLat(location.latitude);
-                setPopupLong(location.longitude);
-                setPopupName(location.location_name);
-                setShowPopup(true);
-              }}
-            />
-          </Marker>
-        ))}
+
+            minZoom ={5}
+            maxZoom = {16}
+            >
+{allLocationData.map(location => <Marker key={location.location_id}longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
+                <img src="/location-marker.png" onClick={() => {
+                    setPopupLat(location.latitude);
+                    setPopupLong(location.longitude)
+                    setPopupName(location.location_name)
+                    setShowPopup(true)}} />
+             </Marker>
+ )}
+              
+  
+
 
         {showPopup && (
           <Popup
