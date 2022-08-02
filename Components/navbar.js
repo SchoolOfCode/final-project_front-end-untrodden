@@ -12,7 +12,7 @@ export default function Nav() {
 
   return (
     <header className={styles.header}>
-      <img className={styles.image} src="/Inline-logo-whiteandblack.png" />
+      <img className={styles.image} src="/Inline-logo-whiteandblack.png" alt="Untrodden"/>
       <nav className={styles.nav}>
         <Link href="/">
           <a className={styles.link}>Home</a>
