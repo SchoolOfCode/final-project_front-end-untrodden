@@ -1,9 +1,9 @@
-import styles from '../styles/Map.module.css';
+import styles from '../../styles/Map.module.css';
 import { useRef, useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-export default function Map({ allLocationData }) {
+export default function Map({ location }) {
   const mapRef = useRef(null);
   const [showPopup, setShowPopup] = useState(false);
   const [popupLat, setPopupLat] = useState(null);
@@ -33,7 +33,7 @@ export default function Map({ allLocationData }) {
         minZoom={5}
         maxZoom={16}
       >
-        {allLocationData.map((location) => (
+        {location.map((location) => (
           <Marker
             longitude={location.longitude}
             latitude={location.latitude}

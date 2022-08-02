@@ -25,7 +25,7 @@ export default function LocationCategory({ register }) {
       </div>
       <div className={`${styles.location_category} ${styles.checked}`}>
         <label>
-          <input type="checkbox" id="caves" {...register('caves')} />
+          <input type="checkbox" id="caves" {...register('category_caves')} />
           <span>Caves</span>
         </label>
       </div>
@@ -93,8 +93,8 @@ export default function LocationCategory({ register }) {
         <label>
           <input
             type="checkbox"
-            id="category_lake"
-            {...register('category_lake')}
+            id="category_lakes"
+            {...register('category_lakes')}
           />
           <span>Lake</span>
         </label>
