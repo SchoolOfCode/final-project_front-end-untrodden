@@ -1,14 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import CardDisplay from '../Components/Card Display/cardDisplay'
 import styles from '../styles/Home.module.css'
-import Map from '../Components/map'
-import FilterBar from '../Components/Filter Bar/filterBar'
 import dynamic from 'next/dynamic'
 import React, { useEffect, useState } from 'react'
 import CategoryFilter from '../Components/Category Filter/categoryFilter'
 import RegionFilter from '../Components/Region Filter/regionFilter'
 import AmenityFilter from '../Components/Amenity Filter/amenityFilter'
+import ComboBox from '../Components/Text Search/textSearch'
 
 
 
@@ -30,10 +28,10 @@ export default function Home() {
 
   const [categoryState, setCategoryState] = useState("")
   const [allLocationData , setAllLocationData] = useState([])
-  const[displayedData,setDisplayedData]= useState([])
+  const [displayedData,setDisplayedData]= useState([])
   const [regionState, setRegionState] = useState("")
   const [amenityState, setAmenityState] = useState([]);
-
+  const [searchState, setSearchState] = useState("")
   
   
 
@@ -52,6 +50,7 @@ export default function Home() {
     }
     fetchData()
   } ,[])
+
 
 
   function onChangeRegionState(event){
@@ -85,8 +84,12 @@ setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(a
 
 };
 
-
-  console.log(allLocationData)
+//function onChangeSearchState(event){
+ // console.log(event.target.value)
+  //setSearchState(event.target.value)
+  //setDisplayedData([...allLocationData.filter(location =>location.location_name === event.target.value)])
+//}
+  //console.log(allLocationData)
 
   return (
     <div className={styles.container}>
@@ -100,6 +103,7 @@ setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(a
 <RegionFilter onChange={onChangeRegionState} value={regionState}/>
 <CategoryFilter onChange={onChangeCategoryState} value={categoryState} />
 <AmenityFilter handleChange={handleChange} value={amenityState}/>
+<ComboBox setSearchState={setSearchState} setDisplayedData={setDisplayedData} options={allLocationData} value={searchState}/>
   </section>
           
      

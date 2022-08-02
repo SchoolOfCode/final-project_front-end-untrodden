@@ -33,7 +33,7 @@ export default function Map({allLocationData}) {
             minZoom ={5}
             maxZoom = {16}
             >
-{allLocationData.map(location => <Marker longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
+{allLocationData.map(location => <Marker key={location.location_id}longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
                 <img src="/location-marker.png" onClick={() => {
                     setPopupLat(location.latitude);
                     setPopupLong(location.longitude)
