@@ -1,6 +1,6 @@
 import styles from '../../styles/FilterRegion.module.css'
 
-export default function RegionFilter ({onChange, value}){
+export default function RegionFilter ({setRegionState, value}){
 
     let regions = [
         {value:"London",label:"London"},
@@ -33,7 +33,7 @@ export default function RegionFilter ({onChange, value}){
       ]
 
     return   <div>
-    <select className={styles.dropdown} id="regions" onChange={onChange} value={value}>
+    <select className={styles.dropdown} id="regions" onChange={e => setRegionState(e.target.value)} value={value}>
 <option value="0">Region:</option>
 {regions.map(reg => <option key={reg.value} value={reg.value}>{reg.label}</option>)}
   </select>

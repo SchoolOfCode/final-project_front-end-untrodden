@@ -22,7 +22,7 @@ const MenuProps = {
     },
   },
 };
-export default function AmenityFilter ({handleChange,value}){
+export default function AmenityFilter ({setAmenityState,value}){
 
 
     let amenities = [ 
@@ -61,7 +61,7 @@ return <div className={styles.amenities_filter}>
     id="demo-multiple-checkbox"
     multiple
     value={value}
-    onChange={handleChange}
+    onChange={e => setAmenityState(e.target.value)}
     input={<OutlinedInput label="Amenities:" />}
     renderValue={(selected) => {
       let selectedAms = [] 
