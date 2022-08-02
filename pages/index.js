@@ -53,33 +53,33 @@ export default function Home() {
   const [allLocationData , setAllLocationData] = useState([])
   const[displayedData,setDisplayedData]= useState([])
   const [regionState, setRegionState] = useState("")
-  const [amenity, setAmenity] = useState([]);
+  const [amenityState, setAmenityState] = useState([]);
 
   let amenities = [ 
-    "Parking",
-    "Food",
-    "Family",
-    "Changing facilities",
-    "Disability access",
-    "Peaceful",
-    "Electric charging",
-    "No restaurants",
-    "Museums",
-    "Beach",
-    "Hiking",
-    "Pet friendly",
-    "Forests",
-    "Lots of wildlife",
-    "Watersports",
-    "Shopping",
-    "Bodies of water",
-    "Camping",
-    "Mountains",
-    "Hearing loop",
-    "Public transport good",
-    "Public transport bad",
-    "Accommodation",
-    "Wifi",
+    {value:"amenities_parking", label:"Parking"},
+    {value:"amenities_food", label:"Food"},
+    {value:"amenities_family", label:"Family"},
+    {value:"amenities_changing_facilities", label:"Changing facilities"},
+    {value:"amenities_disability_access", label:"Disability access"},
+    {value:"amenities_peaceful", label:"Peaceful"},
+    {value:"amenities_electric_charging", label:"Electric charging"},
+    {value:"amenities_no_resturants", label:"No restaurants"},
+    {value:"amenities_museums", label:"Museums"},
+    {value:"amenities_beach", label:"Beach"},
+    {value:"amenities_hiking", label:"Hiking"},
+    {value:"amenities_pet_friendly", label:"Pet friendly"},
+    {value:"amenities_forests", label:"Forests"},
+    {value:"amenities_lots_of_wildlife", label:"Lots of wildlife"},
+    {value:"amenities_watersports", label:"Watersports"},
+    {value:"amenities_shopping", label:"Shopping"},
+    {value:"amenities_bodies_of_water", label:"Bodies of water"},
+    {value:"amenities_camping", label:"Camping"},
+    {value:"amenities_moutains", label:"Mountains"},
+    {value:"amenities_hearing_loop", label:"Hearing loop"},
+    {value:"amenities_public_transport_good", label:"Public transport good"},
+    {value:"amenities_public_transport_bad", label:"Public transport bad"},
+    {value:"amenities_accommodation", label:"Accommodation"},
+    {value:"amenities_wifi", label:"Wifi"},
   ]
   
   
@@ -119,11 +119,17 @@ function handleChange (event) {
   const {
     target: { value },
   } = event;
-  setAmenity(
+  setAmenityState(
     // On autofill we get a stringified value.
     typeof value === 'string' ? value.split(',') : value,
   );
-  console.log(categoryState)
+
+let selectedAmenities = event.target.value
+
+
+  
+setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(amenity =>location.amenities.includes(amenity))))])
+
 };
 
 
@@ -147,17 +153,17 @@ function handleChange (event) {
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
           multiple
-          value={amenity}
+          value={amenityState}
           onChange={handleChange}
           input={<OutlinedInput label="Amenities:" />}
-          renderValue={(selected) => selected.join(', ')}
+          renderValue={(selected) => let selectedAms = [] selected.split(', ')}
           MenuProps={MenuProps}
-          style={{color:'white'}}
+          style={{color:'black'}}
         >
           {amenities.map((amen) => (
-            <MenuItem key={amen} value={amen}>
-            <ListItemText primary={amen} />
-              <Checkbox style={{color:'white'}} checked={amenity.indexOf(amen) > -1} />
+            <MenuItem key={amen.value} value={amen.value}>
+            <ListItemText primary={amen.label} />
+              <Checkbox style={{color:'white'}} checked={amenityState.indexOf(amen.value) > -1} />
              
             </MenuItem>
           ))}
