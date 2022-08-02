@@ -84,11 +84,7 @@ setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(a
 
 };
 
-//function onChangeSearchState(event){
- // console.log(event.target.value)
-  //setSearchState(event.target.value)
-  //setDisplayedData([...allLocationData.filter(location =>location.location_name === event.target.value)])
-//}
+
   //console.log(allLocationData)
 
   return (
