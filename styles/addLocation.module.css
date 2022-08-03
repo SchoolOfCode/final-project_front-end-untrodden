@@ -2,9 +2,11 @@
 .main {
   max-width: 1400px;
   margin: auto;
+
 }
 .h1 {
   text-align: center;
+  font-size: 3rem;
 }
 
 .main_grid_container {
@@ -19,8 +21,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 1rem;
   color: var(--secondary);
+  align-items: center;
+  margin: 1rem;
 }
 .btn_container {
   display: flex;
@@ -41,6 +45,21 @@
   color: var(--primary);
   margin-bottom: 2rem;
 }
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 100ms;
+  transition-property: transform;
+  color: white;
+}
+
+.btn:checked + span .amenities_pic {
+  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%);
+}
+
+
 /* location and address section */
 .main input[type='text'],
 .main textarea,
@@ -85,9 +104,13 @@
   width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  justify-content: center;
 }
 .location_category {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  /* width: 4rem; */
+  justify-content: center;
 }
 .location_category label {
   font-weight: 500;
@@ -98,6 +121,7 @@
   background-color: var(--primary);
   padding: 0.4rem 1.8rem;
   border-radius: 6px;
+  width: 100%
 }
 .location_category label input {
   display: none;
@@ -115,8 +139,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 1rem;
   color: var(--secondary);
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .amenities_category input:checked + span .amenities_pic {
@@ -129,7 +155,8 @@
 }
 
 .amenities_category_grid_container {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -146,4 +173,16 @@
   transform: scale(1.1);
   transition-duration: 100ms;
   transition-property: transform;
+}
+
+
+.label{
+  width: 80%;
+  align-items: left;
+  margin-top: 1rem;
+}
+
+.input{
+  margin:10rem;
+  width:80%;
 }

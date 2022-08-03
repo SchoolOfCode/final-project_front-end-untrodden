@@ -1,5 +1,8 @@
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Image from 'next/image';
+import Link from 'next/link'
+import { useRouter } from 'next/router';
+
 //components
 import LocationNameAndAddress from '../Components/FormComponents/LocationNameAndAddress';
 import LocationDescription from '../Components/FormComponents/LocationDescription';
@@ -17,11 +20,16 @@ const Cloudinary = dynamic(() => import("../Components/FormComponents/Cloudinary
 import styles from '../styles/addLocation.module.css';
 import { useForm } from 'react-hook-form';
 import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
+import { useEffect } from 'react';
 
 export default function AddLocationPage() {
   const { register, handleSubmit, setValue } = useForm();
+  const router = useRouter()
+
+
 
   const onSubmit = async (data) =>{
+     
     console.log(data)
     const res = await fetch("https://untrodden.herokuapp.com/locations", {
       method: "POST",
@@ -30,7 +38,10 @@ export default function AddLocationPage() {
     });
     const responseData = await res.json();
     console.log(responseData)
-    return responseData;
+
+    
+    
+    return responseData, alert("Thank You For Your Submission, you will now be redirected to the homepage."), router.push("/");
    
     
 
@@ -71,7 +82,7 @@ async function postResources(input) {
 
               <LocationDescription register={register} />
 
-              <label htmlFor="Location Category">Location category:</label>
+              <label  className={styles.label} htmlFor="Location Category">Location category:</label>
               <div className={styles.location_category_grid_container}>
                 <LocationCategory register={register} />
               </div>
@@ -80,7 +91,7 @@ async function postResources(input) {
             {/* right side of form */}
             <div className={styles.grid_right}>
               <div className={styles.flex_container_right}>
-                <label>Select all available Amenities</label>
+                <label  className={styles.label}>Select all available Amenities:</label>
                 <div className={styles.amenities_category_grid_container}>
                   <LocationAmenities register={register} />
                 </div>
@@ -95,7 +106,7 @@ async function postResources(input) {
             </div>
           </div>
           <div className={styles.btn_container}>
-            <button className={styles.btn}>Add Location</button>
+          <button className={styles.btn}>Add Location</button>
           </div>
         </form>
       </main>

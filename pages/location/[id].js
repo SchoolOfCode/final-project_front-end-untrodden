@@ -1,21 +1,15 @@
 import styles from '../../styles/LocationDisplayPage.module.css';
 import Image from 'next/image';
+
 import Modal from '../../Components/LocationPageComponents/Modal';
 //map stuff
 import MapLocationPage from '../../Components/MapLocationPage/mapLocationPage';
 import dynamic from 'next/dynamic';
 // import { Modal } from '@mui/material';
 
+
+
 // working in this one
-
-// const MapComponent = dynamic(
-//   () => import('../../Components/MapLocationPage/mapLocationPage'),
-//   {
-//     loading: () => 'Loading...',
-//     ssr: false,
-//   }
-// );
-
 export async function getStaticPaths() {
   const res = await fetch('https://untrodden.herokuapp.com/locations/');
   const data = await res.json();
@@ -39,12 +33,13 @@ export async function getStaticProps(context) {
   const data = await res.json();
   console.log(data);
   return {
-    props: { location: data.payload },
+    props: { location: data.payload[0] },
   };
 }
 
 export default function LocationDisplayPage({ location }) {
   return (
+
     <div className={styles.location_page_wrapper}>
       <div className={styles.location_page}>
         <div className={styles.left_div}>
@@ -94,6 +89,7 @@ export default function LocationDisplayPage({ location }) {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
