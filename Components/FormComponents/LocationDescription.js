@@ -7,9 +7,9 @@ export default function LocationDescription({ register }) {
     <>
       <label className={styles.label}  htmlFor="locationDescription">Location Description:</label>
       <p className={styles.description_p}>
-        Let us know why it’s a place worth visiting. Also, please tell us about
+        Let us know why it’s a place worth visiting. Please tell us about
         any nice restaurants or pubs in the area, transport tips and any other
-        useful information for a first time visitor.
+        useful information for a first time visitor. 
       </p>
       <textarea
       required

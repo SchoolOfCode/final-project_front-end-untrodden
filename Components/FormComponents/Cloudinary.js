@@ -55,7 +55,8 @@ export default function Cloudinary({ setValue }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Upload Location Image</h1>
+
+        <h1 className={styles.title}>Upload Location Image:</h1>
 
         <p className={styles.description}>
           (Remember to click on the upload image button below once selected!)
