@@ -14,7 +14,7 @@ export default function Map({ allLocationData }) {
   const [viewport, setViewport] = useState({
     width: "100%",
     height: "100%",
-    // The latitude and longitude is so the whole of the uk is centered on loading.
+    // latitude and longitude - so the whole of the uk is centered on loading.
     latitude: 54.489471,
     longitude: -3.898575,
     zoom: 5,
@@ -27,12 +27,11 @@ export default function Map({ allLocationData }) {
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
         {...viewport}
         // onViewportChange={(nextViewport) => setViewport(nextViewport)}
-        // Below made the map controlled and so moveable.
+        // ensures the map is controlled and so moveable.
         onMove={(evt) => setViewport(evt.viewport)}
         // stores an instance of the map on initialization to be used later - bounding box?
         ref={(instance) => (mapRef.current = instance)}
-        //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
-
+        //set max and min zoom levels - would be good if could figue out how to set draggable boundaries.
         minZoom={5}
         maxZoom={16}
       >
