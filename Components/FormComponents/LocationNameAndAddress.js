@@ -1,30 +1,40 @@
-// location name and address input
+
+import styles from '../../styles/addLocation.module.css';
+
 export default function LocationNameAndAddress({ register }) {
   return (
     <>
-      <label htmlFor="locationName">Location Name:</label>
-      <input type="text" id="locationName" {...register("location_name")} />
+      <label className={styles.label} htmlFor="locationName">Location Name:</label>
+      <input required type="text" id="locationName" {...register('location_name')} />
+      {/* address section */}
+      <label className={styles.label} htmlFor="Location Address">Location Address:</label>
 
-      <label htmlFor="Location Address">Location Address:</label>
 
-      <label htmlFor="Street/road"></label>
+      <label className={styles.label} htmlFor="Street/road"></label>
       <input
+      required
+      className={styles.input}
         type="text"
         id="Street/road"
         placeholder="Street/Road"
         {...register("street")}
       />
 
-      <label htmlFor="location Town"></label>
+      <label className={styles.label}  htmlFor="location Town"></label>
       <input
+      required
+            className={styles.input}
         type="text"
         id="location Town"
         placeholder="Town"
         {...register("town")}
       />
 
-      <label htmlFor="region-select">Choose a Region:</label>
-      <select name="region" id="region-select" {...register("region")}>
+
+
+      <label className={styles.label} htmlFor="region-select">Choose a Region:</label>
+      <select required className={styles.input} name="region" id="region-select" {...register('region')}>
+
         <option value="West Midlands">West Midlands</option>
         <option value="London">London</option>
         <option value="North East">North East</option>
@@ -58,8 +68,10 @@ export default function LocationNameAndAddress({ register }) {
         <option value="Tyrone">Tyrone</option>
       </select>
 
-      <label htmlFor="location Postcode"></label>
+      <label className={styles.label} htmlFor="location Postcode"></label>
       <input
+      required
+      className={styles.input}
         type="text"
         id="location Postcode"
         placeholder="Postcode"

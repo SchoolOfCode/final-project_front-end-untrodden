@@ -2,15 +2,21 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
+
 // css
 import styles from "../styles/Home.module.css";
 
 // components
+import Button from "../Components/Button/button";
+import CardDisplay from "../Components/Card Display/cardDisplay";
+
 import CategoryFilter from "../Components/Category Filter/categoryFilter";
 import RegionFilter from "../Components/Region Filter/regionFilter";
 import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
 import ComboBox from "../Components/Text Search/textSearch";
-import CardDisplay from "../Components/Card Display/cardDisplay";
+
+
+
 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
   loading: () => "Loading...",
@@ -19,10 +25,12 @@ const MapComponent = dynamic(() => import("../Components/map.js"), {
 
 // states
 export default function Home() {
+
   const [categoryState, setCategoryState] = useState("");
   const [allLocationData, setAllLocationData] = useState([]);
   const [displayedData, setDisplayedData] = useState([]);
   const [regionState, setRegionState] = useState("");
+
   const [amenityState, setAmenityState] = useState([]);
   const [searchState, setSearchState] = useState("");
 
@@ -39,50 +47,45 @@ export default function Home() {
         console.log("error", error);
       }
     };
+
+
     fetchData();
   }, []);
 
-  // set region
-  function onChangeRegionState(event) {
-    setRegionState(event.target.value);
-    setDisplayedData([
-      ...allLocationData.filter(
-        (location) => location.region === event.target.value
-      ),
-    ]);
+  function clearFilter() {
+    // restting the filters to their default value
+    setRegionState("");
+    setCategoryState("");
+    setAmenityState([]);
+    setSearchState("");
+    // setting the dispayedData to all the data retrieved from the API
+    setDisplayedData(allLocationData);
   }
 
-  // set category
-  function onChangeCategoryState(event) {
-    console.log(event.target.value);
-    setCategoryState(event.target.value);
-    setDisplayedData([
-      ...allLocationData.filter((location) =>
-        location.categories.includes(event.target.value)
-      ),
-    ]);
-  }
+  function handleFilter() {
+    let allData = allLocationData;
 
-  // set amentities
-  function handleChange(event) {
-    const {
-      target: { value },
-    } = event;
-    setAmenityState(
-      // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
+    // filter for region (an empty string is falsy)
+    if (regionState) {
+      allData = allData.filter((location) => location.region === regionState);
+    }
+    // filter for category
+    if (categoryState) {
+      allData = allData.filter((location) =>
+        location.categories.includes(categoryState)
+      );
+    }
 
-    let selectedAmenities = event.target.value;
+    // filter for amenities
+    if (amenityState) {
+      allData = allData.filter((location) =>
+        amenityState.every((amenity) => location.amenities.includes(amenity))
+      );
+    }
 
-    // set display data
-    setDisplayedData([
-      ...allLocationData.filter((location) =>
-        selectedAmenities.every((amenity) =>
-          location.amenities.includes(amenity)
-        )
-      ),
-    ]);
+    // setting displayedData as the filtered Data (by region, category, and amenity)
+    setDisplayedData(allData);
+
   }
 
   return (
@@ -94,18 +97,20 @@ export default function Home() {
       </Head>
 
       <section className={styles.filter_bar}>
-        <RegionFilter onChange={onChangeRegionState} value={regionState} />
-        <CategoryFilter
-          onChange={onChangeCategoryState}
-          value={categoryState}
-        />
-        <AmenityFilter handleChange={handleChange} value={amenityState} />
+
+        <RegionFilter setRegionState={setRegionState} value={regionState} />
+        <CategoryFilter setCategoryState={setCategoryState} value={categoryState} />
+        <AmenityFilter setAmenityState={setAmenityState} value={amenityState} />
+        <Button onClick={() => handleFilter()}  label="Apply Filter" />
+        <Button onClick={() => clearFilter()} label="Clear Filter" />
+
         <ComboBox
           setSearchState={setSearchState}
           setDisplayedData={setDisplayedData}
           options={allLocationData}
           value={searchState}
         />
+
       </section>
 
       <main className={styles.main}>

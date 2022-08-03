@@ -58,6 +58,6 @@ textarea {
 .footer {
   display: flex;
   justify-content: center;
-  
+  font-family: 'Raleway', sans-serif;
 }
 

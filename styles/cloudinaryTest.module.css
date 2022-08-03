@@ -1,31 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap');
+
 .container {
     display: grid;
     grid-template-rows: 1fr auto;
     max-width: 80rem;
-    min-height: 100vh;
-    padding: 0 2rem;
-    margin: 0 auto;
+   min-height: 80vh;
+    padding: 0 1rem;
+    
   }
-  
+  .h1{
+    font-size: 3.5rem;
+    
+  }
   .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   
   .title {
     margin: 0;
-    line-height: 1.15;
-    font-size: 4rem;
+    font-size: 2rem;
+    font-family: 'Raleway', sans-serif;
   }
   
   .description {
-    margin: 4rem 0;
-    line-height: 1.5;
-    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    width: 80%;
   }
   
   .form 
@@ -38,12 +45,17 @@
     }
   
     .form button {
-      color: white;
-      font-size: 1em;
-      background-color: blueviolet;
+      color: var(--primary);
+      font-size: 1.5em;
+      background-color:var(--secondary);
       padding: .5em .8em;
       border: none;
       border-radius: .2em;
+    }
+
+    .form button:hover {
+    color: white;
+      cursor: pointer;
     }
   
     .form code {
@@ -59,4 +71,8 @@
     border-top: 1px solid #eaeaea;
     justify-content: center;
     align-items: center;
+  }
+
+  .img{
+    max-width: 100%;
   }

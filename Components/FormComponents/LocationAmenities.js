@@ -35,6 +35,7 @@ export default function LocationAmenities({ register }) {
   return (
     <>
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+
         <Tooltip title="Parking">
           <label>
             <input
@@ -53,6 +54,7 @@ export default function LocationAmenities({ register }) {
             </span>
           </label>
         </Tooltip>
+       
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>

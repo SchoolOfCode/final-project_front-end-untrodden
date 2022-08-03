@@ -10,7 +10,8 @@ export default function ComboBox({
 }) {
   let loctions = options.map((location) => location.location_name);
 
-  return (
+  return (<div>
+   
     <Autocomplete
       clearOnEscape
       value={value}
@@ -33,5 +34,7 @@ export default function ComboBox({
       sx={{ width: 300, color: "#E8A941", fontSize: "1.2vw" }}
       renderInput={(params) => <TextField {...params} label="Locations" />}
     />
+    
+    </div>
   );
 }
