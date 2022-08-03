@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 // css
 import styles from "../styles/Home.module.css";
 
-//components
+// components
 import CategoryFilter from "../Components/Category Filter/categoryFilter";
 import RegionFilter from "../Components/Region Filter/regionFilter";
 import AmenityFilter from "../Components/Amenity Filter/amenityFilter";

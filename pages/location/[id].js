@@ -1,21 +1,14 @@
-import styles from '../../styles/LocationDisplayPage.module.css';
-import Image from 'next/image';
+import Image from "next/image";
+
+// css
+import styles from "../../styles/LocationDisplayPage.module.css";
 
 //map stuff
-import MapLocationPage from '../../Components/MapLocationPage/mapLocationPage';
-import dynamic from 'next/dynamic';
-// working in this one
-
-// const MapComponent = dynamic(
-//   () => import('../../Components/MapLocationPage/mapLocationPage'),
-//   {
-//     loading: () => 'Loading...',
-//     ssr: false,
-//   }
-// );
+import MapLocationPage from "../../Components/MapLocationPage/mapLocationPage";
+import dynamic from "next/dynamic";
 
 export async function getStaticPaths() {
-  const res = await fetch('https://untrodden.herokuapp.com/locations/');
+  const res = await fetch("https://untrodden.herokuapp.com/locations/");
   const data = await res.json();
 
   const paths = data.payload.map((location) => {
@@ -33,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const id = context.params.id;
   console.log(id);
-  const res = await fetch('https://untrodden.herokuapp.com/locations/' + id);
+  const res = await fetch("https://untrodden.herokuapp.com/locations/" + id);
   const data = await res.json();
   console.log(data);
   return {
@@ -43,7 +36,6 @@ export async function getStaticProps(context) {
 
 export default function LocationDisplayPage({ location }) {
   return (
-
     <>
       <div className={styles.location_page}>
         <div className={styles.left_div}>
@@ -74,6 +66,5 @@ export default function LocationDisplayPage({ location }) {
       </div>
       <MapLocationPage location={location} />
     </>
-
   );
 }

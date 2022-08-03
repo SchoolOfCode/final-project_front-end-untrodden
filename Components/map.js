@@ -26,7 +26,6 @@ export default function Map({ allLocationData }) {
         mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
         {...viewport}
-        // onViewportChange={(nextViewport) => setViewport(nextViewport)}
         // ensures the map is controlled and so moveable.
         onMove={(evt) => setViewport(evt.viewport)}
         // stores an instance of the map on initialization to be used later - bounding box?
