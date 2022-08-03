@@ -35,6 +35,7 @@ export default function LocationAmenities({ register }) {
   return (
     <>
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Parking"> 
         <label>
           <input
             type="checkbox"
@@ -47,12 +48,15 @@ export default function LocationAmenities({ register }) {
               src={Parking}
               height={35}
               width={35}
+              alt="Parking image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Food"> 
         <label>
           <input
             type="checkbox"
@@ -65,12 +69,15 @@ export default function LocationAmenities({ register }) {
               src={Food}
               height={35}
               width={35}
+              alt="Food image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Family"> 
         <label>
           <input
             type="checkbox"
@@ -83,12 +90,15 @@ export default function LocationAmenities({ register }) {
               src={Family}
               height={35}
               width={35}
+              alt="Family image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Changing facilities">
         <label>
           <input
             type="checkbox"
@@ -101,12 +111,15 @@ export default function LocationAmenities({ register }) {
               src={BabyChanging}
               height={35}
               width={35}
+              alt="Changing facilities image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Disability acccess">
         <label>
           <input
             type="checkbox"
@@ -119,12 +132,15 @@ export default function LocationAmenities({ register }) {
               src={Disability}
               height={35}
               width={35}
+              alt="Disability access image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Peaceful">
         <label>
           <input
             type="checkbox"
@@ -137,12 +153,15 @@ export default function LocationAmenities({ register }) {
               src={Peaceful}
               height={35}
               width={35}
+              alt="Peaceful image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Wifi">
         <label>
           <input
             type="checkbox"
@@ -155,12 +174,15 @@ export default function LocationAmenities({ register }) {
               src={Wifi}
               height={35}
               width={35}
+              alt="Widi image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="No restaurants">
         <label>
           <input
             type="checkbox"
@@ -173,12 +195,15 @@ export default function LocationAmenities({ register }) {
               src={NoRestaurants}
               height={35}
               width={35}
+              alt="No restaurants image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Museums">
         <label>
           <input
             type="checkbox"
@@ -191,12 +216,15 @@ export default function LocationAmenities({ register }) {
               src={Museums}
               height={35}
               width={35}
+              alt="Museums image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Beach">
         <label>
           <input
             type="checkbox"
@@ -209,12 +237,15 @@ export default function LocationAmenities({ register }) {
               src={Beach}
               height={35}
               width={35}
+              alt="Beach image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Hiking">
         <label>
           <input
             type="checkbox"
@@ -227,12 +258,15 @@ export default function LocationAmenities({ register }) {
               src={Hiking}
               height={35}
               width={35}
+              alt="Hiking image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Pet friendly">
         <label>
           <input
             type="checkbox"
@@ -245,12 +279,15 @@ export default function LocationAmenities({ register }) {
               src={PetFriendly}
               height={35}
               width={35}
+              alt="Pet friendly image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Forests">
         <label>
           <input
             type="checkbox"
@@ -263,12 +300,15 @@ export default function LocationAmenities({ register }) {
               src={Forests}
               height={35}
               width={35}
+              alt="Forests image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Lots of wildlife">
         <label>
           <input
             type="checkbox"
@@ -281,12 +321,15 @@ export default function LocationAmenities({ register }) {
               src={Wildlife}
               height={35}
               width={35}
+              alt="Lots of wildlife image "
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Watersports">
         <label>
           <input
             type="checkbox"
@@ -299,12 +342,15 @@ export default function LocationAmenities({ register }) {
               src={Watersports}
               height={35}
               width={35}
+              alt="Watersports image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Shopping">
         <label>
           <input
             type="checkbox"
@@ -317,12 +363,15 @@ export default function LocationAmenities({ register }) {
               src={Shopping}
               height={35}
               width={35}
+              alt="Shopping image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Bodies of water">
         <label>
           <input
             type="checkbox"
@@ -335,12 +384,15 @@ export default function LocationAmenities({ register }) {
               src={Water}
               height={35}
               width={35}
+              alt="Bodies of water image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Camping">
         <label>
           <input
             type="checkbox"
@@ -353,12 +405,15 @@ export default function LocationAmenities({ register }) {
               src={Camping}
               height={35}
               width={35}
+              alt="Camping image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Mountains">
         <label>
           <input
             type="checkbox"
@@ -371,12 +426,15 @@ export default function LocationAmenities({ register }) {
               src={Mountains}
               height={35}
               width={35}
+              alt="Mountains image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Hearing loop">
         <label>
           <input
             type="checkbox"
@@ -389,12 +447,15 @@ export default function LocationAmenities({ register }) {
               src={HearingLoop}
               height={35}
               width={35}
+              alt="Hearing loop"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Electric charging">
         <label>
           <input
             type="checkbox"
@@ -407,12 +468,15 @@ export default function LocationAmenities({ register }) {
               src={ElectricCharging}
               height={35}
               width={35}
+              alt="Electric charging image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
+      <Tooltip title="Public transport good">
         <label>
           <input
             type="checkbox"
@@ -425,9 +489,11 @@ export default function LocationAmenities({ register }) {
               src={PublicTransportGood}
               height={35}
               width={35}
+              alt="Public transport good image"
             ></Image>
           </span>
         </label>
+        </Tooltip>
       </div>
 
       <div className={`${styles.amenities_category} ${styles.checked}`}>
