@@ -1,6 +1,6 @@
 import styles from '../../styles/categoryFilter.module.css'
 
-export default function CategoryFilter({onChange,value}){
+export default function CategoryFilter({setCategoryState,value}){
     let category = [
         {value:"category_seaside", label:"Seaside"} ,
         {value:"category_castles", label:"Castles"},
@@ -17,7 +17,7 @@ export default function CategoryFilter({onChange,value}){
       ]
 
     return<div> 
-    <select className={styles.dropdown} onChange={onChange} value={value} id="category">
+    <select className={styles.dropdown} onChange={e => setCategoryState(e.target.value)} value={value} id="category">
     <option value="0">Category:</option>
     {category.map(cat => <option key={cat.value} value={cat.value}>{cat.label}</option> )}
   </select>

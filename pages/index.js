@@ -1,42 +1,27 @@
-import Head from 'next/head'
-import CardDisplay from '../Components/Card Display/cardDisplay'
-import styles from '../styles/Home.module.css'
-import dynamic from 'next/dynamic'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import Head from "next/head";
+import dynamic from "next/dynamic";
 
-import CategoryFilter from '../Components/Category Filter/categoryFilter'
-import RegionFilter from '../Components/Region Filter/regionFilter'
-import AmenityFilter from '../Components/Amenity Filter/amenityFilter'
-import ComboBox from '../Components/Text Search/textSearch'
+import CardDisplay from "../Components/Card Display/cardDisplay";
+import CategoryFilter from "../Components/Category Filter/categoryFilter";
+import RegionFilter from "../Components/Region Filter/regionFilter";
+import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
+import ComboBox from "../Components/Text Search/textSearch";
 
-
-
-
-
-
-
-
+import styles from "../styles/Home.module.css";
 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
-    loading: () => "Loading...",
-    ssr: false
-  });
-
-
-
-
+  loading: () => "Loading...",
+  ssr: false,
+});
 
 export default function Home() {
-
-  const [categoryState, setCategoryState] = useState("")
-  const [allLocationData , setAllLocationData] = useState([])
-  const [displayedData,setDisplayedData]= useState([])
-  const [regionState, setRegionState] = useState("")
+  const [allLocationData, setAllLocationData] = useState([]);
+  const [displayedData, setDisplayedData] = useState([]);
+  const [regionState, setRegionState] = useState("");
+  const [categoryState, setCategoryState] = useState("");
   const [amenityState, setAmenityState] = useState([]);
-  const [searchState, setSearchState] = useState("")
-  
-  
-
+  const [searchState, setSearchState] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,49 +30,49 @@ export default function Home() {
         const response = await fetch(url);
         const data = await response.json();
         setAllLocationData(data.payload);
-        setDisplayedData(data.payload)
-              } catch (error) {
-        console.log('error', error);
+        setDisplayedData(data.payload);
+      } catch (error) {
+        console.log("error", error);
       }
+    };
+
+    fetchData();
+  }, []);
+
+  function clearFilter() {
+    // restting the filters to their default value
+    setRegionState("");
+    setCategoryState("");
+    setAmenityState([]);
+    setSearchState("");
+    // setting the dispayedData to all the data retrieved from the API
+    setDisplayedData(allLocationData);
+  }
+
+  function handleFilter() {
+    let allData = allLocationData;
+
+    // filter for region (an empty string is falsy)
+    if (regionState) {
+      allData = allData.filter((location) => location.region === regionState);
     }
-    fetchData()
-  } ,[])
+    // filter for category
+    if (categoryState) {
+      allData = allData.filter((location) =>
+        location.categories.includes(categoryState)
+      );
+    }
 
+    // filter for amenities
+    if (amenityState) {
+      allData = allData.filter((location) =>
+        amenityState.every((amenity) => location.amenities.includes(amenity))
+      );
+    }
 
-
-  function onChangeRegionState(event){
-    
-     setRegionState(event.target.value)
-     setDisplayedData([...allLocationData.filter(location =>location.region === event.target.value)])
- }
-
-
-  function onChangeCategoryState(event){
-        console.log(event.target.value);
-      setCategoryState(event.target.value)   
-  setDisplayedData([...allLocationData.filter(location =>location.categories.includes(event.target.value))])
-
-}
-
-function handleChange (event) {
-  const {
-    target: { value },
-  } = event;
-  setAmenityState(
-    // On autofill we get a stringified value.
-    typeof value === 'string' ? value.split(',') : value,
-  );
-
-let selectedAmenities = event.target.value
-
-
-  
-setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(amenity =>location.amenities.includes(amenity))))])
-
-};
-
-
-  //console.log(allLocationData)
+    // setting displayedData as the filtered Data (by region, category, and amenity)
+    setDisplayedData(allData);
+  }
 
   return (
     <div className={styles.container}>
@@ -97,29 +82,28 @@ setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(a
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-<section className={styles.filter_bar}>
-<RegionFilter onChange={onChangeRegionState} value={regionState}/>
-<CategoryFilter onChange={onChangeCategoryState} value={categoryState} />
-<AmenityFilter handleChange={handleChange} value={amenityState}/>
-<ComboBox setSearchState={setSearchState} setDisplayedData={setDisplayedData} options={allLocationData} value={searchState}/>
-  </section>
-          
-     
-         <main className={styles.main}>
+      <section className={styles.filter_bar}>
+        <RegionFilter setRegionState={setRegionState} value={regionState} />
+        <CategoryFilter setCategoryState={setCategoryState} value={categoryState} />
+        <AmenityFilter setAmenityState={setAmenityState} value={amenityState} />
+        <ComboBox
+          setSearchState={setSearchState}
+          setDisplayedData={setDisplayedData}
+          options={allLocationData}
+          value={searchState}
+        />
+        <button onClick={() => handleFilter()}>Filter</button>
+        <button onClick={() => clearFilter()}> Clear All</button>
+      </section>
+
+      <main className={styles.main}>
         <section>
-          <MapComponent allLocationData={displayedData}/>
+          <MapComponent allLocationData={displayedData} />
         </section>
         <section>
-        <CardDisplay allLocationData={displayedData}/>
-    </section>
-
-    </main>
-
-
-
-      
+          <CardDisplay allLocationData={displayedData} />
+        </section>
+      </main>
     </div>
-  )
+  );
 }
-
-
