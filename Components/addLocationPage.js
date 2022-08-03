@@ -41,7 +41,7 @@ export default function AddLocationPage() {
 
     
     
-    return responseData, alert("Thank You For Your Submission, you will now be redirected to the homepage."), router.push("/");
+    return responseData, alert("Thank You For Your Submission, press 'Ok' be redirected to the homepage."), router.push("/");
    
     
 
