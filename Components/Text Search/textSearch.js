@@ -7,7 +7,8 @@ export default function ComboBox({options, setDisplayedData, setSearchState,valu
 let loctions = options.map(location=> location.location_name)
 
 
-  return (
+  return (<div>
+   
     <Autocomplete
     clearOnEscape
     value={value}
@@ -22,6 +23,8 @@ let loctions = options.map(location=> location.location_name)
       sx={{ width: 300,color:'#E8A941', fontSize:'1.2vw' }}
       renderInput={(params) => <TextField {...params} label="Locations" />}
     />
+    
+    </div>
   );
 }
 
