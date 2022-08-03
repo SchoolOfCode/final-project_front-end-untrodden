@@ -1,6 +1,6 @@
 import styles from '../../styles/LocationDisplayPage.module.css';
 import Image from 'next/image';
-
+// working in this one
 export async function getStaticPaths() {
   const res = await fetch('https://untrodden.herokuapp.com/locations/');
   const data = await res.json();

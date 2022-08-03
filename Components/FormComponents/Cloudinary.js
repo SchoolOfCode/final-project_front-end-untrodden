@@ -52,10 +52,11 @@ export default function Cloudinary({ setValue }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Upload Location Image</h1>
+
+        <h1 className={styles.title}>Upload Location Image:</h1>
 
         <p className={styles.description}>
-          Please upload a photo of the location below:
+          (Remember to click on the upload image button below once selected!)
         </p>
 
         {/* Changed this form to a div tag instead, as we can't have a form inside a form */}
@@ -69,11 +70,11 @@ export default function Cloudinary({ setValue }) {
             <input onChange={handleOnChange} type="file" name="file" /> 
           </p>
 
-          <img src={imageSrc} />
+          <img className={styles.img} src={imageSrc} />
 
           {imageSrc && !uploadData && (
             <p>
-              <button onClick={handleOnSubmit}>Upload Files</button>
+              <button onClick={handleOnSubmit}>Upload Image</button>
             </p>
           )}
           {/* 

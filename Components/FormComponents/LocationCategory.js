@@ -1,124 +1,23 @@
 import styles from '../../styles/addLocation.module.css';
+import CategoryButton from '../CategoryButton';
+
 
 export default function LocationCategory({ register }) {
   return (
     <>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_seaside"
-            {...register('category_seaside')}
-          />
-          <span>Seaside</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_castles"
-            {...register('category_castles')}
-          />
-          <span>Castles</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input type="checkbox" id="caves" {...register('category_caves')} />
-          <span>Caves</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_peaceful"
-            {...register('category_peaceful')}
-          />
-          <span>Peaceful</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_hiking"
-            {...register('category_hiking')}
-          />
-          <span>Hiking</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_hills"
-            {...register('category_hills')}
-          />
-          <span>Hills</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_historic"
-            {...register('category_historic')}
-          />
-          <span>Historic</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_secluded"
-            {...register('category_secluded')}
-          />
-          <span>Secluded</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_casual"
-            {...register('category_casual')}
-          />
-          <span>Casual</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_lakes"
-            {...register('category_lakes')}
-          />
-          <span>Lake</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_busy"
-            {...register('category_busy')}
-          />
-          <span>Busy</span>
-        </label>
-      </div>
-      <div className={`${styles.location_category} ${styles.checked}`}>
-        <label>
-          <input
-            type="checkbox"
-            id="category_woods"
-            {...register('category_woods')}
-          />
-          <span>Woods</span>
-        </label>
-      </div>
+    <CategoryButton register={register} id={"category_seaside"} name={"Seaside"}/>
+    <CategoryButton register={register} id={"category_castles"} name={"Castles"}/>
+    <CategoryButton register={register} id={"category_caves"} name={"Caves"}/>
+    <CategoryButton register={register} id={"category_peaceful"} name={"Peaceful"}/>
+    <CategoryButton register={register} id={"category_hiking"} name={"Hiking"}/>
+    <CategoryButton register={register} id={"category_hills"} name={"Hills"}/>
+    <CategoryButton register={register} id={"category_historic"} name={"Historic"}/>
+    <CategoryButton register={register} id={"category_secluded"} name={"Secluded"}/>
+    <CategoryButton register={register} id={"category_casual"} name={"Casual"}/>
+    <CategoryButton register={register} id={"category_lakes"} name={"Lake"}/>
+    <CategoryButton register={register} id={"category_busy"} name={"Busy"}/>
+    <CategoryButton register={register} id={"category_woods"} name={"Woods"}/>
+
     </>
   );
 }

@@ -34,7 +34,7 @@ export default function LocationAmenities({ register }) {
     <>
       <div className={`${styles.amenities_category} ${styles.checked}`}>
         <label>
-          <input
+          <input 
             type="checkbox"
             id="amenities_parking"
             {...register('amenities_parking')}

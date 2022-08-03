@@ -1,15 +1,60 @@
-import Link from 'next/link'
-import styles from '../styles/Navbar.module.css'
-import Image from 'next/image'
+import Link from 'next/link';
+import styles from '../styles/Navbar.module.css';
+import Image from 'next/image';
+import Profile from './Profile.js';
+import { useUser } from '@auth0/nextjs-auth0';
 
-export default function Nav(){
-    return <header className={styles.header}>
-        <img className={styles.image} src='/Inline-logo-whiteandblack.png' />
-        <nav className={styles.nav}>
-        <Link href='/'><a  className={styles.link}>HOME</a></Link>
-        <Link href='/aboutUs'><a  className={styles.link}>ABOUT US</a></Link>
-        <Link href='/addlocation'><a  className={styles.link}>ADD LOCATION</a></Link>
-        <a>LOGIN</a>
-        </nav>
+// image
+import ProfileDefault from '../public/profile_pic_default.png';
+
+export default function Nav() {
+  const { user } = useUser();
+
+  return (
+    <header className={styles.header}>
+    <Link href="/">
+      <img className={styles.image} src="/Inline-logo-whiteandblack.png" alt="Untrodden"/>
+      </Link>
+      <nav className={styles.nav}>
+        <Link href="/">
+          <a className={styles.link}>Home</a>
+        </Link>
+        <Link href="/aboutUs">
+          <a className={styles.link}>About Us</a>
+        </Link>
+        {/* <Link href='/addlocation'><a  className={styles.link}>ADD LOCATION</a></Link> */}
+
+        
+          <Link className={styles.link} href="/addlocation">
+            Add Location
+          </Link>
+    
+
+        
+
+        {user ? (
+          <>
+            <a className={styles.link} href="/api/auth/logout">
+              Logout
+            </a>
+            <Profile />
+          </>
+        ) : (
+          <>
+            <a className={styles.link} href="/api/auth/login">
+              Login
+            </a>
+            <Image
+              src={ProfileDefault}
+              alt="profile"
+              className={styles.default_image}
+              height={50}
+              width={50}
+            />
+          </>
+        )}
+      </nav>
+
     </header>
+  );
 }
