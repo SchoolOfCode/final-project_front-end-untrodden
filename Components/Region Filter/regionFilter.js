@@ -1,3 +1,4 @@
+// css
 import styles from '../../styles/FilterRegion.module.css'
 
 export default function RegionFilter ({setRegionState, value}){

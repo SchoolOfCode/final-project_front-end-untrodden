@@ -1,5 +1,7 @@
-import styles from '../../styles/addLocation.module.css';
+// css
+import styles from "../../styles/addLocation.module.css";
 
+// location desciption input
 export default function LocationDescription({ register }) {
   return (
     <>
@@ -13,7 +15,7 @@ export default function LocationDescription({ register }) {
       required
       className={styles.input}
         id="locationDescription"
-        {...register('location_description')}
+        {...register("location_description")}
       />
     </>
   );

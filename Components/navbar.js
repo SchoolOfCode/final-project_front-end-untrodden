@@ -1,11 +1,15 @@
-import Link from 'next/link';
-import styles from '../styles/Navbar.module.css';
-import Image from 'next/image';
-import Profile from './Profile.js';
-import { useUser } from '@auth0/nextjs-auth0';
+import Link from "next/link";
+import Image from "next/image";
+import { useUser } from "@auth0/nextjs-auth0";
+
+// authorisation
+import Profile from "./Profile.js";
 
 // image
-import ProfileDefault from '../public/profile_pic_default.png';
+import ProfileDefault from "../public/profile_pic_default.png";
+
+// css
+import styles from "../styles/Navbar.module.css";
 
 export default function Nav() {
   const { user } = useUser();
@@ -26,15 +30,12 @@ export default function Nav() {
         <Link href="/aboutUs">
           <a className={styles.link}>About Us</a>
         </Link>
-        {/* <Link href='/addlocation'><a  className={styles.link}>ADD LOCATION</a></Link> */}
 
         
           <Link className={styles.link} href="/addlocation">
             Add Location
           </Link>
-    
 
-        
 
         {user ? (
           <>
@@ -58,7 +59,6 @@ export default function Nav() {
           </>
         )}
       </nav>
-
     </header>
   );
 }

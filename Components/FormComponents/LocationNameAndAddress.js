@@ -1,3 +1,4 @@
+
 import styles from '../../styles/addLocation.module.css';
 
 export default function LocationNameAndAddress({ register }) {
@@ -8,6 +9,7 @@ export default function LocationNameAndAddress({ register }) {
       {/* address section */}
       <label className={styles.label} htmlFor="Location Address">Location Address:</label>
 
+
       <label className={styles.label} htmlFor="Street/road"></label>
       <input
       required
@@ -15,7 +17,7 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="Street/road"
         placeholder="Street/Road"
-        {...register('street')}
+        {...register("street")}
       />
 
       <label className={styles.label}  htmlFor="location Town"></label>
@@ -25,19 +27,14 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Town"
         placeholder="Town"
-        {...register('town')}
+        {...register("town")}
       />
 
-      {/* <label htmlFor="location Region"></label>
-      <input
-        type="text"
-        id="locationn Region"
-        placeholder="Region"
-        {...register('region')}
-      /> */}
+
 
       <label className={styles.label} htmlFor="region-select">Choose a Region:</label>
       <select required className={styles.input} name="region" id="region-select" {...register('region')}>
+
         <option value="West Midlands">West Midlands</option>
         <option value="London">London</option>
         <option value="North East">North East</option>
@@ -78,7 +75,7 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Postcode"
         placeholder="Postcode"
-        {...register('postcode')}
+        {...register("postcode")}
       />
     </>
   );

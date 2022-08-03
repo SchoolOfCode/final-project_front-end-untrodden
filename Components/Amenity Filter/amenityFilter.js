@@ -1,12 +1,13 @@
-import styles from '../../styles/AmenityFilter.module.css'
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import ListItemText from '@mui/material/ListItemText';
-import Select from '@mui/material/Select';
-import Checkbox from '@mui/material/Checkbox';
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import ListItemText from "@mui/material/ListItemText";
+import Select from "@mui/material/Select";
+import Checkbox from "@mui/material/Checkbox";
 
+// css
+import styles from "../../styles/AmenityFilter.module.css";
 
 //import Select from 'react-select';
 const ITEM_HEIGHT = 48;
@@ -16,12 +17,12 @@ const MenuProps = {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 250,
-      color:'white',
-      backgroundColor: '#225544',
-    
+      color: "white",
+      backgroundColor: "#225544",
     },
   },
 };
+
 export default function AmenityFilter ({setAmenityState,value}){
 
 

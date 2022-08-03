@@ -1,24 +1,22 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import dynamic from "next/dynamic";
 
-import dynamic from 'next/dynamic'
-import AddLocationPage from '../Components/addLocationPage';
+// component
+import AddLocationPage from "../Components/addLocationPage";
 
-const Cloudinary = dynamic(() => import("../Components/FormComponents/Cloudinary"), {
+const Cloudinary = dynamic(
+  () => import("../Components/FormComponents/Cloudinary"),
+  {
     loading: () => "Loading...",
-    ssr: false
-  });
-// amenities pics
+    ssr: false,
+  }
+);
 
-
-const MyProtectedPage = withPageAuthRequired(AddLocationPage)
+const MyProtectedPage = withPageAuthRequired(AddLocationPage);
 export default function Addlocation() {
-
-
   return (
     <>
-    <MyProtectedPage>
-    
-      </MyProtectedPage>
+      <MyProtectedPage></MyProtectedPage>
     </>
   );
 }

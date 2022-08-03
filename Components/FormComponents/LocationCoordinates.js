@@ -1,3 +1,4 @@
+
 import styles from '../../styles/addLocation.module.css'
 import NumberFormat from 'react-number-format';
 
@@ -33,3 +34,4 @@ export default function LocationCoordinates({ register }) {
     );
   }
   
+

@@ -1,3 +1,4 @@
+
 import styles from '../../styles/LocationCard.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,6 +21,9 @@ export default function LocationCard ({location}){
                 <Link href={`/location/${location.location_id}`}><a><Button label="More Info"/></a></Link>
             </section>
 
+
         </section>
+      </section>
     </div>
+  );
 }

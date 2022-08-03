@@ -1,5 +1,5 @@
-import styles from '../../styles/LocationDisplayPage.module.css';
-import Image from 'next/image';
+import Image from "next/image";
+
 
 import Modal from '../../Components/LocationPageComponents/Modal';
 //map stuff
@@ -9,9 +9,10 @@ import dynamic from 'next/dynamic';
 
 
 
+
 // working in this one
 export async function getStaticPaths() {
-  const res = await fetch('https://untrodden.herokuapp.com/locations/');
+  const res = await fetch("https://untrodden.herokuapp.com/locations/");
   const data = await res.json();
 
   const paths = data.payload.map((location) => {
@@ -29,7 +30,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const id = context.params.id;
   console.log(id);
-  const res = await fetch('https://untrodden.herokuapp.com/locations/' + id);
+  const res = await fetch("https://untrodden.herokuapp.com/locations/" + id);
   const data = await res.json();
   console.log(data);
   return {
@@ -41,6 +42,7 @@ export default function LocationDisplayPage({ location }) {
   return (
 
     <div className={styles.location_page_wrapper}>
+
       <div className={styles.location_page}>
         <div className={styles.left_div}>
           <img src={location[0].image_url} className={styles.image}></img>
@@ -90,6 +92,8 @@ export default function LocationDisplayPage({ location }) {
         </div>
       </div>
 
+
     </div>
+
   );
 }
