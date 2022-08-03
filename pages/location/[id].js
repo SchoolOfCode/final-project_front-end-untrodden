@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import styles from '../../styles/LocationDisplayPage.module.css';
 
 import Modal from '../../Components/LocationPageComponents/Modal';
 //map stuff

@@ -13,7 +13,6 @@ import LocationAmenities from '../Components/FormComponents/LocationAmenities';
 import dynamic from 'next/dynamic'
 
 
-import styles from "../styles/addLocation.module.css";
 
 
 import styles from '../styles/addLocation.module.css';

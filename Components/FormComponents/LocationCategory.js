@@ -1,6 +1,6 @@
 
 // css
-import styles from "../../styles/addLocation.module.css
+import styles from "../../styles/addLocation.module.css"
 import CategoryButton from '../CategoryButton';
 
 
