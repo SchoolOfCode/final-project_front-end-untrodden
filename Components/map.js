@@ -16,9 +16,9 @@ export default function Map({ allLocationData }) {
     width: '100%',
     height: '100%',
     // The latitude and longitude is so the whole of the uk is centered on loading.
-    latitude: 54.489471,
+    latitude: 54.629471,
     longitude: -3.898575,
-    zoom: 5,
+    zoom: 4.7,
   });
 
   return (
@@ -34,7 +34,7 @@ export default function Map({ allLocationData }) {
         ref={(instance) => (mapRef.current = instance)}
         //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
 
-            minZoom ={5}
+            minZoom ={4}
             maxZoom = {16}
             >
 {allLocationData.map(location => <Marker key={location.location_id}longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
