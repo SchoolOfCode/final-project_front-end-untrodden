@@ -1,65 +1,41 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Image from 'next/image';
-//components
-import LocationNameAndAddress from '../Components/FormComponents/LocationNameAndAddress';
-import LocationDescription from '../Components/FormComponents/LocationDescription';
-import LocationCategory from '../Components/FormComponents/LocationCategory';
-import LocationAmenities from '../Components/FormComponents/LocationAmenities';
-// dynamic components
-import dynamic from 'next/dynamic'
+import { useForm } from "react-hook-form";
+import dynamic from "next/dynamic";
 
-const Cloudinary = dynamic(() => import("../Components/FormComponents/Cloudinary"), {
+import styles from "../styles/addLocation.module.css";
+
+// components
+import LocationNameAndAddress from "../Components/FormComponents/LocationNameAndAddress";
+import LocationDescription from "../Components/FormComponents/LocationDescription";
+import LocationCategory from "../Components/FormComponents/LocationCategory";
+import LocationAmenities from "../Components/FormComponents/LocationAmenities";
+import LocationCoordinates from "../Components/FormComponents/LocationCoordinates";
+
+const Cloudinary = dynamic(
+  () => import("../Components/FormComponents/Cloudinary"),
+  {
     loading: () => "Loading...",
-    ssr: false
-  });
-// amenities pics
+    ssr: false,
+  }
+);
 
-import styles from '../styles/addLocation.module.css';
-import { useForm } from 'react-hook-form';
-import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
-
+// function to add a new location to the backend
 export default function AddLocationPage() {
   const { register, handleSubmit, setValue } = useForm();
 
-  const onSubmit = async (data) =>{
-    console.log(data)
+  const onSubmit = async (data) => {
+    console.log(data);
     const res = await fetch("https://untrodden.herokuapp.com/locations", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
     const responseData = await res.json();
-    console.log(responseData)
+    console.log(responseData);
     return responseData;
-   
-    
-
-  }
-
-
-
-
-
-
-// function to add a new resources to the backend
-async function postResources(input) {
-  const res = await fetch("v1/resources", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(input),
-  });
-  const data = await res.json();
-  return data;
-}
-
-
-
-
-
+  };
 
   return (
     <>
-  
       <main className={styles.main}>
         <h1 className={styles.h1}>Add Location</h1>
 
@@ -85,12 +61,10 @@ async function postResources(input) {
                   <LocationAmenities register={register} />
                 </div>
 
-                <LocationCoordinates register={register}/>
+                <LocationCoordinates register={register} />
 
                 {/* add image will go here */}
                 <Cloudinary setValue={setValue} />
-
-                {/* closing divs for the whole form */}
               </div>
             </div>
           </div>

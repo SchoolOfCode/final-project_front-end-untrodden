@@ -1,5 +1,7 @@
-import styles from '../../styles/addLocation.module.css';
+// css
+import styles from "../../styles/addLocation.module.css";
 
+// resonsive category labels
 export default function LocationCategory({ register }) {
   return (
     <>
@@ -8,7 +10,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_seaside"
-            {...register('category_seaside')}
+            {...register("category_seaside")}
           />
           <span>Seaside</span>
         </label>
@@ -18,14 +20,14 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_castles"
-            {...register('category_castles')}
+            {...register("category_castles")}
           />
           <span>Castles</span>
         </label>
       </div>
       <div className={`${styles.location_category} ${styles.checked}`}>
         <label>
-          <input type="checkbox" id="caves" {...register('category_caves')} />
+          <input type="checkbox" id="caves" {...register("category_caves")} />
           <span>Caves</span>
         </label>
       </div>
@@ -34,7 +36,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_peaceful"
-            {...register('category_peaceful')}
+            {...register("category_peaceful")}
           />
           <span>Peaceful</span>
         </label>
@@ -44,7 +46,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_hiking"
-            {...register('category_hiking')}
+            {...register("category_hiking")}
           />
           <span>Hiking</span>
         </label>
@@ -54,7 +56,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_hills"
-            {...register('category_hills')}
+            {...register("category_hills")}
           />
           <span>Hills</span>
         </label>
@@ -64,7 +66,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_historic"
-            {...register('category_historic')}
+            {...register("category_historic")}
           />
           <span>Historic</span>
         </label>
@@ -74,7 +76,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_secluded"
-            {...register('category_secluded')}
+            {...register("category_secluded")}
           />
           <span>Secluded</span>
         </label>
@@ -84,7 +86,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_casual"
-            {...register('category_casual')}
+            {...register("category_casual")}
           />
           <span>Casual</span>
         </label>
@@ -94,7 +96,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_lakes"
-            {...register('category_lakes')}
+            {...register("category_lakes")}
           />
           <span>Lake</span>
         </label>
@@ -104,7 +106,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_busy"
-            {...register('category_busy')}
+            {...register("category_busy")}
           />
           <span>Busy</span>
         </label>
@@ -114,7 +116,7 @@ export default function LocationCategory({ register }) {
           <input
             type="checkbox"
             id="category_woods"
-            {...register('category_woods')}
+            {...register("category_woods")}
           />
           <span>Woods</span>
         </label>

@@ -1,9 +1,10 @@
+// location name and address input
 export default function LocationNameAndAddress({ register }) {
   return (
     <>
       <label htmlFor="locationName">Location Name:</label>
-      <input type="text" id="locationName" {...register('location_name')} />
-      {/* address section */}
+      <input type="text" id="locationName" {...register("location_name")} />
+
       <label htmlFor="Location Address">Location Address:</label>
 
       <label htmlFor="Street/road"></label>
@@ -11,7 +12,7 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="Street/road"
         placeholder="Street/Road"
-        {...register('street')}
+        {...register("street")}
       />
 
       <label htmlFor="location Town"></label>
@@ -19,18 +20,11 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Town"
         placeholder="Town"
-        {...register('town')}
+        {...register("town")}
       />
 
-      {/* <label htmlFor="location Region"></label>
-      <input
-        type="text"
-        id="locationn Region"
-        placeholder="Region"
-        {...register('region')}
-      /> */}
       <label htmlFor="region-select">Choose a Region:</label>
-      <select name="region" id="region-select" {...register('region')}>
+      <select name="region" id="region-select" {...register("region")}>
         <option value="West Midlands">West Midlands</option>
         <option value="London">London</option>
         <option value="North East">North East</option>
@@ -69,7 +63,7 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Postcode"
         placeholder="Postcode"
-        {...register('postcode')}
+        {...register("postcode")}
       />
     </>
   );

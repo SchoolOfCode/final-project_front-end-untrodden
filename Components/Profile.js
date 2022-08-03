@@ -1,5 +1,8 @@
-import { useUser } from '@auth0/nextjs-auth0';
-import styles from '../styles/Navbar.module.css';
+// auth0
+import { useUser } from "@auth0/nextjs-auth0";
+
+// css
+import styles from "../styles/Navbar.module.css";
 
 export default function Profile() {
   const { user, error, isLoading } = useUser();
@@ -9,7 +12,6 @@ export default function Profile() {
 
   return (
     user && (
-
       <>
         <img
           className={styles.profile_image}
@@ -18,10 +20,7 @@ export default function Profile() {
           height={50}
           width={50}
         />
-        {/* <h2>{user.name}</h2>
-        <p>{user.email}</p> */}
       </>
-
     )
   );
 }

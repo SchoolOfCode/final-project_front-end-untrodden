@@ -1,43 +1,32 @@
-import Head from 'next/head'
-import CardDisplay from '../Components/Card Display/cardDisplay'
-import styles from '../styles/Home.module.css'
-import dynamic from 'next/dynamic'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import Head from "next/head";
+import dynamic from "next/dynamic";
 
-import CategoryFilter from '../Components/Category Filter/categoryFilter'
-import RegionFilter from '../Components/Region Filter/regionFilter'
-import AmenityFilter from '../Components/Amenity Filter/amenityFilter'
-import ComboBox from '../Components/Text Search/textSearch'
+// css
+import styles from "../styles/Home.module.css";
 
-
-
-
-
-
-
-
+//components
+import CategoryFilter from "../Components/Category Filter/categoryFilter";
+import RegionFilter from "../Components/Region Filter/regionFilter";
+import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
+import ComboBox from "../Components/Text Search/textSearch";
+import CardDisplay from "../Components/Card Display/cardDisplay";
 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
-    loading: () => "Loading...",
-    ssr: false
-  });
+  loading: () => "Loading...",
+  ssr: false,
+});
 
-
-
-
-
+// states
 export default function Home() {
-
-  const [categoryState, setCategoryState] = useState("")
-  const [allLocationData , setAllLocationData] = useState([])
-  const [displayedData,setDisplayedData]= useState([])
-  const [regionState, setRegionState] = useState("")
+  const [categoryState, setCategoryState] = useState("");
+  const [allLocationData, setAllLocationData] = useState([]);
+  const [displayedData, setDisplayedData] = useState([]);
+  const [regionState, setRegionState] = useState("");
   const [amenityState, setAmenityState] = useState([]);
-  const [searchState, setSearchState] = useState("")
-  
-  
+  const [searchState, setSearchState] = useState("");
 
-
+  // fetch and display all data from backend
   useEffect(() => {
     const fetchData = async () => {
       const url = `https://untrodden.herokuapp.com/locations`;
@@ -45,49 +34,56 @@ export default function Home() {
         const response = await fetch(url);
         const data = await response.json();
         setAllLocationData(data.payload);
-        setDisplayedData(data.payload)
-              } catch (error) {
-        console.log('error', error);
+        setDisplayedData(data.payload);
+      } catch (error) {
+        console.log("error", error);
       }
-    }
-    fetchData()
-  } ,[])
+    };
+    fetchData();
+  }, []);
 
+  // set region
+  function onChangeRegionState(event) {
+    setRegionState(event.target.value);
+    setDisplayedData([
+      ...allLocationData.filter(
+        (location) => location.region === event.target.value
+      ),
+    ]);
+  }
 
+  // set category
+  function onChangeCategoryState(event) {
+    console.log(event.target.value);
+    setCategoryState(event.target.value);
+    setDisplayedData([
+      ...allLocationData.filter((location) =>
+        location.categories.includes(event.target.value)
+      ),
+    ]);
+  }
 
-  function onChangeRegionState(event){
-    
-     setRegionState(event.target.value)
-     setDisplayedData([...allLocationData.filter(location =>location.region === event.target.value)])
- }
+  // set amentities
+  function handleChange(event) {
+    const {
+      target: { value },
+    } = event;
+    setAmenityState(
+      // On autofill we get a stringified value.
+      typeof value === "string" ? value.split(",") : value
+    );
 
+    let selectedAmenities = event.target.value;
 
-  function onChangeCategoryState(event){
-        console.log(event.target.value);
-      setCategoryState(event.target.value)   
-  setDisplayedData([...allLocationData.filter(location =>location.categories.includes(event.target.value))])
-
-}
-
-function handleChange (event) {
-  const {
-    target: { value },
-  } = event;
-  setAmenityState(
-    // On autofill we get a stringified value.
-    typeof value === 'string' ? value.split(',') : value,
-  );
-
-let selectedAmenities = event.target.value
-
-
-  
-setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(amenity =>location.amenities.includes(amenity))))])
-
-};
-
-
-  //console.log(allLocationData)
+    // set display data
+    setDisplayedData([
+      ...allLocationData.filter((location) =>
+        selectedAmenities.every((amenity) =>
+          location.amenities.includes(amenity)
+        )
+      ),
+    ]);
+  }
 
   return (
     <div className={styles.container}>
@@ -97,29 +93,29 @@ setDisplayedData([...allLocationData.filter(location=>(selectedAmenities.every(a
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-<section className={styles.filter_bar}>
-<RegionFilter onChange={onChangeRegionState} value={regionState}/>
-<CategoryFilter onChange={onChangeCategoryState} value={categoryState} />
-<AmenityFilter handleChange={handleChange} value={amenityState}/>
-<ComboBox setSearchState={setSearchState} setDisplayedData={setDisplayedData} options={allLocationData} value={searchState}/>
-  </section>
-          
-     
-         <main className={styles.main}>
+      <section className={styles.filter_bar}>
+        <RegionFilter onChange={onChangeRegionState} value={regionState} />
+        <CategoryFilter
+          onChange={onChangeCategoryState}
+          value={categoryState}
+        />
+        <AmenityFilter handleChange={handleChange} value={amenityState} />
+        <ComboBox
+          setSearchState={setSearchState}
+          setDisplayedData={setDisplayedData}
+          options={allLocationData}
+          value={searchState}
+        />
+      </section>
+
+      <main className={styles.main}>
         <section>
-          <MapComponent allLocationData={displayedData}/>
+          <MapComponent allLocationData={displayedData} />
         </section>
         <section>
-        <CardDisplay allLocationData={displayedData}/>
-    </section>
-
-    </main>
-
-
-
-      
+          <CardDisplay allLocationData={displayedData} />
+        </section>
+      </main>
     </div>
-  )
+  );
 }
-
-
