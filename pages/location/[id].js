@@ -71,7 +71,7 @@ export default function LocationDisplayPage({ location }) {
               </div>
             ))}
           </section>
-          <Modal />
+          <Modal location={location[0]} />
         </div>
         <div className={styles.right_div}>
           <h1 className={styles.title}>{location[0].location_name}</h1>

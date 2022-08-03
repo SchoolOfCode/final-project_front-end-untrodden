@@ -23,7 +23,7 @@ const style = {
   p: 4,
 };
 
-export default function TransitionsModal() {
+export default function TransitionsModal({ location }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -56,8 +56,13 @@ export default function TransitionsModal() {
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               <form className={styles.report_form} onSubmit={handleSubmit}>
-                <label htmlFor="name">Name</label>
-                <input id="name" type="text" name="messager-name" />
+                <label htmlFor="name">Location Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="messager-name"
+                  value={location.location_name}
+                />
                 <ValidationError
                   prefix="Name"
                   field="messager-name"
@@ -98,7 +103,7 @@ export default function TransitionsModal() {
                 {state.succeeded && (
                   <h2 className={styles.form_submission}>
                     Thanks for your submission! We&apos;ll review the issue and
-                    make any neccessary ammendmnents.
+                    make any neccessary ammendments.
                   </h2>
                 )}
               </form>
