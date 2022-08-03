@@ -1,4 +1,5 @@
 import styles from '../../styles/Map.module.css';
+import stylesMap from '../../styles/LocationDisplayPage.module.css'
 import { useRef, useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -13,13 +14,15 @@ export default function Map({ location }) {
     width: '100%',
     height: '100%',
     // The latitude and longitude is so the whole of the uk is centered on loading.
-    latitude: 54.489471,
-    longitude: -3.898575,
-    zoom: 5,
+    // latitude: 54.489471,
+    // longitude: -3.898575,
+    latitude: location[0].latitude,
+    longitude: location[0].longitude,
+    zoom: 6,
   });
 
   return (
-    <section className={styles.map_container}>
+    <section className={stylesMap.map_container}>
       <ReactMapGL
         mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
