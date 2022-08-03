@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
   const data = await res.json();
   console.log(data);
   return {
-    props: { location: data.payload[0] },
+    props: { location: data.payload },
   };
 }
 
