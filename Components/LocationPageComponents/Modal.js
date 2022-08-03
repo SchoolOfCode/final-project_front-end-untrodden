@@ -56,7 +56,7 @@ export default function TransitionsModal() {
               Report an Issue
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              <form className="contact-form" onSubmit={handleSubmit}>
+              <form className={styles.report_form} onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input id="name" type="text" name="messager-name" />
                 <ValidationError
@@ -89,7 +89,7 @@ export default function TransitionsModal() {
                 />
 
                 <button
-                  className="btn-main form-button"
+                  className={styles.button}
                   type="submit"
                   disabled={state.submitting}
                 >
