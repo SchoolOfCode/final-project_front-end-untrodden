@@ -17,7 +17,7 @@ export default function LocationCard ({location}){
                   {location.amenities.map(amenity =><img key={amenity} src={`/amenities_images/${amenity}.png`} height={24} width={24} alt={amenity} />)}  
                     
                     </section>
-                <Link href={`/location/${location.location_id}`}><Button label="More Info" /></Link>
+                <Link href={`/location/${location.location_id}`}><a><Button label="More Info"/></a></Link>
             </section>
 
         </section>
