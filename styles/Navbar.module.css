@@ -13,10 +13,16 @@
   color: #e8a941;
   font-family: 'Raleway', sans-serif;
   font-size: 16;
+  
+
+}
+.image{
+    transform: scale(0.8);
 }
 
-.image {
+.image:hover {
   /* height: 8vh; */
+  cursor: pointer;
 }
 
 .nav {
@@ -27,19 +33,27 @@
   /* padding-top: 3vh; */
   font-size: 1vw;
   align-items: center;
+  
+
 }
 
 .link,
 .header a {
-  color: #e8a941;
+  color: white;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
+  
 }
 .link:hover,
 .header a:hover {
-  color: #e8a941;
-  text-decoration: underline;
+  color: white;
+  text-decoration: underline 4px #e8a941;
+  transform: scale(1.1);
+  transition-duration: 100ms;
+  transition-property: transform;
+  
+
 }
 /* 
 .header a {
