@@ -39,7 +39,9 @@ export default function Map({ allLocationData }) {
                     setPopupLat(location.latitude);
                     setPopupLong(location.longitude)
                     setPopupName(location.location_name)
-                    setShowPopup(true)}} />
+                    setShowPopup(true)}} 
+                    alt="Location Marker"
+                    />
              </Marker>
  )}
               

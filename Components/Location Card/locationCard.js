@@ -14,7 +14,7 @@ export default function LocationCard ({location}){
             <section className={styles.amenities_button}>        
                 <section className={styles.amenities}>
 
-                  {location.amenities.map(amenity =><img key={amenity} src={`/amenities_images/${amenity}.png`} height={24} width={24} />)}  
+                  {location.amenities.map(amenity =><img key={amenity} src={`/amenities_images/${amenity}.png`} height={24} width={24} alt={amenity} />)}  
                     
                     </section>
                 <Link href={`/location/${location.location_id}`}><button className={styles.button}>More Info</button></Link>
