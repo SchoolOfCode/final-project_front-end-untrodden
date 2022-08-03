@@ -19,6 +19,8 @@ const MenuProps = {
       width: 250,
       color: "white",
       backgroundColor: "#225544",
+      
+    
     },
   },
 };
@@ -56,14 +58,29 @@ export default function AmenityFilter ({setAmenityState,value}){
 
 return <div className={styles.amenities_filter}>
 <FormControl sx={{ m: 0.5, width: '15vw' }}>
-  <InputLabel id="demo-multiple-checkbox-label" style={{color:'#E8A941', fontSize:'1.2vw',}} >Amenities:</InputLabel>
+  <InputLabel id="demo-multiple-checkbox-label" 
+  sx={{
+    width: 300,
+    color: 'success.main',
+    '& .MuiSelect-outlined': {
+      border: 'blue',
+    },
+  }}
+  style={{color:'#E8A941', fontSize:'1.2vw',}} >Amenities:</InputLabel>
   <Select
     labelId="demo-multiple-checkbox-label"
     id="demo-multiple-checkbox"
     multiple
     value={value}
     onChange={e => setAmenityState(e.target.value)}
-    input={<OutlinedInput label="Amenities:" />}
+    input={<OutlinedInput sx={{
+    width: 250,
+    notchedOutline:'blue',
+    
+    '& .MuiOutlinedInput-root': {
+      color: 'blue',
+    },
+  }} label="Amenities:" />}
     renderValue={(selected) => {
       let selectedAms = [] 
       for (let i = 0; i < selected.length; i++) {
@@ -89,3 +106,5 @@ return <div className={styles.amenities_filter}>
 </FormControl>
 </div>
 }
+
+// MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiOutlinedInput-input MuiInputBase-input

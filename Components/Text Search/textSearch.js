@@ -31,6 +31,7 @@ export default function ComboBox({
       disablePortal
       id="combo-box-demo"
       options={loctions}
+      style={{color:'#E8A941', fontSize:'1.2vw',}}
       sx={{ width: 300, color: "#E8A941", fontSize: "1.2vw" }}
       renderInput={(params) => <TextField {...params} label="Locations" />}
     />
