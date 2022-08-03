@@ -28,7 +28,7 @@ import BadPublicTransport from "../../public/amenities_images/amenities_public_t
 import styles from "../../styles/addLocation.module.css";
 //image
 import Image from "next/image";
-
+//import Tooltip
 import Tooltip from "@mui/material/Tooltip";
 
 export default function LocationAmenities({ register }) {
