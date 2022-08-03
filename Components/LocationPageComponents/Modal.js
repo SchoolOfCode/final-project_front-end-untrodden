@@ -28,7 +28,7 @@ export default function TransitionsModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [state, handleSubmit] = useForm('mzbwprql');
+  const [state, handleSubmit] = useForm('xqkjzypy');
 
   return (
     <div className={styles.modal}>
@@ -51,10 +51,10 @@ export default function TransitionsModal() {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h5" component="h2">
+            <Typography id="transition-modal-title" variant="h4" component="h2">
               Report an Issue
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2}}>
+            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               <form className={styles.report_form} onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input id="name" type="text" name="messager-name" />
@@ -96,7 +96,10 @@ export default function TransitionsModal() {
                 </button>
                 <ValidationError errors={state.errors} />
                 {state.succeeded && (
-                  <h1>Thanks for your submission! You&apos;ve made my day!</h1>
+                  <h2 className={styles.form_submission}>
+                    Thanks for your submission! We&apos;ll review the issue and
+                    make any neccessary ammendmnents.
+                  </h2>
                 )}
               </form>
             </Typography>

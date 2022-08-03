@@ -167,6 +167,8 @@
   font-weight: 700;
   font-size: 26px;
   margin-left: 1.2rem;
+  align-self: flex-start;
+  margin-left: 3rem;
 }
 
 .button {
@@ -181,4 +183,8 @@
   background-color: var(--secondary);
   color: var(--primary);
   margin: 2rem;
+}
+
+.form_submission {
+  color: #225544;
 }
