@@ -17,7 +17,7 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: 'background.paper',
-
+  textAlign: 'center',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -37,7 +37,6 @@ export default function TransitionsModal() {
           <p>Report any issues with this page</p>
           <img src="/report_flag.png" />
         </div>
-        ;
       </Button>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -55,7 +54,7 @@ export default function TransitionsModal() {
             <Typography id="transition-modal-title" variant="h5" component="h2">
               Report an Issue
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+            <Typography id="transition-modal-description" sx={{ mt: 2}}>
               <form className={styles.report_form} onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input id="name" type="text" name="messager-name" />
