@@ -17,8 +17,8 @@ const MenuProps = {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: 250,
-      color: "white",
-      backgroundColor: "#225544",
+      //color: "white",
+     // backgroundColor: "#225544",
     },
   },
 };
@@ -55,15 +55,21 @@ export default function AmenityFilter ({setAmenityState,value}){
       
 
 return <div className={styles.amenities_filter}>
-<FormControl sx={{ m: 0.5, width: '15vw' }}>
-  <InputLabel id="demo-multiple-checkbox-label" style={{color:'#E8A941', fontSize:'1.2vw',}} >Amenities:</InputLabel>
+<FormControl sx={{ m: 0.5, 
+                    width: '12vw', 
+                    '& .MuiOutlinedInput-root':{'& > fieldset': {border: 'none'}},
+                    '& .MuiSvgIcon-root':{color: '#e8a941'},
+                    '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.2vw'},
+
+}}>
+  <InputLabel id="demo-multiple-checkbox-label" >Amenities:</InputLabel>
   <Select
     labelId="demo-multiple-checkbox-label"
     id="demo-multiple-checkbox"
     multiple
     value={value}
     onChange={e => setAmenityState(e.target.value)}
-    input={<OutlinedInput label="Amenities:" />}
+    input={<OutlinedInput   label="Amenities:" />}
     renderValue={(selected) => {
       let selectedAms = [] 
       for (let i = 0; i < selected.length; i++) {
@@ -81,7 +87,7 @@ return <div className={styles.amenities_filter}>
     {amenities.map((amen) => (
       <MenuItem key={amen.value} value={amen.value}>
       <ListItemText primary={amen.label} />
-        <Checkbox style={{color:'white'}} checked={value.indexOf(amen.value) > -1} />
+        <Checkbox style={{color:'black'}} checked={value.indexOf(amen.value) > -1} />
        
       </MenuItem>
     ))}
