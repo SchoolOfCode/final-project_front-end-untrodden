@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+
+
 .map_container{
     width:50vw;
     height: 70vh;
@@ -13,3 +16,10 @@
     border-radius: 50%;
     cursor: pointer;
   }
+
+ .popup{
+   
+    font-family:  "Raleway", sans-serif ;
+   
+  
+ }

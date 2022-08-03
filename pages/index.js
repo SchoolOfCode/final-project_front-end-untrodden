@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-
+import Button from "../Components/Button/button";
 import CardDisplay from "../Components/Card Display/cardDisplay";
 import CategoryFilter from "../Components/Category Filter/categoryFilter";
 import RegionFilter from "../Components/Region Filter/regionFilter";
@@ -86,14 +86,15 @@ export default function Home() {
         <RegionFilter setRegionState={setRegionState} value={regionState} />
         <CategoryFilter setCategoryState={setCategoryState} value={categoryState} />
         <AmenityFilter setAmenityState={setAmenityState} value={amenityState} />
+        <Button onClick={() => handleFilter()}  label="Apply Filter" />
+        <Button onClick={() => clearFilter()} label="Clear Filter" />
         <ComboBox
           setSearchState={setSearchState}
           setDisplayedData={setDisplayedData}
           options={allLocationData}
           value={searchState}
         />
-        <button onClick={() => handleFilter()}>Filter</button>
-        <button onClick={() => clearFilter()}> Clear All</button>
+        
       </section>
 
       <main className={styles.main}>

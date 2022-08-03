@@ -1,7 +1,7 @@
 import styles from '../../styles/LocationCard.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import Button from '../Button/button'
 
 //get props to location page
 
@@ -17,7 +17,7 @@ export default function LocationCard ({location}){
                   {location.amenities.map(amenity =><img key={amenity} src={`/amenities_images/${amenity}.png`} height={24} width={24} alt={amenity} />)}  
                     
                     </section>
-                <Link href={`/location/${location.location_id}`}><button className={styles.button}>More Info</button></Link>
+                <Link href={`/location/${location.location_id}`}><a><Button label="More Info"/></a></Link>
             </section>
 
         </section>

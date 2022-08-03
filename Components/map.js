@@ -2,10 +2,13 @@ import styles from '../styles/Map.module.css';
 import { useRef, useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import Button from '../Components/Button/button'
+import Link from 'next/link';
 
 export default function Map({ allLocationData }) {
   const mapRef = useRef(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [popupId, setPopupId] = useState(null)
   const [popupLat, setPopupLat] = useState(null);
   const [popupLong, setPopupLong] = useState(null);
   const [popupName, setPopupName] = useState(null);
@@ -39,6 +42,7 @@ export default function Map({ allLocationData }) {
                     setPopupLat(location.latitude);
                     setPopupLong(location.longitude)
                     setPopupName(location.location_name)
+                    setPopupId(location.location_id)
                     setShowPopup(true)}} 
                     alt="Location Marker"
                     />
@@ -46,17 +50,17 @@ export default function Map({ allLocationData }) {
  )}
               
   
-
-
         {showPopup && (
           <Popup
+          className={styles.popup}
             longitude={popupLong}
             latitude={popupLat}
             anchor="top-left"
             closeOnClick={false}
             onClose={() => setShowPopup(false)}
           >
-            {popupName}
+           <p>{popupName}</p> <br/>
+           <Link href={`/location/${popupId}`}><a><Button label="More Info" /></a></Link>
           </Popup>
         )}
       </ReactMapGL>
