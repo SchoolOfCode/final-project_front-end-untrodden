@@ -143,12 +143,12 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 1rem;
 }
-.main textarea {
-  min-height: 300px;
-  max-width: 500px;
-  min-width: 500px;
+.report_form textarea {
+  height: 200px;
+  /* max-width: 500px;
+  min-width: 500px; */
 }
 
 .report_form {
@@ -162,7 +162,7 @@
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 1rem;
 
   align-self: flex-start;
   margin-left: 3rem;
@@ -171,7 +171,7 @@
 .button {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   /* line-height: 38px; */
   text-align: center;
   padding: 0.8rem 5rem;
