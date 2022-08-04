@@ -35,8 +35,8 @@ export default function RegionFilter ({setRegionState, value}){
 
     return   <div>
     <select className={styles.dropdown} id="regions" onChange={e => setRegionState(e.target.value)} value={value}>
-<option value="0">Region:</option>
-{regions.map(reg => <option key={reg.value} value={reg.value}>{reg.label}</option>)}
+<option className={styles.options} value="0">Region:</option>
+{regions.map(reg => <option className={styles.options} key={reg.value} value={reg.value}>{reg.label}</option>)}
   </select>
 </div>
 }

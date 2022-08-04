@@ -9,11 +9,10 @@ import styles from "../styles/Home.module.css";
 // components
 import Button from "../Components/Button/button";
 import CardDisplay from "../Components/Card Display/cardDisplay";
-
 import CategoryFilter from "../Components/Category Filter/categoryFilter";
 import RegionFilter from "../Components/Region Filter/regionFilter";
 import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
-import ComboBox from "../Components/Text Search/textSearch";
+import LocationFilter from "../Components/Location Filter/locationFilter";
 
 
 
@@ -103,8 +102,7 @@ export default function Home() {
         <AmenityFilter setAmenityState={setAmenityState} value={amenityState} />
         <Button onClick={() => handleFilter()}  label="Apply Filter" />
         <Button onClick={() => clearFilter()} label="Clear Filter" />
-
-        <ComboBox
+        <LocationFilter
           setSearchState={setSearchState}
           setDisplayedData={setDisplayedData}
           options={allLocationData}
