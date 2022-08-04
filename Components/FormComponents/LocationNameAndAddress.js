@@ -5,7 +5,7 @@ export default function LocationNameAndAddress({ register }) {
   return (
     <>
       <label className={styles.label} htmlFor="locationName">Location Name:</label>
-      <input required type="text" id="locationName" pattern="[a-z, 0-9]{1,30}"
+      <input required type="text" id="locationName" pattern="[a-z, A-Z, 0-9]{1,30}"
         title="Only Letters 'A-Z' and Numbers '0-9'  allowed" {...register('location_name')} />
       {/* address section */}
       <label className={styles.label} htmlFor="Location Address">Location Address:</label>
@@ -18,7 +18,7 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="Street/road"
         placeholder="Street Address"
-        pattern="[a-z, 0-9]{1,30}"
+        pattern="[a-z, A-Z, 0-9]{1,30}"
         title="Only Letters A-Z allowed"
         {...register("street")}
       />
@@ -30,7 +30,7 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Town"
         placeholder="Town"
-        pattern="[a-z]{1,30}"
+        pattern="[a-z, A-Z]{1,30}"
         title="Only Letters A-Z allowed"
         {...register("town")}
       />
@@ -80,8 +80,8 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Postcode"
         placeholder="Postcode"
-        pattern="[a-z, 0-9]{1,9}"
-        title="Only Letters 'A-Z' and numbers '0-9' allowed"
+        pattern="[a-z, A-Z, 0-9]{1,9}"
+        title="Only Letters 'A-Z' and numbers '0-9' allowed Maximum 9 Characters"
         {...register("postcode")}
       />
     </>
