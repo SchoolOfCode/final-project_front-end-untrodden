@@ -26,7 +26,7 @@ export default function Map({ location }) {
   });
 
   return (
-    <section className={stylesMap.map_container}>
+    <section className={stylesMap.map_container} style={{borderRadius: '10ßpx', overflow: 'hidden'}}>
       <ReactMapGL
         mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
