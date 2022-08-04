@@ -1,9 +1,10 @@
-import styles from "../styles/aboutUs.module.css";
+import styles from "../styles/aboutUs.module.css"
+
 
 export default function AboutUs() {
   return (
     <div>
-      <h1 className={styles.h1}>About Us Page</h1>
+      <h1 className={styles.h1}>About Us Page</h1>   
       <p>
         The last few years have been full of uncertainty, with restrictions,
         travel bans, isolation periods and more inconveniences. This has been
