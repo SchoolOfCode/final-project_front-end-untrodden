@@ -16,7 +16,7 @@ export default function LocationCard ({location}){
             <section className={styles.amenities}>
               {location.amenities.map(amenity =><img key={amenity} src={`/amenities_images/${amenity}.png`} height={24} width={24} alt={amenity} />)}  
             </section>
-            <Link href={`/location/${location.location_id}`}><a><Button label="More Info"/></a></Link>
+            <Link href={`/location/${location.location_id}`}><a className={styles.moreInfo}><Button label="More Info"/></a></Link>
           </section>
         </section>
     </div>
