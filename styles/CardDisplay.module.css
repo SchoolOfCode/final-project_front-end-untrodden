@@ -5,10 +5,13 @@
     height: 70vh;
     overflow: auto;
     margin-top: 3vh;
- 
-}
-
-.display_container::-webkit-scrollbar {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+  }
+  
+  .display_container::-webkit-scrollbar {
     width: 15px;               /* width of the entire scrollbar */
   }
   
@@ -23,3 +26,22 @@
     height: 50px;
   }
   
+.noResultsContainer{
+  margin-top: 25%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  color: #E8A941;
+  background-color: #225544;
+  height: 20vh;
+}
+
+.noResults{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}

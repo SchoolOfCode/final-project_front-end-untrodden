@@ -65,7 +65,7 @@ export default function Map({ allLocationData }) {
             onClose={() => setShowPopup(false)}
           >
            <p>{popupName}</p> <br/>
-           <Link href={`/location/${popupId}`}><a><Button label="More Info" /></a></Link>
+           <Link href={`/location/${popupId}`}><a className='moreInfo'><Button label="More Info" className='moreInfo'/></a></Link>
           </Popup>
         )}
       </ReactMapGL>

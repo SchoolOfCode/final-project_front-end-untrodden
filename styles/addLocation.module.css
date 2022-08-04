@@ -169,7 +169,8 @@
 } */
 .amenities_pic:hover {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
-    brightness(35%) contrast(88%);
+  brightness(35%) contrast(88%);
+  cursor: pointer;
 }
 .amenities_category:hover {
   transform: scale(1.1);
