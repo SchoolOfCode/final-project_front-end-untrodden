@@ -86,7 +86,7 @@
 .main textarea {
   min-height: 300px;
   max-width: 500px;
-  min-width: 500px;
+ 
   font-size: 1.2rem;
 }
 .main label {
@@ -164,7 +164,7 @@
 
 .amenities_category_grid_container {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+ 
   width: 80%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
