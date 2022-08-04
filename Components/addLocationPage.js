@@ -34,7 +34,7 @@ export default function AddLocationPage() {
   const onSubmit = async (data) => {
     console.log(data);
 
-    const res = await fetch('https://untrodden.herokuapp.com/locations', {
+    const res = await fetch('https://untrodden-untrodded.herokuapp.com/locations', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

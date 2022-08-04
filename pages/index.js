@@ -33,7 +33,7 @@ export default function Home() {
   // fetch and display all data from backend
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://untrodden.herokuapp.com/locations`;
+      const url = `https://untrodden-untrodded.herokuapp.com/locations`;
       try {
         const response = await fetch(url);
         const data = await response.json();

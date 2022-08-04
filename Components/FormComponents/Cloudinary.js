@@ -24,7 +24,7 @@ export default function Cloudinary({ setValue }) {
     event.preventDefault();
 
     const response = await fetch(
-      'https://api.cloudinary.com/v1_1/dkethqypm/image/upload',
+      'https://api.cloudinary.com/v1_1/dnshrtqmv/image/upload',
       {
         method: 'POST',
         headers: {
