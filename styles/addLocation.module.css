@@ -43,6 +43,7 @@
   background-color: var(--secondary);
   color: var(--primary);
   margin-bottom: 2rem;
+  margin-top: 1.5rem;
 }
 
 .btn:hover {
@@ -80,6 +81,7 @@
   min-height: 300px;
   max-width: 500px;
   min-width: 500px;
+  font-size: 1.2rem;
 }
 .main label {
   color: var(--secondary);
