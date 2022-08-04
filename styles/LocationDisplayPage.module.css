@@ -6,11 +6,13 @@
 }
 
 .location_page {
-  display: flex;
-  justify-content: center;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 75%;
   background-color: #225544;
-  padding: 3vw;
-  margin: 6vh 0vw;
+  margin: 5vh auto;
+  padding: 5vh;
   border-radius: 10px;
   color: white;
   font-family: 'raleway';
@@ -23,16 +25,17 @@
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  width: 40vw;
+  width: 80%;
   /* margin-right: 2.5vw ; */
   margin: 0 auto;
   /* justify-content: space-between; */
 }
+
 .right_div {
   /* display: flex;
   flex-direction: column; */
-  width: 40vw;
-  margin-left: 2.5vw;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* .amenities {
@@ -50,7 +53,7 @@
   /* margin-top: 1rem; */
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
 
@@ -79,7 +82,7 @@
 
 .title {
   /* text-decoration: underline; */
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 0;
 }
 
@@ -93,7 +96,7 @@
 
 .map_container {
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   margin-top: 3vh;
   border-radius: 10px;
 }
@@ -145,6 +148,7 @@
   font-weight: 500;
   font-size: 1rem;
 }
+
 .report_form textarea {
   height: 200px;
   /* max-width: 500px;
