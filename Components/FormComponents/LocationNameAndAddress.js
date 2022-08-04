@@ -81,7 +81,7 @@ export default function LocationNameAndAddress({ register }) {
         id="location Postcode"
         placeholder="Postcode"
         maxlength="10"
-        pattern="[a-z, A-Z, 0-9]"
+        pattern="[a-z, A-Z, 0-9]{1,30}"
         title="Only Letters 'A-Z' and Numbers '0-9'  allowed"
         {...register("postcode")}
       />
