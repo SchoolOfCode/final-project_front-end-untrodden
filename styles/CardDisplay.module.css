@@ -5,10 +5,10 @@
     height: 70vh;
     overflow: auto;
     margin-top: 3vh;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
   }
   
   .display_container::-webkit-scrollbar {
@@ -27,7 +27,7 @@
   }
   
 .noResultsContainer{
-  margin-top: -10vh;
+  margin-top: 25%;
   border-radius: 30px;
   display: flex;
   align-items: center;
