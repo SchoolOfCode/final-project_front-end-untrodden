@@ -31,9 +31,8 @@
   background-color: #225544;
   margin-top:5vh ;
   border-radius: 10px;
-  width:82vw;
-  margin-left:7vw;
-  margin-right:11vw;
+  max-width: 87%;
+  margin: 5vh auto
 
 }
 
