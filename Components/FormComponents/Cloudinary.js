@@ -59,14 +59,13 @@ export default function Cloudinary({ setValue }) {
           <p>
             <input onChange={handleOnChange} type="file" name="file" />
           </p>
-
-          <img className={styles.img} src={imageSrc} />
-
           {imageSrc && !uploadData && (
             <p>
-              <button onClick={handleOnSubmit}>Upload Image</button>
+              <button onClick={handleOnSubmit}>Confirm Upload!</button>
             </p>
           )}
+
+          <img className={styles.img} src={imageSrc} />
         </div>
       </main>
     </div>

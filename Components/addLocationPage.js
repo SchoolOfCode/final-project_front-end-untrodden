@@ -71,46 +71,47 @@ export default function AddLocationPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.h1}>Add Location</h1>
+        <div className={styles.max_page_width}>
+          <h1 className={styles.h1}>Add Location</h1>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
-          {/* left side of form */}
-          <div className={styles.main_grid_container}>
-            <div className={styles.flex_container_left}>
-              <LocationNameAndAddress register={register} />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {/* left side of form */}
+            <div className={styles.main_grid_container}>
+              <div className={styles.flex_container}>
+                <LocationNameAndAddress register={register} />
 
-              <LocationDescription register={register} />
+                <LocationDescription register={register} />
 
-              <label className={styles.label} htmlFor="Location Category">
-                Location category:
-              </label>
-              <div className={styles.location_category_grid_container}>
-                <LocationCategory register={register} />
-              </div>
-            </div>
-
-            {/* right side of form */}
-            <div className={styles.grid_right}>
-              <div className={styles.flex_container_right}>
-                <label className={styles.label}>
-                  Select all available Amenities:
+                <label className={styles.label} htmlFor="Location Category">
+                  Location category:
                 </label>
-                <div className={styles.amenities_category_grid_container}>
-                  <LocationAmenities register={register} />
+                <div className={styles.location_category_grid_container}>
+                  <LocationCategory register={register} />
                 </div>
+              </div>
 
-                <FormMap setValue={setValue}/>
-                
-                {/* add image will go here */}
-                <Cloudinary setValue={setValue} />
+              {/* right side of form */}
+              <div className={styles.grid_right}>
+                <div className={styles.flex_container}>
+                  <label className={styles.label}>
+                    Select all available Amenities:
+                  </label>
+                  <div className={styles.amenities_category_grid_container}>
+                    <LocationAmenities register={register} />
+                  </div>
+
+                  <FormMap setValue={setValue} />
+
+                  {/* add image will go here */}
+                  <Cloudinary setValue={setValue} />
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.btn_container}>
-            <button className={styles.btn}>Add Location</button>
-          </div>
-        </form>
-       
+            <div className={styles.btn_container}>
+              <button className={styles.btn}>Add Location</button>
+            </div>
+          </form>
+        </div>
       </main>
     </>
   );

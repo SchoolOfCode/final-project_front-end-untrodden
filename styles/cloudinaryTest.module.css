@@ -8,26 +8,25 @@
   padding: 0 1rem;
   margin-top: 1.8rem;
 }
-.h1 {
-  font-size: 3.5rem;
-}
+
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  /* align-items: center; */
+  /* text-align: center; */
   padding: 1rem 0;
+  margin-top: 3rem;
 }
 
 .title {
-  display: flex;
   color: var(--secondary);
   margin: 0;
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
-  align-items: left;
-  width: 80%;
+  text-align: left;
+  /* align-items: left; */
+  /* width: 80%; */
 }
 
 .description {
@@ -38,6 +37,8 @@
   font-family: 'Raleway', sans-serif;
   width: 80%;
   color: var(--secondary);
+  color: darkred;
+  font-weight: 600;
 }
 
 .form [type='file'] {
@@ -48,9 +49,9 @@
 }
 
 .form button {
-  color: var(--primary);
+  color: white;
   font-size: 1.5em;
-  background-color: var(--secondary);
+  background-color: darkred;
   padding: 0.5em 0.8em;
   border: none;
   border-radius: 0.2em;
@@ -59,21 +60,15 @@
 .form button:hover {
   color: white;
   cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 100ms;
+  transition-property: transform;
 }
 
 .form code {
   text-align: left;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
 .img {
-  max-width: 100%;
+  max-width: 80%;
 }
