@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import Head from 'next/head';
-import styles from '../../styles/cloudinaryTest.module.css';
+import { useState } from "react";
+import Head from "next/head";
+
+// css
+import styles from "../../styles/cloudinaryTest.module.css";
 
 export default function Cloudinary({ setValue }) {
   const [imageSrc, setImageSrc] = useState();
@@ -17,29 +19,30 @@ export default function Cloudinary({ setValue }) {
     reader.readAsDataURL(changeEvent.target.files[0]);
   }
 
+  // post image to backend
   async function handleOnSubmit(event) {
     event.preventDefault();
-    // console.log(event);
 
     const response = await fetch(
-      'https://api.cloudinary.com/v1_1/dkethqypm/image/upload',
+      "https://api.cloudinary.com/v1_1/dkethqypm/image/upload",
       {
-       method: 'POST',
-       headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-       },
-       body: JSON.stringify({
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           file: imageSrc,
-          upload_preset: 'untrodden-pics'
-      })
-     })
-    
+          upload_preset: "untrodden-pics",
+        }),
+      }
+    );
+
     const data = await response.json();
-    
+
     setImageSrc(data.secure_url);
     setUploadData(data);
-    setValue('image_url', data.secure_url);
+    setValue("image_url", data.secure_url);
     console.log(data);
   }
 
@@ -59,15 +62,9 @@ export default function Cloudinary({ setValue }) {
           (Remember to click on the upload image button below once selected!)
         </p>
 
-        {/* Changed this form to a div tag instead, as we can't have a form inside a form */}
-        <div
-          className={styles.form}
-          method="post"
-          // onChange={handleOnChange} -> Moved this directly to the input tag below
-          // onSubmit={handleOnSubmit} -> Moved this directly to the button tag below
-        >
+        <div className={styles.form} method="post">
           <p>
-            <input onChange={handleOnChange} type="file" name="file" /> 
+            <input onChange={handleOnChange} type="file" name="file" />
           </p>
 
           <img className={styles.img} src={imageSrc} />
@@ -77,12 +74,6 @@ export default function Cloudinary({ setValue }) {
               <button onClick={handleOnSubmit}>Upload Image</button>
             </p>
           )}
-          {/* 
-          {uploadData && (
-            <code>
-              <pre>{JSON.stringify(uploadData, null, 2)}</pre>
-            </code>
-          )} */}
         </div>
       </main>
     </div>

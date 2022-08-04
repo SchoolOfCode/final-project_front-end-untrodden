@@ -2,27 +2,39 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 
+
+// css
+import styles from "../styles/Home.module.css";
+
+// components
+import Button from "../Components/Button/button";
 import CardDisplay from "../Components/Card Display/cardDisplay";
+
 import CategoryFilter from "../Components/Category Filter/categoryFilter";
 import RegionFilter from "../Components/Region Filter/regionFilter";
 import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
 import ComboBox from "../Components/Text Search/textSearch";
 
-import styles from "../styles/Home.module.css";
+
+
 
 const MapComponent = dynamic(() => import("../Components/map.js"), {
   loading: () => "Loading...",
   ssr: false,
 });
 
+// states
 export default function Home() {
+
+  const [categoryState, setCategoryState] = useState("");
   const [allLocationData, setAllLocationData] = useState([]);
   const [displayedData, setDisplayedData] = useState([]);
   const [regionState, setRegionState] = useState("");
-  const [categoryState, setCategoryState] = useState("");
+
   const [amenityState, setAmenityState] = useState([]);
   const [searchState, setSearchState] = useState("");
 
+  // fetch and display all data from backend
   useEffect(() => {
     const fetchData = async () => {
       const url = `https://untrodden.herokuapp.com/locations`;
@@ -35,6 +47,7 @@ export default function Home() {
         console.log("error", error);
       }
     };
+
 
     fetchData();
   }, []);
@@ -72,6 +85,7 @@ export default function Home() {
 
     // setting displayedData as the filtered Data (by region, category, and amenity)
     setDisplayedData(allData);
+
   }
 
   return (
@@ -83,17 +97,20 @@ export default function Home() {
       </Head>
 
       <section className={styles.filter_bar}>
+
         <RegionFilter setRegionState={setRegionState} value={regionState} />
         <CategoryFilter setCategoryState={setCategoryState} value={categoryState} />
         <AmenityFilter setAmenityState={setAmenityState} value={amenityState} />
+        <Button onClick={() => handleFilter()}  label="Apply Filter" />
+        <Button onClick={() => clearFilter()} label="Clear Filter" />
+
         <ComboBox
           setSearchState={setSearchState}
           setDisplayedData={setDisplayedData}
           options={allLocationData}
           value={searchState}
         />
-        <button onClick={() => handleFilter()}>Filter</button>
-        <button onClick={() => clearFilter()}> Clear All</button>
+
       </section>
 
       <main className={styles.main}>

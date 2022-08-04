@@ -1,12 +1,15 @@
+
 import styles from '../../styles/addLocation.module.css';
 
 export default function LocationNameAndAddress({ register }) {
   return (
     <>
       <label className={styles.label} htmlFor="locationName">Location Name:</label>
-      <input required type="text" id="locationName" {...register('location_name')} />
+      <input required type="text" id="locationName" pattern="[a-z, 0-9]{1,30}"
+        title="Only Letters 'A-Z' and Numbers '0-9'  allowed" {...register('location_name')} />
       {/* address section */}
       <label className={styles.label} htmlFor="Location Address">Location Address:</label>
+
 
       <label className={styles.label} htmlFor="Street/road"></label>
       <input
@@ -14,8 +17,10 @@ export default function LocationNameAndAddress({ register }) {
       className={styles.input}
         type="text"
         id="Street/road"
-        placeholder="Street/Road"
-        {...register('street')}
+        placeholder="Street Address"
+        pattern="[a-z, 0-9]{1,30}"
+        title="Only Letters A-Z allowed"
+        {...register("street")}
       />
 
       <label className={styles.label}  htmlFor="location Town"></label>
@@ -25,19 +30,16 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Town"
         placeholder="Town"
-        {...register('town')}
+        pattern="[a-z]{1,30}"
+        title="Only Letters A-Z allowed"
+        {...register("town")}
       />
 
-      {/* <label htmlFor="location Region"></label>
-      <input
-        type="text"
-        id="locationn Region"
-        placeholder="Region"
-        {...register('region')}
-      /> */}
+
 
       <label className={styles.label} htmlFor="region-select">Choose a Region:</label>
       <select required className={styles.input} name="region" id="region-select" {...register('region')}>
+
         <option value="West Midlands">West Midlands</option>
         <option value="London">London</option>
         <option value="North East">North East</option>
@@ -78,7 +80,9 @@ export default function LocationNameAndAddress({ register }) {
         type="text"
         id="location Postcode"
         placeholder="Postcode"
-        {...register('postcode')}
+        pattern="[a-z, 0-9]{1,9}"
+        title="Only Letters 'A-Z' and numbers '0-9' allowed"
+        {...register("postcode")}
       />
     </>
   );
