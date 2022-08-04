@@ -38,7 +38,7 @@ export default function Map({ allLocationData }) {
 
         //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
 
-            minZoom ={4}
+            minZoom ={4.7}
             maxZoom = {16}
             >
 {allLocationData.map(location => <Marker key={location.location_id}longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
