@@ -37,9 +37,8 @@ export default function LocationFilter({
                 sx={{ 
                       '& .MuiOutlinedInput-root':{color:'white', '& > fieldset': {border: 'none'}}, 
                       '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.2vw'},
-                      '& .MuiSvgIcon-root':{color: '#e8a941'}
-                      
-                      }}
+                      '& .MuiSvgIcon-root':{color: '#e8a941'},
+                    }}
                 label="Locations:" />}
               />
     
