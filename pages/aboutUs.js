@@ -1,3 +1,4 @@
+
 import styles from '../styles/aboutUs.module.css';
 import Head from 'next/head';
 
@@ -25,5 +26,6 @@ export default function AboutUs() {
         </p>
       </div>
     </>
+
   );
 }

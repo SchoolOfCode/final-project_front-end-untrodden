@@ -16,6 +16,7 @@ import styles from '../styles/addLocation.module.css';
 import { useForm } from 'react-hook-form';
 import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
 import { useEffect } from 'react';
+import FormMap from './FormComponents/FormMap';
 
 const Cloudinary = dynamic(
   () => import('../Components/FormComponents/Cloudinary'),
@@ -98,8 +99,8 @@ export default function AddLocationPage() {
                   <LocationAmenities register={register} />
                 </div>
 
-                <LocationCoordinates register={register} />
-
+                <FormMap setValue={setValue}/>
+                
                 {/* add image will go here */}
                 <Cloudinary setValue={setValue} />
               </div>
@@ -109,6 +110,7 @@ export default function AddLocationPage() {
             <button className={styles.btn}>Add Location</button>
           </div>
         </form>
+       
       </main>
     </>
   );
