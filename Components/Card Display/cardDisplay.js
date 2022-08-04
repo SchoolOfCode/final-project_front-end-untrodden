@@ -11,7 +11,7 @@ export default function CardDisplay({ allLocationData }) {
             <p className={styles.noResults}>
               Sorry, no results found.
               <br/><br/>
-              Please try searching again with different filters.
+              Please try searching again with different filters (or adding a new place which has what you searched for!)
             </p>
           </div>
         : allLocationData.map((location) => <LocationCard key={location.location_id} location={location} />)
