@@ -10,7 +10,7 @@ import Head from 'next/head';
 
 // working in this one
 export async function getStaticPaths() {
-  const res = await fetch('https://untrodden.herokuapp.com/locations/');
+  const res = await fetch('https://untrodden-untrodded.herokuapp.com/locations/');
   const data = await res.json();
 
   const paths = data.payload.map((location) => {
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const id = context.params.id;
   console.log(id);
-  const res = await fetch('https://untrodden.herokuapp.com/locations/' + id);
+  const res = await fetch('https://untrodden-untrodded.herokuapp.com/locations/' + id);
   const data = await res.json();
   console.log(data);
   return {
