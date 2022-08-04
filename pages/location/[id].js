@@ -40,7 +40,7 @@ export default function LocationDisplayPage({ location }) {
   return (
     <>
       <Head>
-        <title>{location[0].location_name}</title>
+        <title>{location[0].location_name} | Untrodden</title>
         <meta name="description" content="About us" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

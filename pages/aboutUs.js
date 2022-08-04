@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <>
       <Head>
-        <title>About us</title>
+        <title>About us | Untrodden</title>
         <meta name="description" content="About us" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

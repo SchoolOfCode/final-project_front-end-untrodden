@@ -65,7 +65,7 @@ export default function AddLocationPage() {
   return (
     <>
       <Head>
-        <title>Add Location</title>
+        <title>Add Location | Untrodden</title>
         <meta name="description" content="Add location" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
