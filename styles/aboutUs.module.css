@@ -3,20 +3,9 @@
 
 /* general styles */
 
-.main {
-  /* max-width: 1400px; */
-  /* width: 80%;
-  margin: 0 auto; */
-}
 .page_width {
   width: 90%;
   margin: 0 auto;
-}
-.page .h1 {
-  text-align: left;
-  margin: 0;
-  margin-top: 1.5rem;
-  margin-left: 1.5rem;
 }
 
 .main .about_us_main_grid_container {
@@ -39,12 +28,15 @@
   color: white;
   font-family: 'Raleway', sans-serif;
   grid-column: span 5;
+  padding: 1rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 10px;
 }
 
 .about_us_description_paragraph {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  font-size: 1.2rem;
+  /* margin-left: 1.5rem;
+  margin-right: 1.5rem; */
+  font-size: 1.3rem;
+  font-family: 'Raleway', serif;
 }
 
 .about_us_images_container {
@@ -54,13 +46,14 @@
   width: 50%;
   height: 50%;
   margin: 3rem; */
-  margin-left: 1rem;
-  border-radius: 10px;
+  /* margin-left: 1rem; */
+  /* border-radius: 10px; */
   /* flex-wrap: wrap;
   justify-content: space-around; */
   padding: 1rem;
   grid-column: span 5;
   align-self: center;
+  border-radius: 10px;
 }
 
 .images_grid_container {
@@ -80,7 +73,7 @@
   height: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  border-radius: 10px;
+  border-radius: 4px;
   object-fit: cover;
   margin: 5px;
   align-self: center;

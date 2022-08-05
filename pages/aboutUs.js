@@ -31,7 +31,7 @@ export default function AboutUs() {
                 restrictions, travel bans, isolation periods. This has been
                 followed by a sharp rise in inflation with soaring livings costs
                 and a surge in fuel prices, and finally by airline issues and
-                travel chaos across airports and borders.{' '}
+                travel chaos across airports and borders.
               </p>
               <p className={styles.about_us_description_paragraph}>
                 For this reason, we have decided to come together and present
@@ -40,8 +40,8 @@ export default function AboutUs() {
                 offer.
               </p>
               <p className={styles.about_us_description_paragraph}>
-                Why not join our community, discovering and sharing secretd
-                places areoun the UK.
+                Why not join our community, discovering and sharing secret
+                places around the UK!
               </p>
             </section>
 
@@ -49,28 +49,29 @@ export default function AboutUs() {
               <div className={styles.images_grid_container}>
                 <img
                   className={styles.images}
-                  src="https://res.cloudinary.com/dkethqypm/image/upload/v1659616979/untrodden-pics/opxkct7wnt3czx00mzj5.jpg"
+                  src="https://www.hebrideanhopscotch.com/outer-hebrides/wp-content/uploads/2014/05/H0039-768x514.jpg"
                 />
                 <img
                   className={styles.images}
-                  src="https://res.cloudinary.com/dkethqypm/image/upload/v1659616979/untrodden-pics/opxkct7wnt3czx00mzj5.jpg"
+                  src="https://www.historichouses.org/app/uploads/2021/01/dunnottar-castle-730x385.jpg"
                 />
                 <img
                   className={styles.images}
-                  src="https://res.cloudinary.com/dkethqypm/image/upload/v1659616979/untrodden-pics/opxkct7wnt3czx00mzj5.jpg"
+                  src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/73105395_2717435854973353_8149464770714533888_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=NTZ0JSz7WT8AX-riFB8&_nc_ht=scontent-man2-1.xx&oh=00_AT-aYexpWL6bR9fp4fY-wGwWIGMZoR_KaGB9gosb5ejkgg&oe=6313B84A"
                 />
                 <img
                   className={styles.images}
-                  src="https://res.cloudinary.com/dkethqypm/image/upload/v1659616979/untrodden-pics/opxkct7wnt3czx00mzj5.jpg"
+                  src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/46792292_2120745774652691_102852990586585088_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9267fe&_nc_ohc=0x8sdNOz3iQAX_VFmhF&_nc_oc=AQlIJkEPP871_DiFCUFsAjidrIVpMSoFsVsH_RLoXDPGRzTR0KcBbZRhf1GlCGDQ5NM&_nc_ht=scontent-man2-1.xx&oh=00_AT8wP_HK-5WH33FL5ggt8KFgVZsjZ5c-nCiHuOWZiIzwWQ&oe=631307C9"
                 />
               </div>
             </section>
           </main>
 
+          <h2 className={styles.h2}>Testimonials</h2>
           <main className={styles.review_section}>
             <section className={styles.reviews}>
               <h1>'Love it!'</h1>
-              <h2>Karim Mallah</h2>
+              <h2>Joe Bloggs</h2>
               <p>
                 "Absolutely love this app! The best way to find out about the
                 beautiful locations in the UK that you may not have heard
@@ -80,7 +81,7 @@ export default function AboutUs() {
 
             <section className={styles.reviews}>
               <h1>'So pleased'</h1>
-              <h2>Tom Booth</h2>
+              <h2>Sally Smith</h2>
               <p>
                 'So happy to disover Untrodden! As an explorer I use this app
                 regularly to find places to visit across the country.''
@@ -89,7 +90,7 @@ export default function AboutUs() {
 
             <section className={styles.reviews}>
               <h1>'Really useful'</h1>
-              <h2>Glyn Knight</h2>
+              <h2>Jim Bob</h2>
               <p>
                 'Great community of users sharing locations. Very useful as we
                 have requirements when going on trips with the kids.
@@ -98,7 +99,7 @@ export default function AboutUs() {
 
             <section className={styles.reviews}>
               <h1>'Changed my life'</h1>
-              <h2> Dan Hawkesford</h2>
+              <h2>Michael Baker</h2>
               <p>
                 'Enjoying life in the UK so much more since coming across this
                 app'
@@ -107,7 +108,7 @@ export default function AboutUs() {
 
             <section className={styles.reviews}>
               <h1>'Game changer'</h1>
-              <h2>Kieran Gill</h2>
+              <h2>Rebecca Suanders</h2>
               <p>
                 'This website just makes trips in the UK so much more
                 accessible'
