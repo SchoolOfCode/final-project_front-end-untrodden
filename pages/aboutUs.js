@@ -62,7 +62,7 @@ export default function AboutUs() {
 
         <section className={styles.review_section}>
           <section className={styles.reviews}>
-            <h1>Banging</h1>
+            <h1>'Love it!'</h1>
             <h2>Karim Mallah</h2>
             <p>
               "Absolutely love this app! The best way to find out about the
@@ -71,7 +71,7 @@ export default function AboutUs() {
           </section>
 
           <section className={styles.reviews}>
-            <h1>Sick</h1>
+            <h1>'So pleased'</h1>
             <h2>Tom Booth</h2>
             <p>
               'So happy to disover Untrodden! As an explorer I use this app
@@ -80,7 +80,7 @@ export default function AboutUs() {
           </section>
 
           <section className={styles.reviews}>
-            <h1>Great</h1>
+            <h1>'Really useful'</h1>
             <h2>Glyn Knight</h2>
             <p>
               'Great community of users sharing locations. Very useful as we
@@ -89,7 +89,7 @@ export default function AboutUs() {
           </section>
 
           <section className={styles.reviews}>
-            <h1>Amazing</h1>
+            <h1>'Changed my life'</h1>
             <h2> Dan Hawkesford</h2>
             <p>
               Enjoying life in the UK so much more since coming across this app.
@@ -97,10 +97,10 @@ export default function AboutUs() {
           </section>
 
           <section className={styles.reviews}>
-            <h1>Love it!</h1>
+            <h1>'Game changer'</h1>
             <h2>Kieran Gill</h2>
             <p>
-              Enjoying life in the UK so much more since coming across this app.
+              This website just makes trips in the UK so much more accessible
             </p>
           </section>
         </section>
