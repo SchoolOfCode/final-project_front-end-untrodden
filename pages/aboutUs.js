@@ -92,7 +92,7 @@ export default function AboutUs() {
             <h1>'Changed my life'</h1>
             <h2> Dan Hawkesford</h2>
             <p>
-              Enjoying life in the UK so much more since coming across this app.
+              'Enjoying life in the UK so much more since coming across this app'
             </p>
           </section>
 
@@ -100,7 +100,7 @@ export default function AboutUs() {
             <h1>'Game changer'</h1>
             <h2>Kieran Gill</h2>
             <p>
-              This website just makes trips in the UK so much more accessible
+              'This website just makes trips in the UK so much more accessible'
             </p>
           </section>
         </section>
