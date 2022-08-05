@@ -4,15 +4,35 @@
 /* general styles */
 
 .page_width {
-  width: 90%;
+  max-width: 1400px;
+  /* width: 100%; */
   margin: 0 auto;
 }
 
+.h2 {
+  font-family: 'Raleway', sans-serif;
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+.logo_container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main {
+  margin: 1rem;
+}
+
+img .logo_image {
+  height: 300px;
+  width: 200px;
+}
 .main .about_us_main_grid_container {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 1.8rem;
 }
 
@@ -27,15 +47,15 @@
   border-radius: 10px; */
   color: white;
   font-family: 'Raleway', sans-serif;
-  grid-column: span 5;
-  padding: 1rem 2.5rem 2.5rem 2.5rem;
+  grid-column: span 6;
+  padding: 0.5rem 2rem 0rem 2rem;
   border-radius: 10px;
 }
 
 .about_us_description_paragraph {
   /* margin-left: 1.5rem;
   margin-right: 1.5rem; */
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: 'Raleway', serif;
 }
 
@@ -51,7 +71,7 @@
   /* flex-wrap: wrap;
   justify-content: space-around; */
   padding: 1rem;
-  grid-column: span 5;
+  grid-column: span 6;
   align-self: center;
   border-radius: 10px;
 }
@@ -99,15 +119,11 @@
   padding: 1rem;
   grid-column: span 2;
   gap: 1rem;
+  border-radius: 10px;
 }
 
-.main {
-  margin: 5rem;
-}
-
-.logo_image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+.reviews h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 1.8rem;
 }
