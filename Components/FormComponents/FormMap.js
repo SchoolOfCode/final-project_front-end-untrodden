@@ -11,6 +11,10 @@ export default function FormMap({ setValue }) {
     longitude: -2.898575,
   });
 
+  // Setting initial values in case the user doesn't move the marker
+  setValue('latitude', marker.latitude);
+  setValue('longitude', marker.longitude);
+
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100%',
