@@ -69,11 +69,11 @@ export default function AboutUs() {
                 />
                 <img
                   className={styles.images}
-                  src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/73105395_2717435854973353_8149464770714533888_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=NTZ0JSz7WT8AX-riFB8&_nc_ht=scontent-man2-1.xx&oh=00_AT-aYexpWL6bR9fp4fY-wGwWIGMZoR_KaGB9gosb5ejkgg&oe=6313B84A"
+                  src="https://res.cloudinary.com/dnshrtqmv/image/upload/v1659706615/untrodden-pics/1_bhdgo3.jpg"
                 />
                 <img
                   className={styles.images}
-                  src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/46792292_2120745774652691_102852990586585088_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9267fe&_nc_ohc=0x8sdNOz3iQAX_VFmhF&_nc_oc=AQlIJkEPP871_DiFCUFsAjidrIVpMSoFsVsH_RLoXDPGRzTR0KcBbZRhf1GlCGDQ5NM&_nc_ht=scontent-man2-1.xx&oh=00_AT8wP_HK-5WH33FL5ggt8KFgVZsjZ5c-nCiHuOWZiIzwWQ&oe=631307C9"
+                  src="https://res.cloudinary.com/dnshrtqmv/image/upload/v1659706623/untrodden-pics/2_e02g7w.jpg"
                 />
               </div>
             </section>
