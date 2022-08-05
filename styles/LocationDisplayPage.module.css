@@ -6,7 +6,6 @@
 }
 
 .location_page {
-  
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 75%;
@@ -60,6 +59,7 @@
 .icon_description {
   display: flex;
   align-items: center;
+  font-size: 1rem;
 }
 
 .icon {
