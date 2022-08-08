@@ -19,7 +19,7 @@ export default function Nav() {
 
       
 
-    <Link href="/">
+    <Link href="/locations">
       <img className={styles.image} src="/Inline-logo-whiteandblack.png" alt="Untrodden"/>
       </Link>
 

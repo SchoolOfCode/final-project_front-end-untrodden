@@ -30,7 +30,13 @@ const Cloudinary = dynamic(
   
   // function to add a new location to the backend
   export default function AddLocationPage() {
-    const { register, handleSubmit, setValue } = useForm();
+    const { register, handleSubmit, setValue } = useForm({
+      defaultValues: {
+        latitude: 52.489471,
+        longitude: -2.898575,
+        image_url: "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659971748/No-Image-Placeholder_urdl1d.svg"
+      }
+    });
     const router = useRouter();
     const { user, error, isLoading } = useUser();
     
@@ -50,9 +56,9 @@ const Cloudinary = dynamic(
     return (
       responseData,
       alert(
-        "Thank You For Your Submission, press 'Ok' be redirected to the homepage."
+        "Thank You For Your Submission, press 'Ok' be redirected to the Locations page."
       ),
-      router.push('/')
+      router.push('/locations')
     );
   };
 

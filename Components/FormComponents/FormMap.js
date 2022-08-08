@@ -12,9 +12,9 @@ export default function FormMap({ setValue }) {
   });
 
   // Setting initial values in case the user doesn't move the marker
-  setValue('latitude', 52.489471);
-  setValue('longitude', -2.898575);
-  console.log(`Test: ${marker.latitude}`);
+  // setValue('latitude', 52.489471);
+  // setValue('longitude', -2.898575);
+  // console.log(`Test: ${marker.latitude}`);
 
   const [viewport, setViewport] = useState({
     width: '100%',
