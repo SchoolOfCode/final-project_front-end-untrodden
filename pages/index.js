@@ -29,6 +29,8 @@ export default function Home() {
 
   const [amenityState, setAmenityState] = useState([]);
   const [searchState, setSearchState] = useState('');
+  
+  const [pending, setPending] = useState(true)
 
   // fetch and display all data from backend
   useEffect(() => {
@@ -39,8 +41,10 @@ export default function Home() {
         const data = await response.json();
         setAllLocationData(data.payload);
         setDisplayedData(data.payload);
+        setPending(false)
       } catch (error) {
         console.log('error', error);
+        setPending(false)
       }
     };
 
@@ -112,7 +116,7 @@ export default function Home() {
           <MapComponent allLocationData={displayedData} />
         </section>
         <section>
-          <CardDisplay allLocationData={displayedData} />
+          <CardDisplay allLocationData={displayedData} pending={pending}/>
         </section>
       </main>
     </div>

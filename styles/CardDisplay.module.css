@@ -33,10 +33,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   color: #E8A941;
   background-color: #225544;
   height: 20vh;
+  padding: 1rem;
 }
 
 .noResults{
