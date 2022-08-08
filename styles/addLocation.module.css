@@ -14,6 +14,23 @@
   font-size: 2.5rem;
 }
 
+.h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  background-color: rgb(235, 101, 101);
+  padding: 5px 0;
+  margin-top: -1vh
+}
+
+.h2 > span {
+  margin: 0 20px;
+}
+
 .main_grid_container {
   max-width: 100%;
   margin: 0 auto;
@@ -63,6 +80,22 @@
 .btn:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
+}
+
+.btnDisabled {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 38px;
+  text-align: center;
+  padding: 0.8rem 5rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #44544f;
+  color: #dab578;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
 }
 
 /* location and address section */

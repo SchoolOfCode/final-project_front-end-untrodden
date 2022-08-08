@@ -1,22 +1,20 @@
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
-import dynamic from "next/dynamic";
-
 // component
 import AddLocationPage from "../Components/addLocationPage";
 
-const Cloudinary = dynamic(
-  () => import("../Components/FormComponents/Cloudinary"),
-  {
-    loading: () => "Loading...",
-    ssr: false,
-  }
-);
+// IF USING AUTH0 FOR THE ENTIRE PAGE, USE THIS:
+// import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+// const MyProtectedPage = withPageAuthRequired(AddLocationPage);
+// export default function Addlocation() {
+//   return (
+//     <>
+//       <MyProtectedPage></MyProtectedPage>
+//     </>
+//   );
+// }
 
-const MyProtectedPage = withPageAuthRequired(AddLocationPage);
-export default function Addlocation() {
+// IF USING AUTH0 ONLY FOR A BUTTON ON THE PAGE, USE THIS:
+export default function AddLocation() {
   return (
-    <>
-      <AddLocationPage/>
-    </>
-  );
-}
+    <AddLocationPage />
+  )
+};

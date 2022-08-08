@@ -59,19 +59,19 @@ export default function AboutUs() {
               <div className={styles.images_grid_container}>
                 <img
                   className={styles.images}
-                  src="https://www.hebrideanhopscotch.com/outer-hebrides/wp-content/uploads/2014/05/H0039-768x514.jpg"
+                  src="https://www.hebrideanhopscotch.com/outer-hebrides/wp-content/uploads/2014/05/H0039-768x514.jpg" alt="Horgabost Beach, Scotland"
                 />
                 <img
                   className={styles.images}
-                  src="https://www.historichouses.org/app/uploads/2021/01/dunnottar-castle-730x385.jpg"
+                  src="https://www.historichouses.org/app/uploads/2021/01/dunnottar-castle-730x385.jpg" alt="Dunnottar Castle, Scotland"
                 />
                 <img
                   className={styles.images}
-                  src="https://res.cloudinary.com/dnshrtqmv/image/upload/v1659706615/untrodden-pics/1_bhdgo3.jpg"
+                  src="https://res.cloudinary.com/dnshrtqmv/image/upload/v1659706615/untrodden-pics/1_bhdgo3.jpg" alt="Glenoe Waterfall, Northern Ireland"
                 />
                 <img
                   className={styles.images}
-                  src="https://res.cloudinary.com/dnshrtqmv/image/upload/v1659706623/untrodden-pics/2_e02g7w.jpg"
+                  src="https://res.cloudinary.com/dnshrtqmv/image/upload/v1659706623/untrodden-pics/2_e02g7w.jpg" alt="Coney Island, Northern Ireland"
                 />
               </div>
             </section>

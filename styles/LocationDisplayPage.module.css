@@ -55,6 +55,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
+.amenities p {
+  font-size: 1.2rem;
+}
 
 .icon_description {
   display: flex;
@@ -78,6 +81,10 @@
 
 .heading {
   color: #e8a941;
+}
+.heading_description {
+  color: #e8a941;
+  padding-top: 2rem;
 }
 
 .title {
@@ -124,6 +131,7 @@
 
 .report img {
   margin-left: 10px;
+  margin-top: 1rem;
   height: 30px;
   width: 30px;
 }
@@ -192,4 +200,70 @@
 }
 .form_submission {
   color: #225544;
+}
+@media screen and (max-width: 800px) {
+  .left_div {
+    grid-column: span 2;
+  }
+  .right_div {
+    grid-column: span 2;
+  }
+  .location_page {
+    max-width: 95%;
+    /* width: 95%; */
+
+    margin: 2rem 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+
+    font-size: 1.1rem;
+    height: 100%;
+  }
+  .left_div {
+    width: 100%;
+  }
+  .right_div {
+    width: 100%;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+  }
+  .categories {
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .categories p {
+    margin: 0.2rem;
+  }
+  .amenities {
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.8rem;
+  }
+  .icon_description p {
+    margin: 0.3rem;
+  }
+  .report {
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+  .report img {
+    margin-left: 0.6rem;
+    margin-top: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 }
