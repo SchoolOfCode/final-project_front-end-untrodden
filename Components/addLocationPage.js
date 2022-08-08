@@ -30,7 +30,12 @@ const Cloudinary = dynamic(
   
   // function to add a new location to the backend
   export default function AddLocationPage() {
-    const { register, handleSubmit, setValue } = useForm();
+    const { register, handleSubmit, setValue } = useForm({
+      defaultValues: {
+        latitude: 52.489471,
+        longitude: -2.898575
+      }
+    });
     const router = useRouter();
     const { user, error, isLoading } = useUser();
     
