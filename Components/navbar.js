@@ -27,8 +27,8 @@ export default function Nav() {
         <Link href="/">
           <a className={styles.link}>Home</a>
         </Link>
-        <Link href="/aboutUs">
-          <a className={styles.link}>About Us</a>
+        <Link href="/locations">
+          <a className={styles.link}>Locations</a>
         </Link>
 
         
