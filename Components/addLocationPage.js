@@ -34,7 +34,7 @@ const Cloudinary = dynamic(
       defaultValues: {
         latitude: 52.489471,
         longitude: -2.898575,
-        image_url: "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659971748/No-Image-Placeholder_urdl1d.svg"
+        image_url: "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659972687/no-image-placeholder_copy_yriogz.png"
       }
     });
     const router = useRouter();
