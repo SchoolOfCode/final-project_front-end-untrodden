@@ -77,12 +77,14 @@ const Cloudinary = dynamic(
       <main className={styles.main}>
         <div className={styles.max_page_width}>
           <h1 className={styles.h1}>Add Location</h1>
+        
           {!user && 
             <h2 className={styles.h2}>
               <span>Please</span>
               <button className={styles.btn} onClick={() => {router.push('/api/auth/login')}}>Log in</button>
               <span>before completing the form</span>
             </h2>}
+
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* left side of form */}
             <div className={styles.main_grid_container}>

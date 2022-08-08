@@ -1,6 +1,6 @@
 /* general styles */
 .main {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -21,7 +21,7 @@
   justify-content: center;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   background-color: rgb(235, 101, 101);
   padding: 5px 0;
   margin-top: -1vh
@@ -36,11 +36,11 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 4rem;
 }
 
 .flex_container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   /* padding: 1rem; */
@@ -58,15 +58,15 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 38px;
+  line-height: 2.2rem;
   text-align: center;
-  padding: 0.8rem 5rem;
+  padding: 0.8rem 2rem;
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--secondary);
   color: var(--primary);
-  margin-bottom: 2rem;
-  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .btn:hover {
@@ -87,7 +87,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 38px;
+  line-height: 2.2rem;
   text-align: center;
   padding: 0.8rem 5rem;
   border-radius: 5px;
@@ -104,10 +104,10 @@
 .main select {
   display: inline-block;
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
   padding: 0.7rem 1.2rem;
   margin: 0.5rem 0;
-  margin-left: 1.2rem;
+ 
   font-family: 'Raleway', sans-serif;
   background: #ffffff;
   border: 2px solid #225544;
@@ -118,7 +118,7 @@
 }
 .main textarea {
   min-height: 300px;
-  max-width: 500px;
+  
  
   font-size: 1.2rem;
 }
@@ -128,19 +128,19 @@
   font-style: normal;
   font-weight: 700;
   font-size: 1.2rem;
-  margin-left: 1.2rem;
+ 
 }
 /* description section */
 .description_p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  width: 80%;
-  margin-left: 1.2rem;
+  width: 100%;
+  
 }
 /* location categories */
 .location_category_grid_container {
   margin-top: 1rem;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
@@ -198,7 +198,7 @@
 .amenities_category_grid_container {
   margin-top: 1.5rem;
  
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.5rem;
@@ -218,7 +218,7 @@
 }
 
 .label {
-  width: 80%;
+  width: 100%;
   align-items: left;
   margin-top: 1rem;
 }
