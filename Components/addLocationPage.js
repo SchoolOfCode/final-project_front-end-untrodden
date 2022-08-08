@@ -50,9 +50,9 @@ const Cloudinary = dynamic(
     return (
       responseData,
       alert(
-        "Thank You For Your Submission, press 'Ok' be redirected to the homepage."
+        "Thank You For Your Submission, press 'Ok' be redirected to the Locations page."
       ),
-      router.push('/')
+      router.push('/locations')
     );
   };
 
