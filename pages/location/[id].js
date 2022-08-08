@@ -48,6 +48,7 @@ export default function LocationDisplayPage({ location }) {
       <div className={styles.location_page_wrapper}>
         <div className={styles.location_page}>
           <div className={styles.left_div}>
+          <h1 className={styles.title}>{location[0].location_name}</h1>
             <img src={location[0].image_url} className={styles.image}></img>
             <h3 className={styles.heading}>Categories:</h3>
             <section className={styles.categories}>
@@ -74,7 +75,8 @@ export default function LocationDisplayPage({ location }) {
             <Modal location={location[0]} />
           </div>
           <div className={styles.right_div}>
-            <h1 className={styles.title}>{location[0].location_name}</h1>
+          <h3 className={styles.heading}>Description:</h3>
+            <p>{location[0].location_description}</p>
             <h3 className={styles.heading}>Address:</h3>
             {/* <p>{location[0].street}</p>
           <p>{location[0].town}</p>
@@ -87,8 +89,7 @@ export default function LocationDisplayPage({ location }) {
               {/* {location[0].region}<br></br> */}
               {location[0].postcode}
             </p>
-            <h3 className={styles.heading}>Description:</h3>
-            <p>{location[0].location_description}</p>
+            
             <div className={styles.map_container}>
               <MapLocationPage location={location} />
             </div>
