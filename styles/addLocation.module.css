@@ -227,3 +227,10 @@
   margin: 10rem;
   width: 80%;
 }
+
+
+@media screen and (max-width: 800px){
+  .flex_container{
+    grid-column: span 2;
+  }
+}
