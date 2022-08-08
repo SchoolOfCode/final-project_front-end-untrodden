@@ -55,6 +55,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
+.amenities p {
+  font-size: 1.2rem;
+}
 
 .icon_description {
   display: flex;
@@ -198,7 +201,7 @@
 .form_submission {
   color: #225544;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .left_div {
     grid-column: span 2;
   }
