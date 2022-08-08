@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
-import Logo from '../public/Logo-with-2colour.png';
+import Logo from '../public/Inline-logo-whiteandblack.png';
 import Image from 'next/image';
 
 export default function AboutUs() {
@@ -20,8 +20,8 @@ export default function AboutUs() {
               className={styles.logo_image}
               src={Logo}
               alt="Untrodden"
-              height={350}
-              width={325}
+              height={115}
+              width={500}
             />
           </div>
           <main className={styles.about_us_main_grid_container}>
@@ -35,28 +35,26 @@ export default function AboutUs() {
               </p>
               <p className={styles.about_us_description_paragraph}>
                 During these times of huge uncertainty, the team at untrodden
-                have found one thing that has been consistent and reliable, The
-                Beautiful United Kingdom. All of us have over the past couple of
-                years taken solace in our home nations astonishing countryside
+                have found one thing that has been consistent and reliable, the
+                beautiful United Kingdom. All of us, have over the past couple of
+                years, taken solace in our home nations astonishing countryside
                 and towns. So much so we have made it our mission to share our
-                unique not so well know places with everyone. The end goal being
-                to create a platform where anyone can share somewhere special to
-                them, allowing people from any walk of life to find comfort and
-                beauty on their very doorstep.
+                unique places with everyone, allowing people from any walk of life to find comfort andbeauty on their doorstep.
               </p>
               <p className={styles.about_us_description_paragraph}>
                 And so Untrodden was born.
               </p>
 
+
               <p className={styles.about_us_description_paragraph}>
-                With UnTrodden we aim to bring a safe and easy to use
+                With Untrodden we aim to bring a safe and easy to use
                 environment for anyone to find either a quick day out or plan a
                 weekend or longer trip away to explore the beauty the UK has to
-                offer. As well as being able to seamlessly upload your own place
-                of solitude for others to explore and enjoy.
-              </p>
+                offer. a long with a seamless and easy way to upload your own secret getaways to share with our community.
+                </p>
+             
             </section>
-
+           
             <section className={styles.about_us_images_container}>
               <div className={styles.images_grid_container}>
                 <img
@@ -78,6 +76,17 @@ export default function AboutUs() {
               </div>
             </section>
           </main>
+          <div className={styles.instructions_container}>
+          <p className={styles.instructions}>
+                To start finding exciting new places click either the "Start Exploring" button bellow or the "Locations" link in the nav bar at the top of the page.
+                <br/>
+                <br/>
+                Please do add your own locations (after all this website doesnt work woithout your secret space!). To do so you must Log In using the loging link above so that we can safeguard the aditions ensuring Untrodden remains a safe and frinedly place for all.
+              </p>
+          </div>
+          <div className={styles.btn_container}>
+            <button className={styles.btn}>Start Exploring</button>
+            </div>
 
           <h2 className={styles.h2}>Testimonials</h2>
           <main className={styles.review_section}>

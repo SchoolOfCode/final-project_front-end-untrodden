@@ -1,7 +1,10 @@
+import styles from "../styles/footer.module.css"
+
 export default function Footer() {
   return (
-    <div className="footer">
-      <p>Copyright Untrodded by Undrodden 2022</p>
+    <div className={styles.footer}>
+      <p>©Untrodden by Undrodded™ 2022
+      Built using Next.Js</p>
     </div>
   );
 }
