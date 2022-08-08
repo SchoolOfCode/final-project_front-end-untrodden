@@ -81,11 +81,13 @@ export default function AboutUs() {
                 To start finding exciting new places click either the "Start Exploring" button bellow or the "Locations" link in the nav bar at the top of the page.
                 <br/>
                 <br/>
-                Please do add your own locations (after all this website doesnt work woithout your secret space!). To do so you must Log In using the loging link above so that we can safeguard the aditions ensuring Untrodden remains a safe and frinedly place for all.
+                Please do add your own locations (after all this website doesn't work without your secret space!). To do so you must Log In using the Login link above so that we can safeguard the additions ensuring Untrodden remains a safe and friendly place for all.
               </p>
           </div>
           <div className={styles.btn_container}>
+          <Link href={"/locations"}>
             <button className={styles.btn}>Start Exploring</button>
+            </Link>
             </div>
 
           <h2 className={styles.h2}>Testimonials</h2>

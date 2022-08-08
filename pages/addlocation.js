@@ -16,7 +16,7 @@ const MyProtectedPage = withPageAuthRequired(AddLocationPage);
 export default function Addlocation() {
   return (
     <>
-      <MyProtectedPage></MyProtectedPage>
+      <AddLocationPage/>
     </>
   );
 }

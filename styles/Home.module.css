@@ -7,8 +7,6 @@
   max-width: 1400px;
   /* width: 100%; */
   margin: 0 auto;
-  
- 
 }
 
 .h2 {
@@ -187,7 +185,7 @@ img .logo_image {
   background-color: var(--secondary);
   padding: 2rem;
   border-radius: 10px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: 'Raleway', serif;
   color: white;
