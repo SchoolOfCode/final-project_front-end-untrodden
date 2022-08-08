@@ -4,14 +4,16 @@ import Link from 'next/link';
 import Button from '../Button/button';
 import Tooltip from '@mui/material/Tooltip';
 
-//get props to location page
 
 export default function LocationCard({ location }) {
+  const url = location.image_url
+  const urlForSmallImage = url.slice(0, url.indexOf('upload') + 7) + 'c_scale,h_250/' + url.slice(url.indexOf('upload') + 7)
+  
   return (
     <div className={styles.card}>
       <img
         className={styles.card_img}
-        src={location.image_url}
+        src={urlForSmallImage}
         alt="Location"
       />
       <section className={styles.card_details}>
