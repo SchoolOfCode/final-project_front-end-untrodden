@@ -17,6 +17,8 @@ import { useForm } from 'react-hook-form';
 import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
 import { useEffect } from 'react';
 import FormMap from './FormComponents/FormMap';
+import { useUser } from "@auth0/nextjs-auth0";
+
 
 const Cloudinary = dynamic(
   () => import('../Components/FormComponents/Cloudinary'),
@@ -24,12 +26,14 @@ const Cloudinary = dynamic(
     loading: () => 'Loading...',
     ssr: false,
   }
-);
-
-// function to add a new location to the backend
-export default function AddLocationPage() {
-  const { register, handleSubmit, setValue } = useForm();
-  const router = useRouter();
+  );
+  
+  // function to add a new location to the backend
+  export default function AddLocationPage() {
+    const { register, handleSubmit, setValue } = useForm();
+    const router = useRouter();
+    const { user, error, isLoading } = useUser();
+    
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -73,7 +77,12 @@ export default function AddLocationPage() {
       <main className={styles.main}>
         <div className={styles.max_page_width}>
           <h1 className={styles.h1}>Add Location</h1>
-
+          {!user && 
+            <h2 className={styles.h2}>
+              <span>Please</span>
+              <button className={styles.btn} onClick={() => {router.push('/api/auth/login')}}>Log in</button>
+              <span>before completing the form</span>
+            </h2>}
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* left side of form */}
             <div className={styles.main_grid_container}>
@@ -108,7 +117,10 @@ export default function AddLocationPage() {
               </div>
             </div>
             <div className={styles.btn_container}>
-              <button className={styles.btn}>Add Location</button>
+              {user ? (
+                <button className={styles.btn}>Add Location</button>
+              ) : <button className={styles.btnDisabled} disabled>Log in first!</button>
+              }
             </div>
           </form>
         </div>
