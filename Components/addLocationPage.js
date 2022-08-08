@@ -33,7 +33,8 @@ const Cloudinary = dynamic(
     const { register, handleSubmit, setValue } = useForm({
       defaultValues: {
         latitude: 52.489471,
-        longitude: -2.898575
+        longitude: -2.898575,
+        image_url: "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659971748/No-Image-Placeholder_urdl1d.svg"
       }
     });
     const router = useRouter();
