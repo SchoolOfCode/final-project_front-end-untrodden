@@ -37,6 +37,7 @@ export async function getStaticProps(context) {
   console.log(data);
   return {
     props: { location: data.payload },
+    revalidate: 1,
   };
 }
 
