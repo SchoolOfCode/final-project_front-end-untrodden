@@ -17,8 +17,7 @@ import { useForm } from 'react-hook-form';
 import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
 import { useEffect } from 'react';
 import FormMap from './FormComponents/FormMap';
-import { useUser } from "@auth0/nextjs-auth0";
-
+import { useUser } from '@auth0/nextjs-auth0';
 
 const Cloudinary = dynamic(
   () => import('../Components/FormComponents/Cloudinary'),
@@ -26,23 +25,25 @@ const Cloudinary = dynamic(
     loading: () => 'Loading...',
     ssr: false,
   }
-  );
-  
-  // function to add a new location to the backend
-  export default function AddLocationPage() {
-    const { register, handleSubmit, setValue } = useForm();
-    const router = useRouter();
-    const { user, error, isLoading } = useUser();
-    
+);
+
+// function to add a new location to the backend
+export default function AddLocationPage() {
+  const { register, handleSubmit, setValue } = useForm();
+  const router = useRouter();
+  const { user, error, isLoading } = useUser();
 
   const onSubmit = async (data) => {
     console.log(data);
 
-    const res = await fetch('https://untrodden-untrodded.herokuapp.com/locations', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+    const res = await fetch(
+      'https://untrodden-untrodded.herokuapp.com/locations',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      }
+    );
     const responseData = await res.json();
 
     console.log(responseData);
@@ -77,13 +78,24 @@ const Cloudinary = dynamic(
       <main className={styles.main}>
         <div className={styles.max_page_width}>
           <h1 className={styles.h1}>Add Location</h1>
-        
-          {!user && 
-            <h2 className={styles.h2}>
-              <span>Please</span>
-              <button className={styles.btn} onClick={() => {router.push('/api/auth/login')}}>Log in</button>
-              <span>before completing the form</span>
-            </h2>}
+
+          {!user && (
+            <div className={styles.login_warning_container}>
+              <p className={styles.login_warning}>Please </p>
+              <button
+                className={styles.btn}
+                onClick={() => {
+                  router.push('/api/auth/login');
+                }}
+              >
+                Log in
+              </button>
+              <p className={styles.login_warning}>
+                {' '}
+                before completing the form
+              </p>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* left side of form */}
@@ -121,8 +133,11 @@ const Cloudinary = dynamic(
             <div className={styles.btn_container}>
               {user ? (
                 <button className={styles.btn}>Add Location</button>
-              ) : <button className={styles.btnDisabled} disabled>Log in first!</button>
-              }
+              ) : (
+                <button className={styles.btnDisabled} disabled>
+                  Log in first!
+                </button>
+              )}
             </div>
           </form>
         </div>
