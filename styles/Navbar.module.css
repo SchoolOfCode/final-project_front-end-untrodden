@@ -75,17 +75,22 @@
 }
 
 .hamburger{
-  visibility: hidden;
+
+  display: none;
 }
 
 @media screen and (max-width: 800px){
-
-  .link_desktop{
-  visibility: hidden;
+ 
+.link_desktop{
+    display: none;
 }
 
 .hamburger{
-  visibility: visible;
+  display: block;
 }
-  
+
+.default_image{
+  visibility: hidden;
+}
+ 
 }

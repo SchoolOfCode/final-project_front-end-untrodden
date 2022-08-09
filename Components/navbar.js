@@ -93,7 +93,7 @@ export default function Nav() {
         onClick={handleClick}
        
       >
-     <MenuIcon  />
+     <MenuIcon sx={{ color: 'white' }} />
       </IconButton>
       <Menu
         id="long-menu"
@@ -107,7 +107,7 @@ export default function Nav() {
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: '20ch',
-            backgroundColor: 'black',
+            backgroundColor: '#225544',
           },
         }}
       >
