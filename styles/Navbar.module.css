@@ -79,8 +79,13 @@
   display: none;
 }
 
+
 @media screen and (max-width: 800px){
  
+.header{
+  padding-left: 0;
+ }
+
 .link_desktop{
     display: none;
 }
@@ -91,6 +96,7 @@
 
 .default_image{
   visibility: hidden;
+  width: 50%;
 }
  
 }
