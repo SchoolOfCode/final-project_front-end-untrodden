@@ -14,7 +14,13 @@ import RegionFilter from "../Components/Region Filter/regionFilter";
 import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
 import LocationFilter from "../Components/Location Filter/locationFilter";
 import MyCarousel from '../Components/carousel';
-
+//import MobileFilterBar from '../Components/Mobile Filter Bar/mobileFilterBar';
+import Box from '@mui/material/Box';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import MuiButton from '@mui/material/Button';
 const MapComponent = dynamic(() => import('../Components/map.js'), {
   loading: () => 'Loading...',
   ssr: false,
@@ -26,11 +32,10 @@ export default function Home() {
   const [allLocationData, setAllLocationData] = useState([]);
   const [displayedData, setDisplayedData] = useState([]);
   const [regionState, setRegionState] = useState('');
-
   const [amenityState, setAmenityState] = useState([]);
   const [searchState, setSearchState] = useState('');
-  
   const [pending, setPending] = useState(true)
+  const [open, setOpen] = React.useState(false);
 
   // fetch and display all data from backend
   useEffect(() => {
@@ -59,11 +64,12 @@ export default function Home() {
     setSearchState('');
     // setting the dispayedData to all the data retrieved from the API
     setDisplayedData(allLocationData);
+    handleClose()
   }
 
   function handleFilter() {
     let allData = allLocationData;
-
+    handleClose()
     // filter for region (an empty string is falsy)
     if (regionState) {
       allData = allData.filter((location) => location.region === regionState);
@@ -85,6 +91,20 @@ export default function Home() {
     // setting displayedData as the filtered Data (by region, category, and amenity)
     setDisplayedData(allData);
   }
+
+  const handleChange = (event) => {
+    setAge(Number(event.target.value) || '');
+  };
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason !== 'backdropClick') {
+      setOpen(false);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -109,6 +129,7 @@ export default function Home() {
           options={allLocationData}
           value={searchState}
         />
+      
       </section>
 
       <main className={styles.main}>
@@ -118,6 +139,24 @@ export default function Home() {
         <section className={styles.card_display}>
           <CardDisplay  allLocationData={displayedData} pending={pending}/>
           </section>
+          <div className={styles.mobile_filter}>
+      <MuiButton onClick={handleClickOpen} sx={{width:'150px', height: "25px", backgroundColor:'#225544', color: '#E8A941'}}>Filters</MuiButton>
+      <Dialog disableEscapeKeyDown open={open} onClose={handleClose} >
+        <DialogTitle  >Select Filters</DialogTitle>
+        <DialogContent sx={{backgroundColor:'#225544', color: '#E8A941'}}>
+          <Box component="form" sx={{height:'200px', backgroundColor: '#225544', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly'}}>
+        <RegionFilter setRegionState={setRegionState} value={regionState}/>
+        <CategoryFilter setCategoryState={setCategoryState}
+          value={categoryState}/>
+        <AmenityFilter setAmenityState={setAmenityState} value={amenityState}/>
+          </Box>
+        </DialogContent>
+        <DialogActions >
+          <MuiButton sx={{backgroundColor:'#225544', color: '#E8A941'}} onClick={() => clearFilter()} >Clear</MuiButton>
+          <MuiButton sx={{backgroundColor:'#225544', color: '#E8A941'}} onClick={() => handleFilter()} >Apply</MuiButton>
+        </DialogActions>
+      </Dialog>
+    </div>
           <section className={styles.carousel}>
           <MyCarousel  allLocationData={displayedData}/>
         </section>

@@ -24,6 +24,7 @@
 
  .popup{
     font-family:  "Raleway", sans-serif ;
+    
  }
 
  @media screen and (max-width: 850px){
@@ -32,7 +33,7 @@
         width:90vw;
         height: 45vh;
         margin-top: 1rem;
+        margin-bottom: 0.5rem;
         border-radius: 10px;
     }
-
- }
+}

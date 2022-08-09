@@ -55,17 +55,19 @@ export default function AmenityFilter ({setAmenityState,value}){
       
 
 return <div className={styles.amenities_filter}>
-<FormControl sx={{ m: 0.5, 
-                    width: '12vw', 
+<FormControl sx={{ m: 0.5,
+                    padding: 0, 
+                    width: '12rem', 
                     '& .MuiOutlinedInput-root':{'& > fieldset': {border: 'none'}},
                     '& .MuiSvgIcon-root':{color: '#e8a941'},
-                    '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.2vw'},
+                    '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.5rem'},
 
 }}>
-  <InputLabel id="demo-multiple-checkbox-label" >Amenities:</InputLabel>
+  <InputLabel id="demo-multiple-checkbox-label" sx={{paddingLeft: 0}} >Amenities:</InputLabel>
   <Select
     labelId="demo-multiple-checkbox-label"
     id="demo-multiple-checkbox"
+    
     multiple
     value={value}
     onChange={e => setAmenityState(e.target.value)}
