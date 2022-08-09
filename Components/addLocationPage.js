@@ -1,54 +1,61 @@
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Head from "next/head";
 
 //components
-import LocationNameAndAddress from '../Components/FormComponents/LocationNameAndAddress';
-import LocationDescription from '../Components/FormComponents/LocationDescription';
-import LocationCategory from '../Components/FormComponents/LocationCategory';
-import LocationAmenities from '../Components/FormComponents/LocationAmenities';
+import LocationNameAndAddress from "../Components/FormComponents/LocationNameAndAddress";
+import LocationDescription from "../Components/FormComponents/LocationDescription";
+import LocationCategory from "../Components/FormComponents/LocationCategory";
+import LocationAmenities from "../Components/FormComponents/LocationAmenities";
 // dynamic components
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
-import styles from '../styles/addLocation.module.css';
-import { useForm } from 'react-hook-form';
-import LocationCoordinates from '../Components/FormComponents/LocationCoordinates';
-import { useEffect } from 'react';
-import FormMap from './FormComponents/FormMap';
+import styles from "../styles/addLocation.module.css";
+import { useForm } from "react-hook-form";
+import LocationCoordinates from "../Components/FormComponents/LocationCoordinates";
+import { useEffect, useState } from "react";
+import FormMap from "./FormComponents/FormMap";
 import { useUser } from "@auth0/nextjs-auth0";
-
+import { useSlotProps } from "@mui/base";
 
 const Cloudinary = dynamic(
-  () => import('../Components/FormComponents/Cloudinary'),
+  () => import("../Components/FormComponents/Cloudinary"),
   {
-    loading: () => 'Loading...',
+    loading: () => "Loading...",
     ssr: false,
   }
-  );
+);
+
+// function to add a new location to the backend
+export default function AddLocationPage() {
   
-  // function to add a new location to the backend
-  export default function AddLocationPage() {
-    const { register, handleSubmit, setValue } = useForm({
-      defaultValues: {
-        latitude: 52.489471,
-        longitude: -2.898575,
-        image_url: "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659972687/no-image-placeholder_copy_yriogz.png"
-      }
-    });
-    const router = useRouter();
-    const { user, error, isLoading } = useUser();
-    
+
+  const { register, handleSubmit, setValue } = useForm({
+    defaultValues: {
+      latitude: 52.489471,
+      longitude: -2.898575,
+      image_url:
+        "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659972687/no-image-placeholder_copy_yriogz.png",
+    },
+  });
+  const router = useRouter();
+  const { user, error, isLoading } = useUser();
 
   const onSubmit = async (data) => {
     console.log(data);
+    console.log(user.email)
+    console.log({...data, user_email:  user ? user.email : "" })
 
-    const res = await fetch('https://untrodden-untrodded.herokuapp.com/locations', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+    const res = await fetch(
+      "https://untrodden-untrodded.herokuapp.com/locations",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({...data, user_email:  user ? user.email : "" }),
+      }
+    );
     const responseData = await res.json();
 
     console.log(responseData);
@@ -56,17 +63,17 @@ const Cloudinary = dynamic(
     return (
       responseData,
       alert(
-        "Thank You For Your Submission, press 'Ok' be redirected to the Locations page."
+        `Thank you, ${user.name} for your submission, press 'Ok' be redirected to the locations page.`
       ),
-      router.push('/locations')
+      router.push("/locations")
     );
   };
 
   // function to add a new resources to the backend
   async function postResources(input) {
-    const res = await fetch('v1/resources', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("v1/resources", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(input),
     });
     const data = await res.json();
@@ -83,12 +90,20 @@ const Cloudinary = dynamic(
       <main className={styles.main}>
         <div className={styles.max_page_width}>
           <h1 className={styles.h1}>Add Location</h1>
-          {!user && 
+          {!user && (
             <h2 className={styles.h2}>
               <span>Please</span>
-              <button className={styles.btn} onClick={() => {router.push('/api/auth/login')}}>Log in</button>
+              <button
+                className={styles.btn}
+                onClick={() => {
+                  router.push("/api/auth/login");
+                }}
+              >
+                Log in
+              </button>
               <span>before completing the form</span>
-            </h2>}
+            </h2>
+          )}
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* left side of form */}
             <div className={styles.main_grid_container}>
@@ -122,11 +137,16 @@ const Cloudinary = dynamic(
                 </div>
               </div>
             </div>
+            <div>
+            </div>
             <div className={styles.btn_container}>
               {user ? (
                 <button className={styles.btn}>Add Location</button>
-              ) : <button className={styles.btnDisabled} disabled>Log in first!</button>
-              }
+              ) : (
+                <button className={styles.btnDisabled} disabled>
+                  Log in first!
+                </button>
+              )}
             </div>
           </form>
         </div>

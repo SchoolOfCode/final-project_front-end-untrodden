@@ -4,7 +4,7 @@ import { useUser } from "@auth0/nextjs-auth0";
 // css
 import styles from "../styles/Navbar.module.css";
 
-export default function Profile() {
+export default function Profile(profile) {
   const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
@@ -20,6 +20,8 @@ export default function Profile() {
           height={50}
           width={50}
         />
+      
+        
       </>
     )
   );
