@@ -73,6 +73,16 @@ if (confirm("Are you sure you want to delete this location?") == true) {
 }
   }
 
+  function handleEdit(){
+
+  let text;
+if (confirm("Are you sure you want to edit this location?") == true) {
+  router.push('/editlocation/'+location[0].location_id);
+} else {
+  text = "You canceled!";
+}
+  }
+
 
   return(
   <>
@@ -89,7 +99,7 @@ if (confirm("Are you sure you want to delete this location?") == true) {
         <div className={styles.left_div}>
           <h1 className={styles.title}>
             {location[0].location_name} 
-            {user && user.email === location[0].user_email ? (<><Button label="Edit"/>
+            {user && user.email === location[0].user_email ? (<><Button label="Edit" onClick={handleEdit} />
             <Button label="Delete" onClick={handleDelete}/></>): null}
           </h1>
 
