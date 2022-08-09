@@ -38,8 +38,40 @@
 }
 
 
+.carousel{
+  display: none;
+
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    padding: 0;
+  }
+
+.filter_bar{
+  display: none;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  max-height: 90%;
+}
+
+  .carousel{
+   max-height: 50%;
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+  }
 
 
+  .card_display{
+    display: none;
+  }
+
+}
 
 
 

@@ -13,7 +13,7 @@ import CategoryFilter from "../Components/Category Filter/categoryFilter";
 import RegionFilter from "../Components/Region Filter/regionFilter";
 import AmenityFilter from "../Components/Amenity Filter/amenityFilter";
 import LocationFilter from "../Components/Location Filter/locationFilter";
-
+import MyCarousel from '../Components/carousel';
 
 const MapComponent = dynamic(() => import('../Components/map.js'), {
   loading: () => 'Loading...',
@@ -115,8 +115,11 @@ export default function Home() {
         <section>
           <MapComponent allLocationData={displayedData} />
         </section>
-        <section>
-          <CardDisplay allLocationData={displayedData} pending={pending}/>
+        <section className={styles.card_display}>
+          <CardDisplay  allLocationData={displayedData} pending={pending}/>
+          </section>
+          <section className={styles.carousel}>
+          <MyCarousel  allLocationData={displayedData}/>
         </section>
       </main>
     </div>

@@ -65,3 +65,50 @@
 .moreInfo{
     height: 1.7vw;
 }
+
+
+@media screen and (max-width: 850px){
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding:5px;
+        height:30vh;
+    }
+    .card_details{
+        display: inline;
+        width: 90%;
+        height: 60%;
+        font-size: 1.5rem;
+        margin: 0.2rem;
+        
+    }
+    .card_img{
+        height: 30%;
+        width:100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .title {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+    }
+
+    .description{
+        overflow: hidden;
+        font-size: 0.8rem;
+        max-height: 60%;
+               margin: 0.5rem 0;
+    
+    }
+  .amenities{
+    display: none;
+  }
+  .more_info_button{
+    position: absolute; 
+    bottom: 0;
+    margin-bottom: 1.5rem;
+}
+}

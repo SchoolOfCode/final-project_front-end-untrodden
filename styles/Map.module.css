@@ -25,3 +25,14 @@
  .popup{
     font-family:  "Raleway", sans-serif ;
  }
+
+ @media screen and (max-width: 850px){
+
+    .map_container{
+        width:90vw;
+        height: 45vh;
+        margin-top: 1rem;
+        border-radius: 10px;
+    }
+
+ }
