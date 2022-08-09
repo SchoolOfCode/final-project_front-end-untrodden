@@ -69,16 +69,58 @@ export async function getStaticProps(context) {
 }
 
 
-export default function editLocationPage() {
+export default function editLocationPage({ location }) {
   
 
   const { register, handleSubmit, setValue } = useForm({
     defaultValues: {
-      latitude: 52.489471,
-      longitude: -2.898575,
-      image_url:
-        "https://res.cloudinary.com/dnshrtqmv/image/upload/v1659972687/no-image-placeholder_copy_yriogz.png",
-    },
+      location_name: location[0].location_name,
+      street: location[0].street,
+      town: location[0].town,
+      region: location[0].region,
+      postcode: location[0].postcode,
+      location_description: location[0].location_description,
+      category_seaside: location[0].category_seaside,
+      category_castles: location[0].category_castles,
+      category_caves: location[0].category_caves,
+      category_peaceful: location[0].category_peaceful,
+      category_hiking: location[0].category_hiking,
+      category_hills: location[0].category_hills,
+      category_historic: location[0].category_historic,
+      category_secluded: location[0].category_secluded,
+      category_casual: location[0].category_casual,
+      category_lakes: location[0].category_lakes,
+      category_busy: location[0].category_busy,
+      category_woods: location[0].category_woods,
+      amenities_parking: location[0].amenities_parking,
+      amenities_food: location[0].amenities_food,
+      amenities_family: location[0].amenities_family,
+      amenities_changing_facilities: location[0].amenities_changing_facilities,
+      amenities_disability_access: location[0].amenities_disability_access,
+      amenities_peaceful: location[0].amenities_peaceful,
+      amenities_electric_charging: location[0].amenities_electric_charging,
+      amenities_no_restaurants: location[0].amenities_no_restaurants,
+      amenities_museums: location[0].amenities_museums,
+      amenities_beach: location[0].amenities_beach,
+      amenities_hiking: location[0].amenities_hiking,
+      amenities_pet_friendly: location[0].amenities_pet_friendly,
+      amenities_forests: location[0].amenities_forests,
+      amenities_lots_of_wildlife: location[0].amenities_lots_of_wildlife,
+      amenities_watersports: location[0].amenities_watersports,
+      amenities_shopping: location[0].amenities_shopping,
+      amenities_bodies_of_water: location[0].amenities_bodies_of_water,
+      amenities_camping: location[0].amenities_camping,
+      amenities_mountains: location[0].amenities_mountains,
+      amenities_hearing_loop: location[0].amenities_hearing_loop,
+      amenities_public_transport_good: location[0].amenities_public_transport_good,
+      amenities_public_transport_bad: location[0].amenities_public_transport_bad,
+      amenities_accommodation: location[0].amenities_accommodation,
+      amenities_wifi: location[0].amenities_wifi,
+      image_url: location[0].image_url,
+      latitude: location[0].latitude,
+      longitude: location[0].longitude,
+      user_email: location[0].user_email
+    }
   });
   const router = useRouter();
   const { user, error, isLoading } = useUser();
@@ -89,9 +131,9 @@ export default function editLocationPage() {
     console.log({...data, user_email:  user ? user.email : "" })
 
     const res = await fetch(
-      "https://untrodden-untrodded.herokuapp.com/locations",
+      "https://untrodden-untrodded.herokuapp.com/locations/" + location[0].location_id,
       {
-        method: "POST",
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({...data, user_email:  user ? user.email : "" }),
       }
@@ -109,86 +151,66 @@ export default function editLocationPage() {
     );
   };
 
-  // function to add a new resources to the backend
-  async function postResources(input) {
-    const res = await fetch("v1/resources", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(input),
-    });
-    const data = await res.json();
-    return data;
-  }
-
   return (
     <>
       <Head>
-        <title>Add Location | Untrodden</title>
-        <meta name="description" content="Add location" />
+        <title>Edit Location | Untrodden</title>
+        <meta name="description" content="Edit location" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <div className={styles.max_page_width}>
-          <h1 className={styles.h1}>Add Location</h1>
-          {!user && (
-            <h2 className={styles.h2}>
-              <span>Please</span>
-              <button
-                className={styles.btn}
-                onClick={() => {
-                  router.push("/api/auth/login");
-                }}
-              >
-                Log in
-              </button>
-              <span>before completing the form</span>
-            </h2>
-          )}
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {/* left side of form */}
-            <div className={styles.main_grid_container}>
-              <div className={styles.flex_container}>
-                <LocationNameAndAddress register={register} />
-
-                <LocationDescription register={register} />
-
-                <label className={styles.label} htmlFor="Location Category">
-                  Location category:
-                </label>
-                <div className={styles.location_category_grid_container}>
-                  <LocationCategory register={register} />
-                </div>
-              </div>
-
-              {/* right side of form */}
-              <div className={styles.grid_right}>
+          <h1 className={styles.h1}>Edit Location</h1>
+          {user && user.email === location[0].user_email ? (
+            <>
+            
+            <form onSubmit={handleSubmit(onSubmit)}>
+              {/* left side of form */}
+              <div className={styles.main_grid_container}>
                 <div className={styles.flex_container}>
-                  <label className={styles.label}>
-                    Select all available Amenities:
+                  <LocationNameAndAddress register={register} />
+
+                  <LocationDescription register={register} />
+
+                  <label className={styles.label} htmlFor="Location Category">
+                    Location category:
                   </label>
-                  <div className={styles.amenities_category_grid_container}>
-                    <LocationAmenities register={register} />
+                  <div className={styles.location_category_grid_container}>
+                    <LocationCategory register={register} />
                   </div>
+                </div>
 
-                  <FormMap setValue={setValue} />
+                {/* right side of form */}
+                <div className={styles.grid_right}>
+                  <div className={styles.flex_container}>
+                    <label className={styles.label}>
+                      Select all available Amenities:
+                    </label>
+                    <div className={styles.amenities_category_grid_container}>
+                      <LocationAmenities register={register} />
+                    </div>
 
-                  {/* add image will go here */}
-                  <Cloudinary setValue={setValue} />
+                    <FormMap setValue={setValue} />
+
+                    {/* add image will go here */}
+                    <Cloudinary setValue={setValue} />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div>
-            </div>
-            <div className={styles.btn_container}>
-              {user ? (
-                <button className={styles.btn}>Add Location</button>
-              ) : (
-                <button className={styles.btnDisabled} disabled>
-                  Log in first!
-                </button>
-              )}
-            </div>
-          </form>
+              <div>
+              </div>
+              <div className={styles.btn_container}>
+                {user ? (
+                  <button className={styles.btn}>Edit Location</button>
+                ) : (
+                  <button className={styles.btnDisabled} disabled>
+                    Log in first!
+                  </button>
+                )}
+              </div>
+            </form>
+            </>
+            ): <p>Only the creator of this page may edit it.</p>}
         </div>
       </main>
     </>
