@@ -116,6 +116,11 @@
   font-weight: 500;
   font-size: 1rem;
 }
+
+.email_input{
+  visibility: hidden;
+}
+
 .main textarea {
   min-height: 300px;
 
