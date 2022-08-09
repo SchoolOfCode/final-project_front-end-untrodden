@@ -37,7 +37,7 @@
   justify-content: space-evenly;
   width: 40%;
   /* padding-top: 3vh; */
-  font-size: 1vw;
+  font-size: 1rem;
   align-items: center;
   
 
@@ -69,34 +69,34 @@
 .profile_image {
   border-radius: 50%;
 }
+
 .default_image {
   position: relative;
   bottom: 20px;
 }
 
 .hamburger{
-
   display: none;
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 850px){
  
 .header{
   padding-left: 0;
  }
 
 .link_desktop{
-    display: none;
+  display: none;
 }
 
 .hamburger{
   display: block;
 }
 
-.default_image{
-  visibility: hidden;
-  width: 50%;
+.profile_image{
+  width: 2rem;
+  height: 2rem;
 }
  
 }

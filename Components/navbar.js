@@ -129,20 +129,14 @@ export default function Nav() {
             <a className={styles.link} href="/api/auth/logout">
               Logout
             </a>
-            <Profile />
+            
           </>
         ) : (
           <>
             <a className={styles.link} href="/api/auth/login">
               Login
             </a>
-            <Image
-              src={ProfileDefault}
-              alt="profile"
-              className={styles.default_image}
-              height={50}
-              width={50}
-            />
+           
           </>
         )}</MenuItem>
         
