@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Head from "next/head";
+import { useState } from 'react';
+import Head from 'next/head';
 
 // css
-import styles from "../../styles/cloudinaryTest.module.css";
+import styles from '../../styles/cloudinaryTest.module.css';
 
-export default function Cloudinary({ setValue }) {
-  const [imageSrc, setImageSrc] = useState();
+export default function Cloudinary({ setValue, defaultImage }) {
+  const [imageSrc, setImageSrc] = useState(defaultImage ? defaultImage : null);
   const [uploadData, setUploadData] = useState();
 
   function handleOnChange(changeEvent) {
@@ -24,16 +24,16 @@ export default function Cloudinary({ setValue }) {
     event.preventDefault();
 
     const response = await fetch(
-      "https://api.cloudinary.com/v1_1/dkethqypm/image/upload",
+      'https://api.cloudinary.com/v1_1/dnshrtqmv/image/upload',
       {
-        method: "POST",
+        method: 'POST',
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           file: imageSrc,
-          upload_preset: "untrodden-pics",
+          upload_preset: 'untrodden-pics',
         }),
       }
     );
@@ -42,20 +42,13 @@ export default function Cloudinary({ setValue }) {
 
     setImageSrc(data.secure_url);
     setUploadData(data);
-    setValue("image_url", data.secure_url);
+    setValue('image_url', data.secure_url);
     console.log(data);
   }
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Image Uploader</title>
-        <meta name="description" content="Upload your image to Cloudinary!" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
-
         <h1 className={styles.title}>Upload Location Image:</h1>
 
         <p className={styles.description}>
@@ -66,14 +59,13 @@ export default function Cloudinary({ setValue }) {
           <p>
             <input onChange={handleOnChange} type="file" name="file" />
           </p>
-
-          <img className={styles.img} src={imageSrc} />
-
           {imageSrc && !uploadData && (
             <p>
-              <button onClick={handleOnSubmit}>Upload Image</button>
+              <button onClick={handleOnSubmit}>Confirm Upload!</button>
             </p>
           )}
+
+          <img className={styles.img} src={imageSrc} />
         </div>
       </main>
     </div>

@@ -2,7 +2,7 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
-export default function ComboBox({
+export default function LocationFilter({
   options,
   setDisplayedData,
   setSearchState,
@@ -28,13 +28,26 @@ export default function ComboBox({
           ),
         ]);
       }}
-      disablePortal
+      
       id="combo-box-demo"
       options={loctions}
+<<<<<<< HEAD:Components/Text Search/textSearch.js
       style={{color:'#E8A941', fontSize:'1.2vw',}}
       sx={{ width: 300, color: "#E8A941", fontSize: "1.2vw" }}
       renderInput={(params) => <TextField {...params} label="Locations" />}
     />
+=======
+      sx={{ width:'12rem'}}
+      renderInput={(params) => 
+                <TextField {...params} 
+                sx={{ 
+                      '& .MuiOutlinedInput-root':{color:'white', '& > fieldset': {border: 'none'}}, 
+                      '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.5rem'},
+                      '& .MuiSvgIcon-root':{color: '#e8a941'},
+                    }}
+                label="Locations:" />}
+              />
+>>>>>>> development:Components/Location Filter/locationFilter.js
     
     </div>
   );

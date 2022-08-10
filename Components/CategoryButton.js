@@ -7,6 +7,7 @@ function CategoryButton(props){
           <input
             type="checkbox"
             id={props.id}
+            defaultChecked={props.categories ? (props.categories.includes(props.id) ? true: false) : false}
             {...props.register(props.id)}
           />
           <span>{props.name}</span>

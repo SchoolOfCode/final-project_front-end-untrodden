@@ -17,9 +17,23 @@
     cursor: pointer;
   }
 
+.marker:hover{
+    filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%);
+}
+
  .popup{
-   
     font-family:  "Raleway", sans-serif ;
-   
-  
+    
  }
+
+ @media screen and (max-width: 850px){
+
+    .map_container{
+        width:90vw;
+        height: 45vh;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
+    }
+}

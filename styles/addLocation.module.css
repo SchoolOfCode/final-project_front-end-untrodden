@@ -2,29 +2,52 @@
 .main {
   max-width: 1400px;
   margin: auto;
-
 }
+
+.max_page_width {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+.login_warning_container {
+  background-color: rgb(235, 101, 101);
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_warning {
+  /* text-align: center; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+
+  /* margin-top: -1vh; */
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .main_grid_container {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 4rem;
 }
 
-.flex_container_left {
-  width: 100%;
+.flex_container {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  /* padding: 1rem; */
   color: var(--secondary);
-  align-items: center;
-  margin: 1rem;
+  /* align-items: center; */
+  /* margin: 1rem; */
 }
 .btn_container {
   display: flex;
@@ -32,18 +55,18 @@
 }
 
 .btn {
-  display: flex;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 38px;
+  line-height: 2.2rem;
   text-align: center;
-  padding: 0.8rem 5rem;
+  padding: 0.8rem 1rem;
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--secondary);
   color: var(--primary);
-  margin-bottom: 2rem;
+  margin: 1rem 1rem;
+  margin-top: 1rem;
 }
 
 .btn:hover {
@@ -57,8 +80,31 @@
 .btn:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
+    cursor: pointer;
 }
 
+.amenityDefaultChecked{
+  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%);
+    cursor: pointer;
+
+}
+
+.btnDisabled {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  padding: 0.8rem 5rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #44544f;
+  color: #dab578;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
 
 /* location and address section */
 .main input[type='text'],
@@ -66,51 +112,55 @@
 .main select {
   display: inline-block;
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
   padding: 0.7rem 1.2rem;
   margin: 0.5rem 0;
-  margin-left: 1.2rem;
+
   font-family: 'Raleway', sans-serif;
   background: #ffffff;
   border: 2px solid #225544;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 1rem;
 }
+
+.email_input{
+  visibility: hidden;
+}
+
 .main textarea {
   min-height: 300px;
-  max-width: 500px;
-  min-width: 500px;
+
+  font-size: 1.2rem;
 }
 .main label {
   color: var(--secondary);
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  margin-left: 1.2rem;
+  font-size: 1.2rem;
 }
 /* description section */
 .description_p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  width: 80%;
-  margin-left: 1.2rem;
+  width: 100%;
 }
 /* location categories */
 .location_category_grid_container {
-  margin-top: 1rem;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
   justify-content: center;
+  margin-top: 2rem;
 }
 .location_category {
   /* margin-bottom: 2rem; */
   /* width: 4rem; */
-  justify-content: center;
+  justify-content: left;
+  text-align: center;
 }
 .location_category label {
   font-weight: 500;
@@ -121,7 +171,7 @@
   background-color: var(--primary);
   padding: 0.4rem 1.8rem;
   border-radius: 6px;
-  width: 100%
+  width: 100%;
 }
 .location_category label input {
   display: none;
@@ -135,7 +185,7 @@
 
 /* amenities section */
 
-.flex_container_right {
+/* .flex_container{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -143,11 +193,12 @@
   color: var(--secondary);
   align-items: center;
   margin-top: 1rem;
-}
+} */
 
 .amenities_category input:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
+    cursor: pointer;
 }
 
 .amenities_category label input {
@@ -156,8 +207,8 @@
 
 .amenities_category_grid_container {
   margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  width: 80%;
+
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.5rem;
@@ -166,8 +217,9 @@
   border-radius: 8px;
 } */
 .amenities_pic:hover {
-  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
-    brightness(35%) contrast(88%);
+  /* filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%); SOLVES MOBILE ISSUE? */
+  cursor: pointer;
 }
 .amenities_category:hover {
   transform: scale(1.1);
@@ -175,14 +227,61 @@
   transition-property: transform;
 }
 
-
-.label{
-  width: 80%;
+.label {
+  width: 100%;
   align-items: left;
   margin-top: 1rem;
+  /* cursor: pointer; */
 }
 
-.input{
-  margin:10rem;
-  width:80%;
+.input {
+  margin: 10rem;
+  width: 80%;
+}
+
+@media screen and (max-width: 950px) {
+  .max_page_width {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* .flex_container {
+    grid-column: span 2;
+  } */
+  .login_warning_container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .login_warning {
+    margin: 0;
+  }
+
+  .main_grid_container {
+    grid-template-columns: 1fr;
+  }
+
+  .location_category_grid_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .max_page_width {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  .login_warning {
+    /* text-align: center; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+
+    /* margin-top: -1vh; */
+
+    font-weight: 600;
+  }
 }

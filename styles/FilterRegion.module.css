@@ -1,4 +1,5 @@
 .dropdown{
+<<<<<<< HEAD
     /* background-color: #225544;
     border: none;
     color: #E8A941;
@@ -31,3 +32,31 @@
     border: solid 1px black;
     cursor: pointer;
     }
+=======
+    background-color: transparent;
+    border: none;
+    color: #E8A941;
+    width:12vw;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .options{
+    color: black;
+ }   
+
+ @media screen and (max-width: 850px){
+  .dropdown{
+    margin-left: 1rem ;
+    background-color: transparent;
+    border: none;
+    color: #E8A941;
+    width:60%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .options{
+    max-width:50%;
+ }   
+  }
+>>>>>>> development

@@ -1,45 +1,59 @@
-
 import styles from '../../styles/addLocation.module.css';
 
-export default function LocationNameAndAddress({ register }) {
+export default function LocationNameAndAddress({ register, region }) {
   return (
     <>
-      <label className={styles.label} htmlFor="locationName">Location Name:</label>
-      <input required type="text" id="locationName" pattern="[a-z, 0-9]{1,30}"
-        title="Only Letters 'A-Z' and Numbers '0-9'  allowed" {...register('location_name')} />
+      <label className={styles.label} htmlFor="locationName">
+        Location Name:
+      </label>
+      <input
+        required
+        type="text"
+        id="locationName"
+        pattern="[a-z, A-Z, 0-9]{1,30}"
+        title="Only Letters 'A-Z' and Numbers '0-9'  allowed"
+        {...register('location_name')}
+      />
       {/* address section */}
-      <label className={styles.label} htmlFor="Location Address">Location Address:</label>
-
+      <label className={styles.label} htmlFor="Location Address">
+        Location Address:
+      </label>
 
       <label className={styles.label} htmlFor="Street/road"></label>
       <input
-      required
-      className={styles.input}
+        required
+        className={styles.input}
         type="text"
         id="Street/road"
         placeholder="Street Address"
-        pattern="[a-z, 0-9]{1,30}"
-        title="Only Letters A-Z allowed"
-        {...register("street")}
+        pattern="[a-z, A-Z, 0-9]{1,30}"
+        title="Only Letters 'A-Z' and Numbers '0-9'  allowed"
+        {...register('street')}
       />
 
-      <label className={styles.label}  htmlFor="location Town"></label>
+      <label className={styles.label} htmlFor="location Town"></label>
       <input
-      required
-            className={styles.input}
+        required
+        className={styles.input}
         type="text"
         id="location Town"
         placeholder="Town"
-        pattern="[a-z]{1,30}"
-        title="Only Letters A-Z allowed"
-        {...register("town")}
+        pattern="[a-z, A-Z,]{1,30}"
+        title="Only Letters 'A-Z' allowed"
+        {...register('town')}
       />
 
-
-
-      <label className={styles.label} htmlFor="region-select">Choose a Region:</label>
-      <select required className={styles.input} name="region" id="region-select" {...register('region')}>
-
+      <label className={styles.label} htmlFor="region-select">
+        Choose a Region:
+      </label>
+      <select
+        required
+        className={styles.input}
+        name="region"
+        id="region-select"
+        {...register('region')}
+        defaultValue={region}
+      >
         <option value="West Midlands">West Midlands</option>
         <option value="London">London</option>
         <option value="North East">North East</option>
@@ -75,14 +89,15 @@ export default function LocationNameAndAddress({ register }) {
 
       <label className={styles.label} htmlFor="location Postcode"></label>
       <input
-      required
-      className={styles.input}
+        required
+        className={styles.input}
         type="text"
         id="location Postcode"
         placeholder="Postcode"
-        pattern="[a-z, 0-9]{1,9}"
-        title="Only Letters 'A-Z' and numbers '0-9' allowed"
-        {...register("postcode")}
+        maxlength="10"
+        pattern="[a-z, A-Z, 0-9]{1,30}"
+        title="Only Letters 'A-Z' and Numbers '0-9'  allowed"
+        {...register('postcode')}
       />
     </>
   );

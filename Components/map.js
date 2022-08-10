@@ -26,7 +26,7 @@ export default function Map({ allLocationData }) {
   });
 
   return (
-    <section className={styles.map_container}>
+    <section className={styles.map_container} style={{borderRadius: '10px', overflow: 'hidden'}}>
       <ReactMapGL
         mapStyle={process.env.NEXT_PUBLIC_MAP_STYLE_URL}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAP_ACCESS_TOKEN}
@@ -38,7 +38,7 @@ export default function Map({ allLocationData }) {
 
         //    sets max and min zoom levels - would be good if could figue out how to set draggable boundaries.
 
-            minZoom ={4}
+            minZoom ={4.7}
             maxZoom = {16}
             >
 {allLocationData.map(location => <Marker key={location.location_id}longitude={location.longitude} latitude={location.latitude} anchor="bottom" >
@@ -65,7 +65,7 @@ export default function Map({ allLocationData }) {
             onClose={() => setShowPopup(false)}
           >
            <p>{popupName}</p> <br/>
-           <Link href={`/location/${popupId}`}><a><Button label="More Info" /></a></Link>
+           <Link href={`/location/${popupId}`}><a className='moreInfo'><Button label="More Info" className='moreInfo'/></a></Link>
           </Popup>
         )}
       </ReactMapGL>

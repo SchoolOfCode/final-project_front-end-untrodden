@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
 
-
-.button{
-    background-color:#e8a941 ;
-    color: #225544;
-    border: none;
-    min-width: 75px ;
-    height:1.7vw;
-    border-radius: 5px;
-    font-size: 0.8em;
-    font-family: 'Raleway', sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.button {
+  background-color: #e8a941;
+  color: #225544;
+  border: none;
+  min-width: 75px;
+  height: 1.7vw;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-family: 'Raleway', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
 
 .button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
   transition-duration: 100ms;
   transition-property: transform;
+}
+
+@media screen and (max-width: 850px) {
+  .button {
+    height: 1.6rem;
+  }
 }

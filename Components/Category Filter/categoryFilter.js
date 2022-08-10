@@ -18,8 +18,8 @@ export default function CategoryFilter({setCategoryState,value}){
 
     return<div> 
     <select className={styles.dropdown} onChange={e => setCategoryState(e.target.value)} value={value} id="category">
-    <option value="0">Category:</option>
-    {category.map(cat => <option key={cat.value} value={cat.value}>{cat.label}</option> )}
+    <option className={styles.options} value="0">Category:</option>
+    {category.map(cat => <option className={styles.options} key={cat.value} value={cat.value}>{cat.label}</option> )}
   </select>
   </div>
 }
