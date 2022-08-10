@@ -32,11 +32,6 @@ import BadPublicTransport from "../../public/amenities_images/amenities_public_t
 
 // responsive amenities icons wrapped in tooltip
 export default function LocationAmenities({ register, amenities }) {
-console.log(amenities);
-console.log((amenities.includes('amenities_parking') ? "true" : "false"))
-console.log((amenities.includes('amenities_food') ? "true" : "false"))
-// const parking = document.getElementById('amenities_parking')
-// console.log(parking.checked)
 
   return (
     <>
