@@ -1,44 +1,42 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import Modal from "../../Components/LocationPageComponents/Modal";
+import Modal from '../../Components/LocationPageComponents/Modal';
 //map stuff
-import MapLocationPage from "../../Components/MapLocationPage/mapLocationPage";
-import dynamic from "next/dynamic";
-import Head from "next/head";
+import MapLocationPage from '../../Components/MapLocationPage/mapLocationPage';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 // import { Modal } from '@mui/material';
 
-import Button from "../../Components/Button/button";
+import Button from '../../Components/Button/button';
 
-import { useUser } from "@auth0/nextjs-auth0";
+import { useUser } from '@auth0/nextjs-auth0';
 
 import { useRouter } from 'next/router';
 
-import LocationNameAndAddress from "../../Components/FormComponents/LocationNameAndAddress";
-import LocationDescription from "../../Components/FormComponents/LocationDescription";
-import LocationCategory from "../../Components/FormComponents/LocationCategory";
-import LocationAmenities from "../../Components/FormComponents/LocationAmenities";
+import LocationNameAndAddress from '../../Components/FormComponents/LocationNameAndAddress';
+import LocationDescription from '../../Components/FormComponents/LocationDescription';
+import LocationCategory from '../../Components/FormComponents/LocationCategory';
+import LocationAmenities from '../../Components/FormComponents/LocationAmenities';
 // dynamic components
 
-import styles from "../../styles/addLocation.module.css";
-import { useForm } from "react-hook-form";
-import { useEffect, useState } from "react";
-import FormMap from "../../Components/FormComponents/FormMap";
-import { useSlotProps } from "@mui/base";
+import styles from '../../styles/addLocation.module.css';
+import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import FormMap from '../../Components/FormComponents/FormMap';
+import { useSlotProps } from '@mui/base';
 
 const Cloudinary = dynamic(
-  () => import("../../Components/FormComponents/Cloudinary"),
+  () => import('../../Components/FormComponents/Cloudinary'),
   {
-    loading: () => "Loading...",
+    loading: () => 'Loading...',
     ssr: false,
   }
 );
 
-
-
 // working in this one
 export async function getStaticPaths() {
   const res = await fetch(
-    "https://untrodden-untrodded.herokuapp.com/locations/"
+    'https://untrodden-untrodded.herokuapp.com/locations/'
   );
   const data = await res.json();
 
@@ -58,7 +56,7 @@ export async function getStaticProps(context) {
   const id = context.params.id;
   console.log(id);
   const res = await fetch(
-    "https://untrodden-untrodded.herokuapp.com/locations/" + id
+    'https://untrodden-untrodded.herokuapp.com/locations/' + id
   );
   const data = await res.json();
   console.log(data);
@@ -68,10 +66,7 @@ export async function getStaticProps(context) {
   };
 }
 
-
 export default function editLocationPage({ location }) {
-  
-
   const { register, handleSubmit, setValue } = useForm({
     defaultValues: {
       location_name: location[0].location_name,
@@ -112,30 +107,33 @@ export default function editLocationPage({ location }) {
       amenities_camping: location[0].amenities_camping,
       amenities_mountains: location[0].amenities_mountains,
       amenities_hearing_loop: location[0].amenities_hearing_loop,
-      amenities_public_transport_good: location[0].amenities_public_transport_good,
-      amenities_public_transport_bad: location[0].amenities_public_transport_bad,
+      amenities_public_transport_good:
+        location[0].amenities_public_transport_good,
+      amenities_public_transport_bad:
+        location[0].amenities_public_transport_bad,
       amenities_accommodation: location[0].amenities_accommodation,
       amenities_wifi: location[0].amenities_wifi,
       image_url: location[0].image_url,
       latitude: location[0].latitude,
       longitude: location[0].longitude,
-      user_email: location[0].user_email
-    }
+      user_email: location[0].user_email,
+    },
   });
   const router = useRouter();
   const { user, error, isLoading } = useUser();
 
   const onSubmit = async (data) => {
     console.log(data);
-    console.log(user.email)
-    console.log({...data, user_email:  user ? user.email : "" })
+    console.log(user.email);
+    console.log({ ...data, user_email: user ? user.email : '' });
 
     const res = await fetch(
-      "https://untrodden-untrodded.herokuapp.com/locations/" + location[0].location_id,
+      'https://untrodden-untrodded.herokuapp.com/locations/' +
+        location[0].location_id,
       {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({...data, user_email:  user ? user.email : "" }),
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, user_email: user ? user.email : '' }),
       }
     );
     const responseData = await res.json();
@@ -147,7 +145,7 @@ export default function editLocationPage({ location }) {
       alert(
         `Thank you, ${user.name} for your submission, press 'Ok' be redirected to the locations page.`
       ),
-      router.push("/location/" + location[0].location_id)
+      router.push('/location/' + location[0].location_id)
     );
   };
 
@@ -163,54 +161,66 @@ export default function editLocationPage({ location }) {
           <h1 className={styles.h1}>Edit Location</h1>
           {user && user.email === location[0].user_email ? (
             <>
-            
-            <form onSubmit={handleSubmit(onSubmit)}>
-              {/* left side of form */}
-              <div className={styles.main_grid_container}>
-                <div className={styles.flex_container}>
-                  <LocationNameAndAddress register={register} />
-
-                  <LocationDescription register={register} />
-
-                  <label className={styles.label} htmlFor="Location Category">
-                    Location category:
-                  </label>
-                  <div className={styles.location_category_grid_container}>
-                    <LocationCategory register={register} categories={location[0].categories} />
-                  </div>
-                </div>
-
-                {/* right side of form */}
-                <div className={styles.grid_right}>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                {/* left side of form */}
+                <div className={styles.main_grid_container}>
                   <div className={styles.flex_container}>
-                    <label className={styles.label}>
-                      Select all available Amenities:
+                    <LocationNameAndAddress
+                      register={register}
+                      region={location[0].region}
+                    />
+
+                    <LocationDescription register={register} />
+
+                    <label className={styles.label} htmlFor="Location Category">
+                      Location category:
                     </label>
-                    <div className={styles.amenities_category_grid_container}>
-                      <LocationAmenities register={register} amenities={location[0].amenities}/>
+                    <div className={styles.location_category_grid_container}>
+                      <LocationCategory
+                        register={register}
+                        categories={location[0].categories}
+                      />
                     </div>
+                  </div>
 
-                    <FormMap setValue={setValue} />
+                  {/* right side of form */}
+                  <div className={styles.grid_right}>
+                    <div className={styles.flex_container}>
+                      <label className={styles.label}>
+                        Select all available Amenities:
+                      </label>
+                      <div className={styles.amenities_category_grid_container}>
+                        <LocationAmenities
+                          register={register}
+                          amenities={location[0].amenities}
+                        />
+                      </div>
 
-                    {/* add image will go here */}
-                    <Cloudinary setValue={setValue} defaultImage={location[0].image_url} />
+                      <FormMap setValue={setValue} />
+
+                      {/* add image will go here */}
+                      <Cloudinary
+                        setValue={setValue}
+                        defaultImage={location[0].image_url}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div>
-              </div>
-              <div className={styles.btn_container}>
-                {user ? (
-                  <button className={styles.btn}>Edit Location</button>
-                ) : (
-                  <button className={styles.btnDisabled} disabled>
-                    Log in first!
-                  </button>
-                )}
-              </div>
-            </form>
+                <div></div>
+                <div className={styles.btn_container}>
+                  {user ? (
+                    <button className={styles.btn}>Edit Location</button>
+                  ) : (
+                    <button className={styles.btnDisabled} disabled>
+                      Log in first!
+                    </button>
+                  )}
+                </div>
+              </form>
             </>
-            ): <p>Only the creator of this page may edit it.</p>}
+          ) : (
+            <p>Only the creator of this page may edit it.</p>
+          )}
         </div>
       </main>
     </>
