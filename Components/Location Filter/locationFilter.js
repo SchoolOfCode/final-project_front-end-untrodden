@@ -31,12 +31,6 @@ export default function LocationFilter({
       
       id="combo-box-demo"
       options={loctions}
-<<<<<<< HEAD:Components/Text Search/textSearch.js
-      style={{color:'#E8A941', fontSize:'1.2vw',}}
-      sx={{ width: 300, color: "#E8A941", fontSize: "1.2vw" }}
-      renderInput={(params) => <TextField {...params} label="Locations" />}
-    />
-=======
       sx={{ width:'12rem'}}
       renderInput={(params) => 
                 <TextField {...params} 
@@ -47,7 +41,6 @@ export default function LocationFilter({
                     }}
                 label="Locations:" />}
               />
->>>>>>> development:Components/Location Filter/locationFilter.js
     
     </div>
   );

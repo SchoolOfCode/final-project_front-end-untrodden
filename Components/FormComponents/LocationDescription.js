@@ -15,14 +15,9 @@ export default function LocationDescription({ register }) {
       required
       className={styles.input}
         id="locationDescription"
-<<<<<<< HEAD
-        pattern="{1,1000}"
-        title="Maximum of 1000 characters"
-=======
         minlength="300"
         maxlength="5000"
         title="Minimum 300 characters, maximum of 5000. "
->>>>>>> development
         {...register("location_description")}
       />
     </>
