@@ -3,6 +3,9 @@
 .header {
   position: sticky;
     position: -webkit-sticky;
+position: -moz-sticky;
+position: -o-sticky;
+position: -ms-sticky;
     top: 0;
     z-index: 6;
   background-color: #225544;

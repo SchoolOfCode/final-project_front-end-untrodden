@@ -31,7 +31,9 @@ import Accommodation from "../../public/amenities_images/amenities_accommodation
 import BadPublicTransport from "../../public/amenities_images/amenities_public_transport_bad.png";
 
 // responsive amenities icons wrapped in tooltip
-export default function LocationAmenities({ register }) {
+export default function LocationAmenities({ register, amenities }) {
+console.log(amenities);
+
   return (
     <>
       <div className={`${styles.amenities_category} ${styles.checked}`}>
@@ -42,6 +44,7 @@ export default function LocationAmenities({ register }) {
               type="checkbox"
               id="amenities_parking"
               {...register("amenities_parking")}
+              checked={amenities ? (amenities.includes('amenities_parking') ? "false" : "true") : "false"}
             />
             <span>
               <Image
@@ -64,6 +67,7 @@ export default function LocationAmenities({ register }) {
               type="checkbox"
               id="amenities_food"
               {...register("amenities_food")}
+              checked={amenities.includes('amenities_food') ? "true" : "false"}
             />
             <span>
               <Image
@@ -84,6 +88,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_family"
+              checked={amenities.includes('amenities_family') ? "true" : "false"}
               {...register("amenities_family")}
             />
             <span>
@@ -106,6 +111,8 @@ export default function LocationAmenities({ register }) {
               type="checkbox"
               id="amenities_changing_facilities"
               {...register("amenities_changing_facilities")}
+              checked={amenities.includes('amenities_changing_facilities') ? "true" : "false"}
+
             />
             <span>
               <Image
@@ -127,6 +134,7 @@ export default function LocationAmenities({ register }) {
               type="checkbox"
               id="amenities_disability_access"
               {...register("amenities_disability_access")}
+              checked={amenities.includes('amenities_disability_access') ? "true" : "false"}
             />
             <span>
               <Image
@@ -147,6 +155,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_peaceful"
+              checked={amenities.includes('amenities_peaceful') ? "true" : "false"}
               {...register("amenities_peaceful")}
             />
             <span>
@@ -168,6 +177,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_wifi"
+              checked={amenities.includes('amenities_wifi') ? "true" : "false"}
               {...register("amenities_wifi")}
             />
             <span>
@@ -176,7 +186,7 @@ export default function LocationAmenities({ register }) {
                 src={Wifi}
                 height={35}
                 width={35}
-                alt="Widi image"
+                alt="Wifi image"
               ></Image>
             </span>
           </label>
@@ -189,6 +199,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_no_restaurants"
+              checked={amenities.includes('amenities_no_restaurants') ? "true" : "false"}
               {...register("amenities_no_restaurants")}
             />
             <span>
@@ -210,6 +221,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_museums"
+              checked={amenities.includes('amenities_museums') ? "true" : "false"}
               {...register("amenities_museums")}
             />
             <span>
@@ -231,6 +243,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_beach"
+              checked={amenities.includes('amenities_beach') ? "true" : "false"}
               {...register("amenities_beach")}
             />
             <span>
@@ -252,6 +265,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_hiking"
+              checked={amenities.includes('amenities_hiking') ? "true" : "false"}
               {...register("amenities_hiking")}
             />
             <span>
@@ -272,6 +286,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_pet_friendly') ? "true" : "false"}
               id="amenities_pet_friendly"
               {...register("amenities_pet_friendly")}
             />
@@ -292,6 +307,7 @@ export default function LocationAmenities({ register }) {
         <Tooltip title="Forests">
           <label>
             <input
+              checked={amenities.includes('amenities_forests') ? "true" : "false"}
               type="checkbox"
               id="amenities_forests"
               {...register("amenities_forests")}
@@ -314,6 +330,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_lots_of_wildlife') ? "true" : "false"}
               id="amenities_lots_of_wildlife"
               {...register("amenities_lots_of_wildlife")}
             />
@@ -335,6 +352,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_watersports') ? "true" : "false"}
               id="amenities_watersports"
               {...register("amenities_watersports")}
             />
@@ -357,6 +375,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_shopping"
+              checked={amenities.includes('amenities_shopping') ? "true" : "false"}
               {...register("amenities_shopping")}
             />
             <span>
@@ -378,6 +397,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_bodies_of_water"
+              checked={amenities.includes('amenities_bodies_of_water') ? "true" : "false"}
               {...register("amenities_bodies_of_water")}
             />
             <span>
@@ -399,6 +419,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_camping"
+              checked={amenities.includes('amenities_camping') ? "true" : "false"}
               {...register("amenities_camping")}
             />
             <span>
@@ -419,6 +440,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_mountains') ? "true" : "false"}
               id="amenities_mountains"
               {...register("amenities_mountains")}
             />
@@ -440,6 +462,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_hearing_loop') ? "true" : "false"}
               id="amenities_hearing_loop"
               {...register("amenities_hearing_loop")}
             />
@@ -461,6 +484,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_electric_charging') ? "true" : "false"}
               id="amenities_electric_charging"
               {...register("amenities_electric_charging")}
             />
@@ -483,6 +507,7 @@ export default function LocationAmenities({ register }) {
             <input
               type="checkbox"
               id="amenities_public_transport_good"
+              checked={amenities.includes('amenities_public_transport_good') ? "true" : "false"}
               {...register("amenities_public_transport_good")}
             />
             <span>
@@ -503,6 +528,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_accommodation') ? "true" : "false"}
               id="amenities_accommodation"
               {...register("amenities_accommodation")}
             />
@@ -524,6 +550,7 @@ export default function LocationAmenities({ register }) {
           <label>
             <input
               type="checkbox"
+              checked={amenities.includes('amenities_public_transport_bad') ? "true" : "false"}
               id="amenities_public_transport_bad"
               {...register("amenities_public_transport_bad")}
             />

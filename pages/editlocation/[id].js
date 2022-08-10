@@ -187,13 +187,13 @@ export default function editLocationPage({ location }) {
                       Select all available Amenities:
                     </label>
                     <div className={styles.amenities_category_grid_container}>
-                      <LocationAmenities register={register} />
+                      <LocationAmenities register={register} amenities={location[0].amenities}/>
                     </div>
 
                     <FormMap setValue={setValue} />
 
                     {/* add image will go here */}
-                    <Cloudinary setValue={setValue} />
+                    <Cloudinary setValue={setValue} defaultImage={location[0].image_url} />
                   </div>
                 </div>
               </div>
