@@ -67,6 +67,8 @@
   color: var(--primary);
   margin-bottom: 2rem;
   margin-top: 1.5rem;
+  cursor: pointer;
+
 }
 
 .btn:hover {
@@ -80,6 +82,14 @@
 .btn:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
+    cursor: pointer;
+}
+
+.amenityDefaultChecked{
+  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%);
+    cursor: pointer;
+
 }
 
 .btnDisabled {
@@ -194,6 +204,7 @@
 .amenities_category input:checked + span .amenities_pic {
   filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
     brightness(35%) contrast(88%);
+    cursor: pointer;
 }
 
 .amenities_category label input {
@@ -212,8 +223,8 @@
   border-radius: 8px;
 } */
 .amenities_pic:hover {
-  filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
-    brightness(35%) contrast(88%);
+  /* filter: invert(24%) sepia(48%) saturate(507%) hue-rotate(109deg)
+    brightness(35%) contrast(88%); SOLVES MOBILE ISSUE? */
   cursor: pointer;
 }
 .amenities_category:hover {
@@ -226,6 +237,7 @@
   width: 80%;
   align-items: left;
   margin-top: 1rem;
+  /* cursor: pointer; */
 }
 
 .input {
