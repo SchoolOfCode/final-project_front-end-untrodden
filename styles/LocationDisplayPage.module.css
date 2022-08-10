@@ -201,6 +201,17 @@
 .form_submission {
   color: #225544;
 }
+
+/* edit location buttons */
+.edit_delete_container_mobile {
+  display: none;
+}
+.edit_delete_container_desktop {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
 @media screen and (max-width: 800px) {
   .left_div {
     grid-column: span 2;
@@ -265,5 +276,14 @@
     margin-top: 0.5rem;
     height: 1.5rem;
     width: 1.5rem;
+  }
+  .edit_delete_container_mobile {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .edit_delete_container_desktop {
+    display: none;
   }
 }
