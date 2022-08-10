@@ -31,12 +31,12 @@ export default function LocationFilter({
       
       id="combo-box-demo"
       options={loctions}
-      sx={{ width:'12vw'}}
+      sx={{ width:'12rem'}}
       renderInput={(params) => 
                 <TextField {...params} 
                 sx={{ 
                       '& .MuiOutlinedInput-root':{color:'white', '& > fieldset': {border: 'none'}}, 
-                      '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.2vw'},
+                      '& .MuiInputLabel-root':{color: '#e8a941',  fontSize:'1.5rem'},
                       '& .MuiSvgIcon-root':{color: '#e8a941'},
                     }}
                 label="Locations:" />}
