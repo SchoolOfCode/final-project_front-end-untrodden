@@ -15,15 +15,13 @@ describe('Navigation', () => {
     cy.get('a[href*="location/1"]').contains('More Info').click()
 
     cy.get('h1').contains('Old Pale')
+
+    cy.get('a[href*="/"]').contains('Home').click()
+
+    cy.get('a[href*="/addlocation"]').contains('Add Location').click()
+
+    cy.contains('Log in first!')
   })
 
-  it('should login', () => {
-    // Start from the index page
-    cy.visit('http://localhost:3000/')
-
-    // Find a link with an href attribute containing "about" and click it
-    cy.get('a[href*="login"]').click()
-
-
-  })
+  
 })
