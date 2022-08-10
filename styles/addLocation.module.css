@@ -1,6 +1,6 @@
 /* general styles */
 .main {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -13,22 +13,23 @@
   text-align: center;
   font-size: 2.5rem;
 }
-
-.h2 {
+.login_warning_container {
+  background-color: rgb(235, 101, 101);
+  padding: 5px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5rem;
-  background-color: rgb(235, 101, 101);
-  padding: 5px 0;
-  margin-top: -1vh
 }
 
-.h2 > span {
-  margin: 0 20px;
+.login_warning {
+  /* text-align: center; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+
+  /* margin-top: -1vh; */
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .main_grid_container {
@@ -36,11 +37,11 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 4rem;
 }
 
 .flex_container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   /* padding: 1rem; */
@@ -54,21 +55,18 @@
 }
 
 .btn {
-  display: flex;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 38px;
+  line-height: 2.2rem;
   text-align: center;
-  padding: 0.8rem 5rem;
+  padding: 0.8rem 1rem;
   border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--secondary);
   color: var(--primary);
-  margin-bottom: 2rem;
-  margin-top: 1.5rem;
-  cursor: pointer;
-
+  margin: 1rem 1rem;
+  margin-top: 1rem;
 }
 
 .btn:hover {
@@ -97,7 +95,7 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  line-height: 38px;
+  line-height: 2.2rem;
   text-align: center;
   padding: 0.8rem 5rem;
   border-radius: 5px;
@@ -114,10 +112,10 @@
 .main select {
   display: inline-block;
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
   padding: 0.7rem 1.2rem;
   margin: 0.5rem 0;
-  margin-left: 1.2rem;
+
   font-family: 'Raleway', sans-serif;
   background: #ffffff;
   border: 2px solid #225544;
@@ -133,8 +131,7 @@
 
 .main textarea {
   min-height: 300px;
-  max-width: 500px;
- 
+
   font-size: 1.2rem;
 }
 .main label {
@@ -143,19 +140,16 @@
   font-style: normal;
   font-weight: 700;
   font-size: 1.2rem;
-  margin-left: 1.2rem;
 }
 /* description section */
 .description_p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  width: 80%;
-  margin-left: 1.2rem;
+  width: 100%;
 }
 /* location categories */
 .location_category_grid_container {
-  margin-top: 1rem;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
@@ -165,7 +159,7 @@
 .location_category {
   /* margin-bottom: 2rem; */
   /* width: 4rem; */
-  justify-content: center;
+  justify-content: left;
   text-align: center;
 }
 .location_category label {
@@ -213,8 +207,8 @@
 
 .amenities_category_grid_container {
   margin-top: 1.5rem;
- 
-  width: 80%;
+
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.5rem;
@@ -234,7 +228,7 @@
 }
 
 .label {
-  width: 80%;
+  width: 100%;
   align-items: left;
   margin-top: 1rem;
   /* cursor: pointer; */
@@ -243,4 +237,51 @@
 .input {
   margin: 10rem;
   width: 80%;
+}
+
+@media screen and (max-width: 950px) {
+  .max_page_width {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* .flex_container {
+    grid-column: span 2;
+  } */
+  .login_warning_container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .login_warning {
+    margin: 0;
+  }
+
+  .main_grid_container {
+    grid-template-columns: 1fr;
+  }
+
+  .location_category_grid_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .max_page_width {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  .login_warning {
+    /* text-align: center; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+
+    /* margin-top: -1vh; */
+
+    font-weight: 600;
+  }
 }

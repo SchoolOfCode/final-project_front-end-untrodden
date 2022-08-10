@@ -37,11 +37,13 @@ export default function LocationCard({ location }) {
               </Tooltip>
             ))}
           </section>
-          <Link href={`/location/${location.location_id}`}>
+          <section className={styles.more_info_button}>
+                   <Link href={`/location/${location.location_id}`}>
             <a className={styles.moreInfo} target="_blank" rel="noreferrer">
               <Button label="More Info" />
             </a>
           </Link>
+          </section>
         </section>
       </section>
     </div>

@@ -40,13 +40,14 @@ position: -ms-sticky;
   justify-content: space-evenly;
   width: 40%;
   /* padding-top: 3vh; */
-  font-size: 1vw;
+  font-size: 1rem;
   align-items: center;
   
 
 }
 
 .link,
+.link_desktop,
 .header a {
   color: white;
   text-decoration: none;
@@ -55,6 +56,7 @@ position: -ms-sticky;
   
 }
 .link:hover,
+.link_desktop,
 .header a:hover {
   color: white;
   text-decoration: underline 4px #e8a941;
@@ -64,27 +66,40 @@ position: -ms-sticky;
   
 
 }
-/* 
-.header a {
-  text-decoration: none;
-  color: #e8a941;
-}
 
-.login {
-  text-decoration: none;
-  color: #e8a941;
-} */
 
-/* .profile_flex {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}*/
 
 .profile_image {
   border-radius: 50%;
 }
+
 .default_image {
   position: relative;
   bottom: 20px;
+}
+
+.hamburger{
+  display: none;
+}
+
+
+@media screen and (max-width: 850px){
+ 
+.header{
+  padding-left: 0;
+ }
+
+.link_desktop{
+  display: none;
+}
+
+.hamburger{
+  display: block;
+}
+
+.profile_image{
+  width: 2rem;
+  height: 2rem;
+}
+ 
 }

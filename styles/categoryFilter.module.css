@@ -3,7 +3,7 @@
     border: none;
     color: #E8A941;
     width:12vw;
-    font-size: 1.2vw;
+    font-size: 1.5rem;
     cursor: pointer;
     }
 
@@ -11,3 +11,14 @@
  .options{
     color: black;
  }   
+
+ @media screen and (max-width: 850px){
+   .dropdown{
+     background-color: transparent;
+     border: none;
+     color: #E8A941;
+     width:60%;
+     margin-left:1rem;
+     cursor: pointer;
+   }
+   }
