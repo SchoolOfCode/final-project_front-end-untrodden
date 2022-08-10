@@ -13,6 +13,7 @@ import Button from '../../Components/Button/button';
 import { useUser } from '@auth0/nextjs-auth0';
 
 import { useRouter } from 'next/router';
+import { style } from '@mui/system';
 
 // working in this one
 export async function getStaticPaths() {
@@ -90,7 +91,7 @@ export default function LocationDisplayPage({ location }) {
         <div className={styles.location_page}>
           <div className={styles.left_div}>
             <h1 className={styles.title}>{location[0].location_name} </h1>
-            <div className={styles.edit_delete_container}>
+            <div className={styles.edit_delete_container_mobile}>
               {user && user.email === location[0].user_email ? (
                 <>
                   <Button label="Edit" onClick={handleEdit} />
@@ -125,6 +126,14 @@ export default function LocationDisplayPage({ location }) {
             {/* <Modal location={location[0]} /> */}
           </div>
           <div className={styles.right_div}>
+            <div className={styles.edit_delete_container_desktop}>
+              {user && user.email === location[0].user_email ? (
+                <>
+                  <Button label="Edit" onClick={handleEdit} />
+                  <Button label="Delete" onClick={handleDelete} />
+                </>
+              ) : null}
+            </div>
             <h3 className={styles.heading_description}>Description:</h3>
             <p>{location[0].location_description}</p>
             <h3 className={styles.heading}>Address:</h3>
