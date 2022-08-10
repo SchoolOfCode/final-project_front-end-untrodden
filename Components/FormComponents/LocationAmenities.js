@@ -34,7 +34,9 @@ import BadPublicTransport from "../../public/amenities_images/amenities_public_t
 export default function LocationAmenities({ register, amenities }) {
 console.log(amenities);
 console.log((amenities.includes('amenities_parking') ? "true" : "false"))
-console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
+console.log((amenities.includes('amenities_food') ? "true" : "false"))
+// const parking = document.getElementById('amenities_parking')
+// console.log(parking.checked)
 
   return (
     <>
@@ -46,12 +48,11 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
               type="checkbox"
               id="amenities_parking"
               {...register("amenities_parking")}
-              defaultChecked={amenities.includes('amenities_food') ? "true" : "false"}
-              // defaultClass={amenities ? (amenities.includes('amenities_parking') ? styles.amenities_pic : null) : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_parking') ? true: false) : false}
             />
             <span>
               <Image
-                className={!amenities.includes('amenities_parking') ? styles.amenities_pic .amenityDefaultChecked : styles.amenities_pic}
+                className={styles.amenities_pic}
                 src={Parking}
                 height={35}
                 width={35}
@@ -70,12 +71,13 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
               type="checkbox"
               id="amenities_food"
               {...register("amenities_food")}
-              defaultChecked={amenities.includes('amenities_food') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_food') ? true: false) : false}
             />
             <span>
               <Image
-                className={!amenities.includes('amenities_food') ? styles.amenities_pic .amenityDefaultChecked : styles.amenities_pic}
-                // className={styles.amenities_pic}
+                // className={document.getElementById('amenities_food').checked ? styles.amenities_pic .amenityDefaultChecked : styles.amenities_pic}
+                // className={!amenities.includes('amenities_food') ? styles.amenities_pic .amenityDefaultChecked : styles.amenities_pic}
+                className={styles.amenities_pic}
                 src={Food}
                 height={35}
                 width={35}
@@ -92,13 +94,12 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_family"
-              defaultChecked={amenities.includes('amenities_family') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_family') ? true: false) : false}
               {...register("amenities_family")}
             />
             <span>
               <Image
-                className={!amenities.includes('amenities_family') ? styles.amenities_pic .amenityDefaultChecked : styles.amenities_pic}
-                // className={styles.amenities_pic}
+                className={styles.amenities_pic}
                 src={Family}
                 height={35}
                 width={35}
@@ -115,14 +116,12 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_changing_facilities"
+              defaultChecked={amenities ? (amenities.includes('amenities_changing_facilities') ? true: false) : false}
               {...register("amenities_changing_facilities")}
-              defaultChecked={amenities.includes('amenities_changing_facilities') ? "true" : "false"}
-
             />
             <span>
               <Image
-                className={!amenities.includes('amenities_changing_facilities') ? styles.amenities_pic .amenityDefaultChecked : styles.amenities_pic}
-                // className={styles.amenities_pic}
+                className={styles.amenities_pic}
                 src={BabyChanging}
                 height={35}
                 width={35}
@@ -140,7 +139,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
               type="checkbox"
               id="amenities_disability_access"
               {...register("amenities_disability_access")}
-              defaultChecked={amenities.includes('amenities_disability_access') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_disability_access') ? true: false) : false}
             />
             <span>
               <Image
@@ -161,7 +160,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_peaceful"
-              defaultChecked={amenities.includes('amenities_peaceful') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_peaceful') ? true: false) : false}
               {...register("amenities_peaceful")}
             />
             <span>
@@ -183,7 +182,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_wifi"
-              defaultChecked={amenities.includes('amenities_wifi') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_wifi') ? true: false) : false}
               {...register("amenities_wifi")}
             />
             <span>
@@ -205,7 +204,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_no_restaurants"
-              defaultChecked={amenities.includes('amenities_no_restaurants') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_no_restaurants') ? true: false) : false}
               {...register("amenities_no_restaurants")}
             />
             <span>
@@ -227,7 +226,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_museums"
-              defaultChecked={amenities.includes('amenities_museums') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_museums') ? true: false) : false}
               {...register("amenities_museums")}
             />
             <span>
@@ -249,7 +248,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_beach"
-              defaultChecked={amenities.includes('amenities_beach') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_beach') ? true: false) : false}
               {...register("amenities_beach")}
             />
             <span>
@@ -271,7 +270,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_hiking"
-              defaultChecked={amenities.includes('amenities_hiking') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_hiking') ? true: false) : false}
               {...register("amenities_hiking")}
             />
             <span>
@@ -292,7 +291,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_pet_friendly') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_pet_friendly') ? true: false) : false}
               id="amenities_pet_friendly"
               {...register("amenities_pet_friendly")}
             />
@@ -313,7 +312,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
         <Tooltip title="Forests">
           <label>
             <input
-              defaultChecked={amenities.includes('amenities_forests') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_forests') ? true: false) : false}
               type="checkbox"
               id="amenities_forests"
               {...register("amenities_forests")}
@@ -336,7 +335,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_lots_of_wildlife') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_lots_of_wildlife') ? true: false) : false}
               id="amenities_lots_of_wildlife"
               {...register("amenities_lots_of_wildlife")}
             />
@@ -358,7 +357,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_watersports') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_watersports') ? true: false) : false}
               id="amenities_watersports"
               {...register("amenities_watersports")}
             />
@@ -381,7 +380,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_shopping"
-              defaultChecked={amenities.includes('amenities_shopping') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_shopping') ? true: false) : false}
               {...register("amenities_shopping")}
             />
             <span>
@@ -403,7 +402,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_bodies_of_water"
-              defaultChecked={amenities.includes('amenities_bodies_of_water') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_bodies_of_water') ? true: false) : false}
               {...register("amenities_bodies_of_water")}
             />
             <span>
@@ -425,7 +424,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_camping"
-              defaultChecked={amenities.includes('amenities_camping') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_camping') ? true: false) : false}
               {...register("amenities_camping")}
             />
             <span>
@@ -446,7 +445,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_mountains') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_mountains') ? true: false) : false}
               id="amenities_mountains"
               {...register("amenities_mountains")}
             />
@@ -468,7 +467,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_hearing_loop') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_hearing_loop') ? true: false) : false}
               id="amenities_hearing_loop"
               {...register("amenities_hearing_loop")}
             />
@@ -490,7 +489,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_electric_charging') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_electric_charging') ? true: false) : false}
               id="amenities_electric_charging"
               {...register("amenities_electric_charging")}
             />
@@ -513,7 +512,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
             <input
               type="checkbox"
               id="amenities_public_transport_good"
-              defaultChecked={amenities.includes('amenities_public_transport_good') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_public_transport_good') ? true: false) : false}
               {...register("amenities_public_transport_good")}
             />
             <span>
@@ -534,7 +533,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_accommodation') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_accommodation') ? true: false) : false}
               id="amenities_accommodation"
               {...register("amenities_accommodation")}
             />
@@ -556,7 +555,7 @@ console.log((amenities.includes('amenities_wifi') ? "true" : "false"))
           <label>
             <input
               type="checkbox"
-              defaultChecked={amenities.includes('amenities_public_transport_bad') ? "true" : "false"}
+              defaultChecked={amenities ? (amenities.includes('amenities_public_transport_bad') ? true: false) : false}
               id="amenities_public_transport_bad"
               {...register("amenities_public_transport_bad")}
             />

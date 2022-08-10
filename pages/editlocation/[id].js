@@ -147,7 +147,7 @@ export default function editLocationPage({ location }) {
       alert(
         `Thank you, ${user.name} for your submission, press 'Ok' be redirected to the locations page.`
       ),
-      router.push("/locations")
+      router.push("/location/" + location[0].location_id)
     );
   };
 
@@ -176,7 +176,7 @@ export default function editLocationPage({ location }) {
                     Location category:
                   </label>
                   <div className={styles.location_category_grid_container}>
-                    <LocationCategory register={register} />
+                    <LocationCategory register={register} categories={location[0].categories} />
                   </div>
                 </div>
 
