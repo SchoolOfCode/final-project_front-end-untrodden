@@ -39,7 +39,7 @@ export default function LocationCard({ location }) {
           </section>
           <section className={styles.more_info_button}>
                    <Link href={`/location/${location.location_id}`}>
-            <a className={styles.moreInfo} target="_blank" rel="noreferrer">
+            <a className={styles.moreInfo}  rel="noreferrer">
               <Button label="More Info" />
             </a>
           </Link>
