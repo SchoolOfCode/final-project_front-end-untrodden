@@ -143,7 +143,7 @@ export default function editLocationPage({ location }) {
     return (
       responseData,
       alert(
-        `Thank you, ${user.name} for your submission, press 'Ok' be redirected to the locations page.`
+        `Thank you, ${user.name} for editing your submission, press 'Ok' be redirected to the location page.`
       ),
       router.push('/location/' + location[0].location_id)
     );
@@ -196,7 +196,10 @@ export default function editLocationPage({ location }) {
                         />
                       </div>
 
-                      <FormMap setValue={setValue} />
+                      <FormMap
+                        setValue={setValue}
+                        currentLocation={location[0]}
+                      />
 
                       {/* add image will go here */}
                       <Cloudinary
