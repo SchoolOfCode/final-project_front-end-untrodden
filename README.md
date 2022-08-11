@@ -12,8 +12,6 @@ contents here
 - [Glyn Knight](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 - [Karim Mallah](https://github.com/kmallah)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # The Project
 
 Untrodden is the result of the Final project set during the School of Code Bootcamp. We were given four weeks to come up with a working product that met the criteria specified in the project brief.
@@ -48,7 +46,7 @@ You can find the links to these various resources below:
 
 - How to work efficiently in a large Agile team, making sure that everyone is heard whilst also ensuring that tasks get completed on time. We managed to maintain a beautiful and healthy team atmosphere throughout the project,being respectful and working efficiently whilst maintaining an atmosphere of fun and playfulness. It was a wonderful experience and we are all sad to see it end.
 
--We quickly fell into a daily routine consisting of morning standups, and quick end of day retrospectives. Working this way allowed us to pivot quickly and make changes to our plan as and when needed.
+- We quickly fell into a daily routine consisting of morning standups, and quick end of day retrospectives. Working this way allowed us to pivot quickly and make changes to our plan as and when needed.
 
 - We also got into the habit of doing daily merges and regular deploys.This allowed us to solve small bite sized problems regularly, rather than giant stress inducing problems at the end of each week.
 
