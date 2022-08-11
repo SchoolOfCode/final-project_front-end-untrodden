@@ -7,6 +7,7 @@ export default function LocationNameAndAddress({ register, region }) {
         Location Name:
       </label>
       <input
+        onkeydown="return event.key != 'Enter';"
         required
         type="text"
         id="locationName"
