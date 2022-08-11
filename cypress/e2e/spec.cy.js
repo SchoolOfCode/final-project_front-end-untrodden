@@ -1,28 +1,40 @@
 
 
 describe('Navigation', () => {
-  it('should navigate to the about page', () => {
+  it('check date loads to loctions page and More Info button can be used', () => {
     // Start from the index page
     cy.visit('http://localhost:3000/')
 
-    // Find a link with an href attribute containing "about" and click it
     cy.get('button').contains('Start Exploring').click()
 
-    // The new url should include "/about"
     cy.url().should('include', '/locations')
 
-    // Show data has loaded from the date base
-    cy.get('a[href*="location/1"]').contains('More Info').click()
+    // Show data has loaded from the data base
+       cy.get('a[href*="location/1"]').contains('More Info').click()
 
     // Shows location page displays and data has been passed down
-    cy.get('h1').contains('Old Pale')
-
-    //Shows nav bar links work
-    cy.get('a[href*="/addlocation"]').contains('Add Location').click()
-
-    // Shows user have to be signed in to add location 
-    cy.contains('Log in first!')
-  })
+    cy.contains('Old Pale')
 
   
+  })
+
+  it('Check if filters work', ()=>{
+
+
+    cy.get('.FilterRegion_dropdown__aSxR8').select('North West')
+
+    cy.get('button').contains('Apply Filter').dblclick()
+
+    cy.contains('Symonds Yat').should('not.exist');
+
+  })
+
+
+  it('Should check loctions can not be added without loggin in ', ()=> {
+
+    
+    cy.get('a[href*="/addlocation"]').contains('Add Location').click()
+
+    cy.contains('Log in first!')
+  })
 })
