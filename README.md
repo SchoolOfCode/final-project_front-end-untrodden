@@ -1,41 +1,57 @@
 ![Inline-logo-whiteandblack](https://user-images.githubusercontent.com/82081817/184133754-b1eb21a9-9ec0-44ee-ad1d-b0f2c00c032a.png)
 
-![image](https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png)
+## Contents
 
+contents here
 
+## The Team
 
+- [Tom Booth](https://github.com/Plume93)
+- [Kieran Gill](https://github.com/KieranWebDev)
+- [Dan Hawkesford](https://github.com/dhawkesford/)
+- [Glyn Knight](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- [Karim Mallah](https://github.com/kmallah)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# The Project
 
-First, run the development server:
+Untrodden is the result of the Final project set during the School of Code Bootcamp. We were given four weeks to come up with a working product that met the criteria specified in the project brief.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+# The Project Brief and Design Process
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+We were given a very open project brief which was to "solve a real world problem and put users at the center of the project"
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Generating and Selecting Ideas
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Our first meeting was spent getting to know each other, deciding our team manifesto and then each of us coming up with problems we thought could be solved effectively through the use of technology. We came up with many varied problems and solutions between us so started to whittle them down.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Initially, we chose to explore several ideas but went down the path of a Skills Share Website However, we soon realised we hadn’t explored any other options properly, so decided to take a step back, re-assess all of the problems we had identified and make a new decision using the dot voting system.Dot voting was an extremely useful tool that we used at various stages during our project journey.
 
-## Learn More
+We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community.
 
-To learn more about Next.js, take a look at the following resources:
+## Disney Ideation and WireFrames
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+After finalised our project idea we then went on to the Disney Ideation process, created some user stories and profiles, Low-Fidelity and High Fidelity Wireframes, and created a Component Tree.
+You can find the links to these various resources below:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
+- [Low-Fidelity Wireframes](https://miro.com/app/board/uXjVOkLFgCE=/?share_link_id=588061726593)
+- [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
+- [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-## Deploy on Vercel
+# Building the MVP
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image](https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## What we learned
+
+- How to work efficiently in a large Agile team, making sure that everyone is heard whilst also ensuring that tasks get completed on time. We managed to maintain a beautiful and healthy team atmosphere throughout the project,being respectful and working efficiently whilst maintaining an atmosphere of fun and playfulness. It was a wonderful experience and we are all sad to see it end.
+
+- We decided to push ourselves out of our comfort zones a bit and build our app with Nextjs. After researching the pros and cons of the Framework we decided it was more suited to the app we wanted to create, than what we were familiar with.(standard React). Nextjs offers Server side rendering and built in routing out of the box, making our app easily scalable and also optimised the performance for the user over standalone react.
+
+- We incorporated several pieces of new technology into our apps that we hadn't used before, including; Mapbox, Cloudinary, AuthO, Material UI and React Hook form. Although, they each came with their own challenges, we managed to persevere, work together and integrate them successfully into our apps. We learned that not all docs are created equal but me managed to navigate them none the less.
+
+- How to navigate github and avoid merging disasters! After this project we all feel much more comfortable with merging, branching,
+
+- The benefits of user feedback
