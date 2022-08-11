@@ -4,11 +4,11 @@ import { useRef, useState } from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-export default function FormMap({ setValue }) {
+export default function FormMap({ setValue, currentLocation }) {
   const mapRef = useRef(null);
   const [marker, setMarker] = useState({
-    latitude: 52.489471,
-    longitude: -2.898575,
+    latitude: currentLocation ? currentLocation.latitude : 52.489471,
+    longitude: currentLocation ? currentLocation.longitude : -2.898575,
   });
 
   // Setting initial values in case the user doesn't move the marker
@@ -20,8 +20,8 @@ export default function FormMap({ setValue }) {
     width: '100%',
     height: '100%',
     // The latitude and longitude is so the whole of the uk is centered on loading.
-    latitude: 54.489471,
-    longitude: -3.898575,
+    latitude: currentLocation ? currentLocation.latitude : 52.489471,
+    longitude: currentLocation ? currentLocation.longitude : -3.898575,
     zoom: 4,
   });
 

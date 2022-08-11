@@ -4,8 +4,8 @@ import Head from 'next/head';
 // css
 import styles from '../../styles/cloudinaryTest.module.css';
 
-export default function Cloudinary({ setValue }) {
-  const [imageSrc, setImageSrc] = useState();
+export default function Cloudinary({ setValue, defaultImage }) {
+  const [imageSrc, setImageSrc] = useState(defaultImage ? defaultImage : null);
   const [uploadData, setUploadData] = useState();
 
   function handleOnChange(changeEvent) {
