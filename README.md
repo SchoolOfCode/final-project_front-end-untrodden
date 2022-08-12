@@ -9,7 +9,7 @@ contents here
 - [Tom Booth](https://github.com/Plume93)
 - [Kieran Gill](https://github.com/KieranWebDev)
 - [Dan Hawkesford](https://github.com/dhawkesford/)
-- [Glyn Knight](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- [Glyn Knight](glyn_knight@hotmail.com)
 - [Karim Mallah](https://github.com/kmallah)
 
 # The Project
