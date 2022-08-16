@@ -12,13 +12,17 @@ contents here
 - [Glyn Knight](glyn_knight@hotmail.com)
 - [Karim Mallah](https://github.com/kmallah)
 
-# The Project
+
+# The Project Brief 
 
 Untrodden is the result of the Final project set during the School of Code Bootcamp. We were given four weeks to come up with a working product that met the criteria specified in the project brief.
 
-# The Project Brief and Design Process
-
 We were given a very open project brief which was to "solve a real world problem and put users at the center of the project"
+
+# Our App and Features
+
+We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community.  <mark>Marked text</mark>
+
 
 ## Generating and Selecting Ideas
 
@@ -26,7 +30,7 @@ Our first meeting was spent getting to know each other, deciding our team manife
 
 Initially, we chose to explore several ideas but went down the path of a Skills Share Website However, we soon realised we hadn’t explored any other options properly, so decided to take a step back, re-assess all of the problems we had identified and make a new decision using the dot voting system.Dot voting was an extremely useful tool that we used at various stages during our project journey.
 
-We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community.
+
 
 ## Disney Ideation and WireFrames
 
