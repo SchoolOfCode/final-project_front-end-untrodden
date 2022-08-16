@@ -67,7 +67,7 @@ You can find the links to these various resources below:
 - [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
 - [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-
+with <img src="[XXXX](https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png)" alt="drawing" width="50%" >
 
 ![image](https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png)
 
