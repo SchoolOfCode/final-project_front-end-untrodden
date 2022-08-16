@@ -22,7 +22,7 @@
 
 ## The Team
 
-- Tom Booth [Github](https://github.com/Plume93) | [LinkedIn](https://github.com/Plume93)
+- Tom Booth [Github](https://github.com/Plume93) | [LinkedIn](https://www.linkedin.com/in/tom-booth-software-dev/)
 - Kieran Gill [Github](https://github.com/KieranWebDev) | [LinkedIn](https://www.linkedin.com/in/kieran-gill/)
 - Dan Hawkesford [Github](https://github.com/dhawkesford/) | [LinkedIn](https://www.linkedin.com/in/daniel-hawkesford/)
 - Glyn Knight [Github](https://github.com/GLYNKNIGHT) | [LinkedIn](https://www.linkedin.com/in/glyn-knight/)
