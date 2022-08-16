@@ -5,7 +5,7 @@
 	View The Website <a href='https://untroddenapp.netlify.app/'>here</a>
 </h3>
 <h3 align="center">
-	View The Backend API here <a href='https://untrodden.herokuapp.com/locations'>here</a>
+	View The Backend API <a href='https://untrodden.herokuapp.com/locations'>here</a>
 </h3>
 
 ## Contents
