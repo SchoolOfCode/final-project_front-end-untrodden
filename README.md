@@ -12,8 +12,7 @@ contents here
 - [Glyn Knight](glyn_knight@hotmail.com)
 - [Karim Mallah](https://github.com/kmallah)
 
-
-# The Project Brief 
+# The Project Brief
 
 Untrodden is the result of the Final project set during the School of Code Bootcamp. We were given four weeks to come up with a working product that met the criteria specified in the project brief.
 
@@ -21,13 +20,13 @@ We were given a very open project brief which was to "solve a real world problem
 
 # Our App and it's Features
 
-We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community.  <strong>-tidy this up</strong>
+We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community. <strong>-tidy this up</strong>
 
- <strong>pics of app here</strong>
- 
-  - list of app features here. 
+<strong>pics of app here</strong>
 
-# The Journey: What we learned, the challenges we faced and how we overcame them. 
+- list of app features here.
+
+# The Journey: What we learned, the challenges we faced and how we overcame them.
 
 - How to work efficiently in a large Agile team, making sure that everyone is heard whilst also ensuring that tasks get completed on time. We managed to maintain a beautiful and healthy team atmosphere throughout the project,being respectful and working efficiently whilst maintaining an atmosphere of fun and playfulness. It was a wonderful experience and we are all sad to see it end.
 
@@ -45,17 +44,13 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
 
-
-
-
 <strong>Cut or edit stuff below</strong>
+
 ## Generating and Selecting Ideas
 
 Our first meeting was spent getting to know each other, deciding our team manifesto and then each of us coming up with problems we thought could be solved effectively through the use of technology. We came up with many varied problems and solutions between us so started to whittle them down.
 
 Initially, we chose to explore several ideas but went down the path of a Skills Share Website However, we soon realised we hadn’t explored any other options properly, so decided to take a step back, re-assess all of the problems we had identified and make a new decision using the dot voting system.Dot voting was an extremely useful tool that we used at various stages during our project journey.
-
-
 
 ## Disney Ideation and WireFrames
 
@@ -67,7 +62,30 @@ You can find the links to these various resources below:
 - [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
 - [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-with <img src="[XXXX](https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png)" alt="drawing" width="50%" >
-
-![image](https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png)
-
+<img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" alt="drawing" width="50%" >
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="100" />
+  <img src="/img2.png" width="100" /> 
+ 
+</p>
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="200"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="300"/>
+     </div>
+   
+</div>
+<div id="image-table">
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+        	    <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="200"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="300"/>
+            </td>
+        </tr>
+    </table>
+</div>
