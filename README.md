@@ -76,7 +76,7 @@ Live location on app.
 ### 2 more weeks:
 
 User Dashboard, with features such as wishlist locations and visited locations.
-Ratings feature.
+A ratings feature.
 
 ### 4 more weeks:
 
