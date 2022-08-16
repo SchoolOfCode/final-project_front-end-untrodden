@@ -1,4 +1,6 @@
-![Inline-logo-whiteandblack](https://user-images.githubusercontent.com/82081817/184133754-b1eb21a9-9ec0-44ee-ad1d-b0f2c00c032a.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/82081817/184133754-b1eb21a9-9ec0-44ee-ad1d-b0f2c00c032a.png" width="60%" />
+</p>
 
 ## Contents
 
@@ -22,7 +24,25 @@ We were given a very open project brief which was to "solve a real world problem
 
 We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community. <strong>-tidy this up</strong>
 
-<strong>pics of app here</strong>
+<div id="image-table">
+    <table>
+	    <tr>
+    	    <td style="padding:10px">
+        	    <img src="https://user-images.githubusercontent.com/82081817/184818554-7cea4aaa-54b4-44fc-8c8a-3c48575a167f.PNG" width="100%"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="100%"/>
+            </td>
+        </tr>
+         <tr>
+    	    <td style="padding:10px">
+        	    <img src="https://user-images.githubusercontent.com/82081817/184818570-9da7f427-1912-4a31-b1c2-f0be65806319.PNG" width="100%"/>
+      	    </td>
+            <td style="padding:10px">
+            	<img src="https://user-images.githubusercontent.com/82081817/184818577-332bf766-b361-44a7-b16b-8b11204ac85d.PNG" width="100%"/>
+            </td>
+    </table>
+</div>
 
 - list of app features here.
 
@@ -62,11 +82,11 @@ You can find the links to these various resources below:
 - [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
 - [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-<img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" alt="drawing" width="50%" >
+<!-- <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" alt="drawing" width="50%" >
 <p float="left">
   <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="100" />
-  <img src="/img2.png" width="100" /> 
- 
+  <img src="/img2.png" width="100" />
+
 </p>
 <div style="display:flex">
      <div style="flex:1;padding-right:10px;">
@@ -75,17 +95,5 @@ You can find the links to these various resources below:
      <div style="flex:1;padding-left:10px;">
           <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="300"/>
      </div>
-   
-</div>
-<div id="image-table">
-    <table>
-	    <tr>
-    	    <td style="padding:10px">
-        	    <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="200"/>
-      	    </td>
-            <td style="padding:10px">
-            	<img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="300"/>
-            </td>
-        </tr>
-    </table>
-</div>
+
+</div> -->
