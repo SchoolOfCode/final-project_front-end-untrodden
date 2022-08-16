@@ -6,7 +6,7 @@
 
 [The Project Brief](#The-Project-Brief)
 <br>
-[The-Team](#The-Project-Brief)
+[The-Team](#The-Team)
 <br>
 [Our App and it's Features](#Our-App-and-its-Features)
 <br>
@@ -21,7 +21,7 @@
 - [Tom Booth](https://github.com/Plume93)
 - [Kieran Gill](https://github.com/KieranWebDev)
 - [Dan Hawkesford](https://github.com/dhawkesford/)
-- [Glyn Knight](glyn_knight@hotmail.com)
+- [Glyn Knight](https://github.com/GLYNKNIGHT)
 - [Karim Mallah](https://github.com/kmallah)
 
 # The Project Brief
