@@ -21,7 +21,7 @@ We were given a very open project brief which was to "solve a real world problem
 
 # Our App and Features
 
-We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community.  <mark>Marked text</mark>
+We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom, with the key aspect being that it is free and community-oriented so people can share their own unique spots with the community.  <strong>-tidy this up</strong>
 
 
 ## Generating and Selecting Ideas
