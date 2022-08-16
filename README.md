@@ -6,8 +6,7 @@
 
 [The Project Brief](#The-Project-Brief)
 [The-Team](#The-Project-Brief)
-
-[The Project Brief](#The-Project-Brief)
+[Our App and it's Features](#Our-App-and-its-Features)
 [The Project Brief](#The-Project-Brief)
 [The Project Brief](#The-Project-Brief)
 [The Project Brief](#The-Project-Brief)
@@ -29,7 +28,7 @@ Untrodden is the result of the Final project set during the School of Code Bootc
 
 The project brief which was to solve a real world problem and put users at the center of the project.
 
-# Our App and it's Features
+# Our App and its Features
 
 We settled on solving the problem of the increased cost of living and travel costs combined with restricted freedom of movement by building a site that highlights unique and not so well known beauty spots in the United Kingdom; The key aspect being that it is free and community-based so people can share their own unique loations with the general community. 
 
