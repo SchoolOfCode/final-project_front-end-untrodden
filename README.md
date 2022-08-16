@@ -64,7 +64,31 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
 
-<strong>Cut or edit stuff below</strong>
+# Tech Stack
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/82081817/184824668-e40b04cf-1f45-412d-9ad7-9c8062087d76.PNG" width="80%" />
+</p>
+
+# Stretch Goals
+
+### 1 more week:
+
+Admin access to edit or delete all locations. This will allow the admin to take action on any reports they get emailed
+Feature to allow hovering over a card and highlighting the marker on the map
+Autofill address using Google API
+Live location on app
+
+### 2 more weeks:
+
+User Dashboard, with features such as wishlist locations, visited locations.
+Ratings feature
+
+### 4 more weeks:
+
+Adding gamification features: Users can get badges for writing detailed and accurate descriptions, visiting a certain number of locations and for giving reviews.
+
+<h1>Cut or edit stuff below</h1>
 
 ## Generating and Selecting Ideas
 
