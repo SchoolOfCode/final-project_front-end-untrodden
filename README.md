@@ -6,7 +6,7 @@
 
 [The Project Brief](#the-project-brief)
 
-[Our App and its Features](#Our App and its Features)
+[Our App and its Features](#Our-App-and-its-Features)
 
 [The Journey: What we learned, the challenges we faced and how we overcame them
 contents here](#The Journey: What we learned, the challenges we faced and how we overcame them.)
