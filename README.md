@@ -63,7 +63,6 @@ We settled on solving the problem of the increased cost of living and travel cos
 - The benefits of user feedback. After the second week of development we sent out user feedback and the responses were invaluable. Users points out some bugs we had missed and also improvements that could be made in our UI. Although this resulted in us having to ditch some of the code we wrote, we remembered the importance of not getting attached to ideas and focused on the users needs.
 
 - During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
-For a more indepth and complete journey from ideation to completion, watch our final presentation here.
 
 We created our own designs, you can find the links to them below:
 - [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
