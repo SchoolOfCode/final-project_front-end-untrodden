@@ -64,7 +64,7 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
 
-For a more indepth and complete journey, from ideation to completion, please watch out final presentation [here]().
+For a more indepth and complete journey from ideation to completion, watch our final presentation [here]().
 
 # Tech Stack
 
