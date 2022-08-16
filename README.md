@@ -103,7 +103,7 @@ We created our own designs, you can find the links to them below:
 - [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
 - [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-For a more in depth and complete journey from ideation to completion, you can watch our final presentation here.
+For a more in depth and complete journey from ideation to completion, you can watch our final presentation [here](https://youtu.be/6_H7FDGS9Ig).
 
 # Tech Stack
 
