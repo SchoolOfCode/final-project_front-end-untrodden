@@ -5,6 +5,12 @@
 ## Contents
 
 [The Project Brief](#The-Project-Brief)
+[The-Team](#The-Project-Brief)
+[The Project Brief](#The-Project-Brief)
+[The Project Brief](#The-Project-Brief)
+[The Project Brief](#The-Project-Brief)
+[The Project Brief](#The-Project-Brief)
+[The Project Brief](#The-Project-Brief)
 
 contents here
 
@@ -69,19 +75,18 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - How to work efficiently in a large Agile team, making sure that everyone is heard whilst also ensuring that tasks get completed on time. We managed to maintain a healthy team atmosphere throughout the project, being respectful and working efficiently whilst maintaining an atmosphere of fun and playfulness. It was a great experience and we are all sad to see it end.
 
-- We quickly fell into a daily routine consisting of morning standups and quick end of day retrospectives. Working this way allowed us to pivot quickly and make changes to our plan as and when needed.
-
-- We also got into the habit of doing daily merges and regular deploys. This allowed us to solve small bite sized problems regularly, rather than giant stress inducing problems at the end of each week.
+- During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
 
 - We decided to push ourselves out of our comfort zones a bit and build our app with Nextjs. After researching the pros and cons of the Framework we decided it was more suited to the app we wanted to create, than what we were familiar with.(standard React). Nextjs offers server-side rendering and built in routing out of the box, making our app easily scalable and also optimised the performance for the user over standalone react.
 
+- We quickly fell into a daily routine consisting of morning standups and quick end of day retrospectives. Working this way allowed us to pivot quickly and make changes to our plan as and when needed. Along with this we got into the habit of doing daily merges and regular deploys. This allowed us to solve small bite sized problems regularly, rather than giant stress inducing problems at the end of each week.
+
 - We incorporated several pieces of new technology into our apps that we hadn't used before, such as Mapbox, Cloudinary, AuthO, Material UI and React Hook form. Although, they each came with their own challenges, we managed to persevere, work together and integrate them successfully into our apps. We learned that not all docs are created equal but me managed to navigate them none the less.
 
-- How to navigate Github and avoid merging disasters! After this project we all feel much more comfortable with the various features of git, such as merging and branching.
+- Then we learned The benefits of user feedback. After the second week of development we sent out user feedback and the responses were invaluable. Users pointed out some bugs we had missed and also improvements that could be made in our UI/UX. Although this resulted in us having to ditch some of the code we wrote, we remembered the importance of not getting attached to ideas and focused on the users needs.
 
-- The benefits of user feedback. After the second week of development we sent out user feedback and the responses were invaluable. Users points out some bugs we had missed and also improvements that could be made in our UI. Although this resulted in us having to ditch some of the code we wrote, we remembered the importance of not getting attached to ideas and focused on the users needs.
-
-- During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
+- our final and probably most stressful/ painful lesson was How to navigate Github and avoid merging disasters! After this project we all feel much more comfortable with the various features of git, such as merging, branching and conflict resolution, after hours spent doing just that.	
+For a more in depth and complete journey from ideation to completion, watch our final presentation here.
 
 We created our own designs, you can find the links to them below:
 - [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
@@ -115,37 +120,4 @@ A ratings feature.
 
 Adding gamification features: Users can get badges for writing detailed and accurate descriptions, visiting a certain number of locations and for giving reviews.
 
-<h1>Cut or edit stuff below</h1>
 
-## Generating and Selecting Ideas
-
-Our first meeting was spent getting to know each other, deciding our team manifesto and then each of us coming up with problems we thought could be solved effectively through the use of technology. We came up with many varied problems and solutions between us so started to whittle them down.
-
-Initially, we chose to explore several ideas but went down the path of a Skills Share Website, however we soon realised we hadn’t explored any other options properly, so decided to take a step back, re-assess all of the problems we had identified and make a new decision using the dot voting system. Dot voting was an extremely useful tool that we used at various stages during our project journey.
-
-## Disney Ideation and WireFrames
-
-After finalised our project idea we then went on to the Disney Ideation process, created some user stories and profiles, Low-Fidelity and High Fidelity Wireframes, and created a Component Tree.
-
-You can find the links to these various resources below:
-
-- [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
-- [Low-Fidelity Wireframes](https://miro.com/app/board/uXjVOkLFgCE=/?share_link_id=588061726593)
-- [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
-- [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
-
-<!-- <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" alt="drawing" width="50%" >
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="100" />
-  <img src="/img2.png" width="100" />
-
-</p>
-<div style="display:flex">
-     <div style="flex:1;padding-right:10px;">
-          <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="200"/>
-     </div>
-     <div style="flex:1;padding-left:10px;">
-          <img src="https://user-images.githubusercontent.com/82081817/184134868-0ea946b6-5f7a-4603-a216-4fbb78c51a09.png" width="300"/>
-     </div>
-
-</div> -->
