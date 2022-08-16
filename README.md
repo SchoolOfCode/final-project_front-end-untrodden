@@ -22,11 +22,13 @@
 
 ## The Team
 
-- Tom Booth: [Github](https://github.com/Plume93) | [LinkedIn](https://github.com/Plume93)
-- [Kieran Gill](https://github.com/KieranWebDev)
-- [Dan Hawkesford](https://github.com/dhawkesford/)
-- [Glyn Knight](https://github.com/GLYNKNIGHT)
-- [Karim Mallah](https://github.com/kmallah)
+- Tom Booth [Github](https://github.com/Plume93) | [LinkedIn](https://github.com/Plume93)
+- Kieran Gill [Github]((https://github.com/KieranWebDev)) | [LinkedIn](https://www.linkedin.com/in/kieran-gill/)
+- Dan Hawkesford [Github](https://github.com/dhawkesford/) | [LinkedIn](https://www.linkedin.com/in/daniel-hawkesford/)
+- Glyn Knight [Github](https://github.com/GLYNKNIGHT) | [LinkedIn](https://www.linkedin.com/in/glyn-knight/)
+- Karim Mallah [Github](https://github.com/kmallah) | [LinkedIn](https://www.linkedin.com/in/kmallah/)
+- Net Ninja [Youtube](https://github.com/kmallah)
+
 
 # The Project Brief
 
