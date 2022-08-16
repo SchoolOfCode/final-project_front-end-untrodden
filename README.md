@@ -54,7 +54,7 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - We also got into the habit of doing daily merges and regular deploys. This allowed us to solve small bite sized problems regularly, rather than giant stress inducing problems at the end of each week.
 
-- We decided to push ourselves out of our comfort zones a bit and build our app with Nextjs. After researching the pros and cons of the Framework we decided it was more suited to the app we wanted to create, than what we were familiar with.(standard React). Nextjs offers server-side rendering and built in routing out of the box, making our app easily scalable and also optimised the performance for the user over standalone react.
+- We decided to push ourselves out of our comfort zones a bit and build our app with Nextjs. After researching the pros and cons of the Framework we decided it was more suited to the app we wanted to create, than what we were familiar with (standard React).  Nextjs offers server-side rendering and built in routing out of the box, making our app easily scalable and also optimised the performance for the user over standalone react.
 
 - We incorporated several pieces of new technology into our apps that we hadn't used before, such as Mapbox, Cloudinary, AuthO, Material UI and React Hook form. Although, they each came with their own challenges, we managed to persevere, work together and integrate them successfully into our apps. We learned that not all docs are created equal but me managed to navigate them none the less.
 
