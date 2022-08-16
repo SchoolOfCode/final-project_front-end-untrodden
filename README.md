@@ -18,7 +18,7 @@ contents here
 
 Untrodden is the result of the Final project set during the School of Code Bootcamp. We were given four weeks to come up with a working product that met the criteria specified in the project brief.
 
-We were given a very open project brief which was to "solve a real world problem and put users at the center of the project".
+The project brief which was to solve a real world problem and put users at the center of the project.
 
 # Our App and it's Features
 
