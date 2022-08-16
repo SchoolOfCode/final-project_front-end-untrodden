@@ -46,7 +46,24 @@ We settled on solving the problem of the increased cost of living and travel cos
     </table>
 </div>
 
-- list of app features here.
+## Features:
+
+- A descriptive landing page explaining the app and welcoming users to the site
+- A sticky navigation bar with links to other pages on the site, as well as the app's logo which redirects to the main Locations page
+- Authentication using the Auth0 API
+- Locations page:
+    - A list of cards detailing each location, each of which links to a page with more information about that location
+    - An interactive map with markers for each location, which can be clicked to show a popup with that location's name and a link to its page
+    - A filter bar, with options for filtering by region, category or a site's amenities, or any combination thereof
+    - A search box for searching for a location by name
+- More Info page:
+    - Detailed information about each location
+    - An option for submitting a form to report any issues about the location, which is sent to the admins' email inbox
+    - Options for editing and deleting the page if the user is the location's author
+- Add Location page:
+    - A form for submitting a new location to the site (only permitted if a user is logged in)
+    - Includes form validation and an option for uploading an image of the location to Cloudinary
+- Completely mobile responsive
 
 # The Journey: What we learned, the challenges we faced and how we overcame them
 
