@@ -65,7 +65,13 @@ We settled on solving the problem of the increased cost of living and travel cos
 - During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
 For a more indepth and complete journey from ideation to completion, watch our final presentation here.
 
-For a more in depth and complete journey from ideation to completion, watch our final presentation here.
+We created our own designs, you can find the links to them below:
+- [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
+- [Low-Fidelity Wireframes](https://miro.com/app/board/uXjVOkLFgCE=/?share_link_id=588061726593)
+- [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
+- [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
+
+For a more in depth and complete journey from ideation to completion, you can watch our final presentation here.
 
 # Tech Stack
 
