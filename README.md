@@ -54,7 +54,7 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - We also got into the habit of doing daily merges and regular deploys. This allowed us to solve small bite sized problems regularly, rather than giant stress inducing problems at the end of each week.
 
-- We decided to push ourselves out of our comfort zones a bit and build our app with Nextjs. After researching the pros and cons of the Framework we decided it was more suited to the app we wanted to create, than what we were familiar with (standard React).  Nextjs offers server-side rendering and built in routing out of the box, making our app easily scalable and also optimised the performance for the user over standalone react.
+- We decided to push ourselves out of our comfort zones a bit and build our app with Nextjs. After researching the pros and cons of the Framework we decided it was more suited to the app we wanted to create, than what we were familiar with.(standard React). Nextjs offers server-side rendering and built in routing out of the box, making our app easily scalable and also optimised the performance for the user over standalone react.
 
 - We incorporated several pieces of new technology into our apps that we hadn't used before, such as Mapbox, Cloudinary, AuthO, Material UI and React Hook form. Although, they each came with their own challenges, we managed to persevere, work together and integrate them successfully into our apps. We learned that not all docs are created equal but me managed to navigate them none the less.
 
@@ -63,6 +63,8 @@ We settled on solving the problem of the increased cost of living and travel cos
 - The benefits of user feedback. After the second week of development we sent out user feedback and the responses were invaluable. Users points out some bugs we had missed and also improvements that could be made in our UI. Although this resulted in us having to ditch some of the code we wrote, we remembered the importance of not getting attached to ideas and focused on the users needs.
 
 - During planning week we found that we would spend a lot of time ideating on a particular idea and getting caught up in smaller details. Thus, we decided to give ourselves time limits for different ideation phases, in order to ensure that we progressed effectively.
+
+For a more indepth and complete journey, from ideation to completion, please watch out final presentation [here]().
 
 # Tech Stack
 
