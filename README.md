@@ -5,14 +5,16 @@
 ## Contents
 
 [The Project Brief](#The-Project-Brief)
+<br>
 [The-Team](#The-Project-Brief)
+<br>
 [Our App and it's Features](#Our-App-and-its-Features)
-[The Project Brief](#The-Project-Brief)
-[The Project Brief](#The-Project-Brief)
-[The Project Brief](#The-Project-Brief)
-[The Project Brief](#The-Project-Brief)
-
-contents here
+<br>
+[The Journey](#The-Journey)
+<br>
+[Tech Stack](#Tech-Stack)
+<br>
+[Stretch Goals](#Stretch-Goals)
 
 ## The Team
 
@@ -71,7 +73,8 @@ We settled on solving the problem of the increased cost of living and travel cos
     - Includes form validation and an option for uploading an image of the location to Cloudinary
 - Completely mobile responsive
 
-# The Journey: What we learned, the challenges we faced and how we overcame them
+# The Journey: 
+## What we learned, the challenges we faced and how we overcame them
 
 - How to work efficiently in a large Agile team, making sure that everyone is heard whilst also ensuring that tasks get completed on time. We managed to maintain a healthy team atmosphere throughout the project, being respectful and working efficiently whilst maintaining an atmosphere of fun and playfulness. It was a great experience and we are all sad to see it end.
 
