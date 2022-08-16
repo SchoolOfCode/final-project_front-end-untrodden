@@ -1,12 +1,12 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/82081817/184133754-b1eb21a9-9ec0-44ee-ad1d-b0f2c00c032a.png" width="50%" />
 </p>
-<h3 align="center">
+<h2 align="center">
 	View The Website <a href='https://untroddenapp.netlify.app/'>here</a>
-</h3>
-<h3 align="center">
+</h2>
+<h2 align="center">
 	View The Backend API <a href='https://untrodden.herokuapp.com/locations'>here</a>
-</h3>
+</h2>
 
 ## Contents
 
