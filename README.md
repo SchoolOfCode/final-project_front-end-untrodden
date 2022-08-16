@@ -68,15 +68,15 @@ For a more indepth and complete journey from ideation to completion, watch our f
 
 ### 1 more week:
 
-Admin access to edit or delete all locations. This will allow the admin to take action on any reports they get emailed
-Feature to allow hovering over a card and highlighting the marker on the map
-Autofill address using Google API
-Live location on app
+Admin access to edit or delete all locations. This will allow the admin to take action on any reports they get emailed.
+Feature to allow hovering over a card and highlighting the marker on the map.
+Autofill address using Google API.
+Live location on app.
 
 ### 2 more weeks:
 
-User Dashboard, with features such as wishlist locations, visited locations.
-Ratings feature
+User Dashboard, with features such as wishlist locations and visited locations.
+Ratings feature.
 
 ### 4 more weeks:
 
