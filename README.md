@@ -3,6 +3,7 @@
 </p>
 <h3 align="center">
 	View The Website <a href='https://untroddenapp.netlify.app/'>here</a>
+	View a video presentation of our app and development journey [here]("https://www.youtube.com/watch?v=SKA7cI1Aa2w")
 </h3>
 
 
