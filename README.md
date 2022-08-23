@@ -100,7 +100,7 @@ We settled on solving the problem of the increased cost of living and travel cos
 
 - Our final and probably most stressful/ painful lesson was How to navigate Github and avoid merging disasters! After this project we all feel much more comfortable with the various features of git, such as merging, branching and conflict resolution, after hours spent doing just that.	
 
-- For a more in depth and complete journey from ideation to completion, watch our final presentation [here]("https://www.youtube.com/watch?v=SKA7cI1Aa2w").
+
 
 We created our own designs, you can find the links to them below:
 - [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
@@ -108,7 +108,7 @@ We created our own designs, you can find the links to them below:
 - [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
 - [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-- For a more in depth and complete explanation of our journey from ideation to completion, you can watch our final presentation <a href='https://www.youtube.com/watch?v=SKA7cI1Aa2w'>here.</a>
+For a more in depth and complete explanation of our journey from ideation to completion, you can watch our final presentation <a href='https://www.youtube.com/watch?v=SKA7cI1Aa2w'>here.</a>
 
 # Tech Stack
 
