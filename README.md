@@ -99,7 +99,8 @@ We settled on solving the problem of the increased cost of living and travel cos
 - Then we learned The benefits of user feedback. After the second week of development we sent out user feedback and the responses were invaluable. Users pointed out some bugs we had missed and also improvements that could be made in our UI/UX. Although this resulted in us having to ditch some of the code we wrote, we remembered the importance of not getting attached to ideas and focused on the users needs.
 
 - Our final and probably most stressful/ painful lesson was How to navigate Github and avoid merging disasters! After this project we all feel much more comfortable with the various features of git, such as merging, branching and conflict resolution, after hours spent doing just that.	
-For a more in depth and complete journey from ideation to completion, watch our final presentation [here]("https://www.youtube.com/watch?v=SKA7cI1Aa2w").
+
+- For a more in depth and complete journey from ideation to completion, watch our final presentation [here]("https://www.youtube.com/watch?v=SKA7cI1Aa2w").
 
 We created our own designs, you can find the links to them below:
 - [Ideation board](https://jamboard.google.com/d/1lsXeeJTVmYh1VJCgCAojFYTQxRpDGyqBr-EigMhBPno/edit?usp=sharing)
@@ -107,7 +108,7 @@ We created our own designs, you can find the links to them below:
 - [High-Fidelity Wireframes](https://www.figma.com/file/Wa6jdblUvjxNHAfYXDnrf8/Untrodden-High-Fidelity-Fireframe?node-id=0%3A1)
 - [Component Tree](https://miro.com/app/board/uXjVOkbsGTE=/?share_link_id=816367154564)
 
-For a more in depth and complete journey from ideation to completion, you can watch our final presentation [here](https://youtu.be/6_H7FDGS9Ig).
+For a more in depth and complete journey from ideation to completion, you can watch our final presentation <a href='https://www.youtube.com/watch?v=SKA7cI1Aa2w'>here.</a>
 
 # Tech Stack
 
