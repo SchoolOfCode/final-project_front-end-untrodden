@@ -59,7 +59,7 @@ export default function AboutUs() {
               <div className={styles.images_grid_container}>
                 <img
                   className={styles.images}
-                  src="https://www.hebrideanhopscotch.com/outer-hebrides/wp-content/uploads/2014/05/H0039-768x514.jpg" alt="Horgabost Beach, Scotland"
+                  src="https://images.immediate.co.uk/production/volatile/sites/22/2018/09/Kynance-Cove-5446f6c.jpg" alt="Horgabost Beach, Scotland"
                 />
                 <img
                   className={styles.images}
