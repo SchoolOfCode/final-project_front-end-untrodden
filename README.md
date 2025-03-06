@@ -1,14 +1,13 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/82081817/184133754-b1eb21a9-9ec0-44ee-ad1d-b0f2c00c032a.png" width="50%" />
 </p>
-<h1 align="center">
-	View The Website <a href='https://untroddenapp.netlify.app/'>here.</a>
-	
-</h1>
+
 <h3 align="center">
 	View a video presentation of our app and development journey <a href='https://www.youtube.com/watch?v=SKA7cI1Aa2w'>here.</a>
 </h3>
 
+<h3 align="center">
+	Unfortunately this site is no longer live as we couldn't afford to keep paying the heroku bills 🥲</h3>
 
 ## Contents
 
