@@ -7,7 +7,7 @@
 </h3>
 
 <h3 align="center">
-	Unfortunately this site is no longer live as we couldn't afford to keep paying the heroku bills 🥲</h3>
+	Unfortunately this site is no longer live, as we couldn't afford to keep paying the heroku bills 🥲</h3>
 
 ## Contents
 
